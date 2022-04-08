@@ -1,0 +1,24 @@
+{
+  "name": "template-eddiebauer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass src/scss -o src/css",
+    "scss-watch": "node-sass --watch src/scss -o src/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://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@github.com/MarketKarma/template-eddiebauer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MarketKarma/template-eddiebauer/issues"
+  },
+  "homepage": "https://github.com/MarketKarma/template-eddiebauer#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.1"
+  }
+}
