@@ -1,2 +1,2 @@
-# template-eddiebauer
-Eddie Bauer Templates
+# Eddie Bauer Templates
+
