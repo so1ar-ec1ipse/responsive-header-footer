@@ -361,7 +361,7 @@ body {
         }
     }
 }
-@media only screen and (max-width: 565px) {
+@media (max-width: 565px) {
     .exported-element {
         .foot_seperator {
             display: none;
@@ -462,7 +462,7 @@ body {
         }
     }
 }
-@media only screen and (min-width: 565px) and (max-width: 780px) {
+@media (min-width: 565px) and (max-width: 780px) {
     .exported-element {
         >div {
             margin: auto;
@@ -473,6 +473,7 @@ body {
                     >a, div {
                         max-width: 100%;
                         text-decoration: none;
+                        margin: 1rem 0;
                         >div {
                             &:nth-child(2) {
                                 width: 100%;
@@ -513,7 +514,7 @@ body {
         }
     }
 }
-@media only screen and (min-width: 780px) and (max-width: 1135px) {
+@media  (min-width: 780px) and (max-width: 1135px) {
     .exported-element {
         >div {
             margin: auto;
