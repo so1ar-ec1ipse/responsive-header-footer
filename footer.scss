@@ -13,6 +13,16 @@ $background-color_1: #f5f5f5;
 $background-color_2: #424242;
 $background-color_3: #ededed;
 $background-color_4: #333333;
+@font-face {
+    font-family: 'Interstate-Regular';
+    src: url('./view/static/fonts/interstate-regular.eot');
+    src: url('./view/static/fonts/interstate-regular.eot?#iefix') format('embedded-opentype'),
+        url('./view/static/fonts/interstate-regular.woff') format('woff'),
+        url('./view/static/fonts/interstate-regular.ttf') format('truetype'),
+        url('./view/static/fonts/interstate-regular.svg#interstate-regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 html{
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
@@ -71,7 +81,7 @@ body {
                     display: flex;
                     max-width: 300px;
                     text-decoration: none;
-                    margin: 1rem 0 0 0;
+                    margin: 0;
                     >div {
                         &:nth-child(1){
                             margin: 0px 2rem 0px 0px;
@@ -243,7 +253,6 @@ body {
                         }
                         >ul {
                             display: flex;
-                            justify-content: center;
                             list-style: none;
                             margin: 15px auto;
                             padding: 0px;
@@ -269,7 +278,8 @@ body {
                 }
                 .foot_card_right {
                     flex-direction: column;
-                    max-width: 30rem;
+                    max-width: 300px;
+                    width: 100%;
                 }
             }
             // .footer-bottom 
