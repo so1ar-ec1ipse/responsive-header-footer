@@ -385,7 +385,8 @@ body {
                             width: 100%;
                             margin: 1rem 0px;
                             >div {
-                                width: 100%;
+                                width: 70%;
+                                margin: auto;
                                 display: block;
                                 div {
                                     width: 100%;
@@ -399,7 +400,7 @@ body {
                                     cursor: pointer;
                                     display: flex;
                                     flex-basis: 100%;
-                                    font-size: 13px;
+                                    font-size: 17px;
                                     font-weight: 700;
                                     height: 5rem;
                                     justify-content: space-between;
@@ -407,29 +408,41 @@ body {
                                     margin: 0;
                                     padding: 0 1rem;
                                     width: 100%;
-                                    &::after {
-                                        background-color: initial;
-                                        background-image: url(https://www.eddiebauer.com/view/static/images/svg/ydv/arrowDown.svg);
-                                        background-position: 50% center;
-                                        background-repeat: no-repeat;
-                                        background-size: contain;
-                                        content: "";
-                                        font-family: "Helvetica Neue", Helvetica, sans-serif;
-                                        font-size: 13px;
-                                        font-weight: 700;
-                                        height: 1.6rem;
-                                        line-height: 5.1rem;
-                                        margin: 0;
-                                        padding: 0;
-                                        transition: all 0.3s ease-in-out;
-                                        width: 1.6rem;
-                                }
+                                    + ul{
+                                        font-size: 1.3rem;
+                                      padding-left: 2rem !important;
+                                    }
+                                    // &::after {
+                                    //     background-color: initial;
+                                    //     background-image: url(https://www.eddiebauer.com/view/static/images/svg/ydv/arrowDown.svg);
+                                    //     background-position: 50% center;
+                                    //     background-repeat: no-repeat;
+                                    //     background-size: contain;
+                                    //     content: "";
+                                    //     font-family: "Helvetica Neue", Helvetica, sans-serif;
+                                    //     font-size: 13px;
+                                    //     font-weight: 700;
+                                    //     height: 1.6rem;
+                                    //     line-height: 5.1rem;
+                                    //     margin: 0;
+                                    //     padding: 0;
+                                    //     transition: all 0.3s ease-in-out;
+                                    //     width: 1.6rem;
+                                    // }
+                                    // &:hover {
+                                    //     + ul {
+                                    //         display: block !important;
+                                    //         > li {
+                                    //             padding: 0.1rem 0px;
+                                    //         }
+                                    //     }
+                                    // }
+                                    // + ul {
+                                    //     display: none !important;
+                                    // }
                                 }
                             }
-                            ul {
-                                display: none !important;
-                                background-color: red;
-                            }
+                            
                         }
                         &:nth-child(2) {
                             text-align: center;

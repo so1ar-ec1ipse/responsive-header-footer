@@ -1,17 +1,26 @@
 // .search_input .input_parent {
 //     padding: 0px 30px 0px 20px;
 // }
-@import url('https://fonts.googleapis.com/css?family=Interstate&display=swap');
+@font-face {
+    font-family: 'Interstate-Regular';
+    src: url('./view/static/fonts/interstate-regular.eot');
+    src: url('./view/static/fonts/?#iefix') format('embedded-opentype'),
+             url('./view/static/fonts/interstate-regular.woff') format('woff'),
+             url('./view/static/fonts/interstate-regular.ttf') format('truetype'),
+             url('./view/static/fonts/interstate-regular.svg#interstate-regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 .eKWEuw *{
     box-sizing: border-box;
 }
 .eKWEuw {
+    font-family: Interstate;
     position: fixed;
     top: 0px;
     left: 0px;
     z-index: 1100;
     width: 100%;
-    font-family: Interstate;
     > .kNxzoi {
         position: absolute;
         top: 0px;
@@ -107,7 +116,7 @@
                             align-items: center;
                             cursor: pointer;
                             > .store_icon {
-                                background-image: url(/view/static/images/header/location.png);
+                                background-image: url(./view/static/images/header/location.png);
                                 background-repeat: no-repeat;
                                 width: 15px;
                                 height: 18px;
@@ -135,7 +144,7 @@
                             cursor: pointer;
                             
                             > .account_icon {
-                                background-image: url(/view/static/images/header/account-icon.png);
+                                background-image: url(./view/static/images/header/account-icon.png);
                                 background-repeat: no-repeat;
                                 width: 16px;
                                 height: 18px;
@@ -482,7 +491,7 @@
                             height: 100%;
                             text-align: -webkit-match-parent;
                             > a {
-                                text-decoration: none;
+                                text-decoration: none !important;
                                 display: flex;
                                 height: 100%;
                                 -webkit-box-align: center;
@@ -491,7 +500,7 @@
                                 opacity: 1;
                                 font-weight: bold;
                                 font-size: 14px;
-                                color: rgb(51, 51, 51);
+                                color: #333333 !important;
                                 padding-bottom: 4px;
                                 &:hover {
                                     display: flex;
@@ -502,7 +511,6 @@
                                     opacity: 1;
                                     font-weight: bold;
                                     font-size: 14px;
-                                    color: rgb(51, 51, 51);
                                     border-bottom: 4px solid #0098a8;
                                     padding-bottom: 0px;
 
