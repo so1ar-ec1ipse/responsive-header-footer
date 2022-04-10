@@ -308,7 +308,7 @@ body {
   font-weight: lighter;
   color: #565a5c;
 }
-@media only screen and (max-width: 565px) {
+@media (max-width: 565px) {
   .exported-element .foot_seperator {
     display: none;
   }
@@ -392,7 +392,7 @@ body {
     justify-content: center;
   }
 }
-@media only screen and (min-width: 565px) and (max-width: 780px) {
+@media (min-width: 565px) and (max-width: 780px) {
   .exported-element > div {
     margin: auto;
     padding: 1.2rem 4vw;
@@ -403,6 +403,7 @@ body {
   .exported-element > div > div:nth-child(1) > a, .exported-element > div > div:nth-child(1) div {
     max-width: 100%;
     text-decoration: none;
+    margin: 1rem 0;
   }
   .exported-element > div > div:nth-child(1) > a > div:nth-child(2), .exported-element > div > div:nth-child(1) div > div:nth-child(2) {
     width: 100%;
@@ -435,7 +436,7 @@ body {
     justify-content: center;
   }
 }
-@media only screen and (min-width: 780px) and (max-width: 1135px) {
+@media (min-width: 780px) and (max-width: 1135px) {
   .exported-element > div {
     margin: auto;
     padding: 1.2rem 7vm;
