@@ -1,564 +1,459 @@
-    $color_1: #000000;
-    $color_2: #0000ee;
-    $color_3: #565a5c;
-    $color_4: #333333;
-    $color_5: inherit;
-    $color_6: #ffffff;
-    $color_7: #1c78b3;
-    $font-family_1: Times;
-    $font-family_2: Interstate, Helvetica, Arial, sans-serif;
-    $font-family_3: "Helvetica Neue", Helvetica, sans-serif;
-    $font-family_4: inherit;
-    $background-color_1: #f5f5f5;
-    $background-color_2: #424242;
-    $background-color_3: #ededed;
-    $background-color_4: #333333;
-    @font-face {
-        font-family: 'Interstate-Regular';
-        src: url('./view/static/fonts/interstate-regular.eot');
-        src: url('./view/static/fonts/interstate-regular.eot?#iefix') format('embedded-opentype'),
-            url('./view/static/fonts/interstate-regular.woff') format('woff'),
-            url('./view/static/fonts/interstate-regular.ttf') format('truetype'),
-            url('./view/static/fonts/interstate-regular.svg#interstate-regular') format('svg');
-        font-weight: normal;
-        font-style: normal;
-    }
-    html{
-        line-height: 1.15;
-        -webkit-text-size-adjust: 100%;
-        font-size: 14px;
-    }
-    body {
-        font-family: Times;
-        background: #eee;
-    }
-    * {
-        box-sizing: inherit;
-    }
-    .footer {
-        background-color: $background-color_1;
-        font-family: Interstate;
-        .card_subheading {
-            font-size: 0.928rem;
-            line-height: 2rem;
-            letter-spacing: 0.2px;
-            opacity: 1;
-            font-weight: lighter;
-            color: #565a5c;
-        } 
-    }
+$color_1: #000000;
+$color_2: #0000ee;
+$color_3: #565a5c;
+$color_4: #333333;
+$color_5: inherit;
+$color_6: #ffffff;
+$color_7: #1c78b3;
+$font-family_1: Times;
+$font-family_2: Interstate, Helvetica, Arial, sans-serif;
+$font-family_3: "Helvetica Neue", Helvetica, sans-serif;
+$font-family_4: inherit;
+$background-color_1: #f5f5f5;
+$background-color_2: #424242;
+$background-color_3: #ededed;
+$background-color_4: #333333;
+html{
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    font-size: 14px;
+}
+body {
+    font-family: Times;
+    background: #eee;
+}
+* {
+    box-sizing: inherit;
+}
+.footer {
+    background-color: $background-color_1;
+    font-family: Interstate;
+    .card_subheading {
+        text-transform: capitalize;
+        font-size: 0.928rem;
+        line-height: 2rem;
+        letter-spacing: 0.2px;
+        opacity: 1;
+        font-weight: lighter;
+        color: #565a5c;
+    } 
+}
 
-    .exported-element {
+.exported-element {
+    
+    >div {
+        max-width: 1440px;
+        margin: auto;
+        margin: 0px 48px;
+        padding: 36px 110px;
         
-        >div {
+        .foot_seperator {
             max-width: 1440px;
-            margin: auto;
-            margin: 0px 48px;
-            padding: 36px 110px;
-            
-            .foot_seperator {
-                max-width: 1440px;
-                opacity: 0.25;
-                background-color: #424242;
-                height: 1px;
-                margin: 1.6rem 0px;
-            }
-            .footer-content {
+            opacity: 0.25;
+            background-color: #424242;
+            height: 1px;
+            margin: 1.6rem 0px;
+        }
+        .footer-content {
+            display: flex;
+            -webkit-box-pack: justify;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        >div {
+
+            // .footer-cards
+            &:nth-child(1) {
                 display: flex;
                 -webkit-box-pack: justify;
                 justify-content: space-between;
                 flex-wrap: wrap;
-            }
-            >div {
-
-                // .footer-cards
-                &:nth-child(1) {
+                >a, div {
                     display: flex;
-                    -webkit-box-pack: justify;
-                    justify-content: space-between;
-                    flex-wrap: wrap;
-                    >a, div {
-                        display: flex;
-                        max-width: 300px;
-                        text-decoration: none;
-                        margin: 0;
-                        >div {
-                            &:nth-child(1){
-                                margin: 0px 2rem 0px 0px;
-                                >svg{
-                                    width: 48px;
-                                    height: 48px;
-                                }
-                            }
-                            &:nth-child(2) {
-                                display: block;
-                                flex-direction: column;
-                                flex: 0 1 auto;
-                                // width: 78%;
-                                >div {
-                                    &:nth-child(1) {
-                                        font-size: 0.928rem;
-                                        letter-spacing: 0.2px;
-                                        opacity: 1;
-                                        color: rgb(51, 51, 51);
-                                        font-weight: bold;
-                                        text-transform: uppercase;
-                                        line-height: normal;
-                                        margin-top: 3px;
-                                    }
-                                    &:nth-child(2) {
-                                        font-size: 0.928rem;
-                                        letter-spacing: 0.2px;
-                                        opacity: 1;
-                                        font-weight: lighter;
-                                        color: rgb(86, 90, 92);
-                                        line-height: 2.08;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-                // .footer-customerservice
-                &:nth-child(3) {
-                    display: flex;
-                    -webkit-box-pack: justify;
-                    justify-content: space-between;
-                    flex-wrap: wrap;
+                    max-width: 300px;
+                    text-decoration: none;
+                    margin: 0;
                     >div {
                         &:nth-child(1){
-                            >div {
-                                display: flex;
-                                -webkit-box-pack: center;
-                                justify-content: center;
-                                width: 25%;
-                                >div {
-                                    width: 16rem;
-                                    &:nth-child(3) {
-                                        display: flex;
-                                        flex-direction: column;
-                                        justify-content: flex-start;
-                                        >div {
-                                            &:nth-child(1){
-                                                width: 13rem;
-                                            }
-                                            &:nth-child(2){
-                                                margin-top: 28px;
-                                                width: 16rem;
-                                            }
-                                        
-                                        }
-                                    }
-                                    &:nth-child(1), &:nth-child(2), &:nth-child(4){
-                                        >span {
-                                            font-size: 0.928rem;
-                                            line-height: 2rem;
-                                            letter-spacing: 0.2px;
-                                            opacity: 1;
-                                            color: #333333;
-                                            font-weight: bold;
-                                            text-transform: uppercase;
-                                        }
-                                        >ul {
-                                            list-style-type: none;
-                                            padding: 0;
-                                            margin: 0;
-                                            display: flex;
-                                            flex-direction: column;
-                                            flex: 0 1 auto;
-                                            font-size: 0.928rem;
-                                            line-height: 2rem;
-                                            letter-spacing: 0.2px;
-                                            opacity: 1;
-                                            font-weight: lighter;
-                                            color: #333333;
-                                            
-                                            >li {
-                                                display: list-item;
-                                                text-align: -webkit-match-parent;
-                                                >div {
-                                                    display: block;
-                                                    >a {
-                                                        color: inherit;
-                                                        text-decoration: none;
-                                                        cursor: pointer;
-                                                        // >a {
-                                                            .card_subheading {
-                                                                background-color: red;
-                                                                font-size: 0.928rem;
-                                                                line-height: 2rem;
-                                                                letter-spacing: 0.2px;
-                                                                opacity: 1;
-                                                                font-weight: lighter;
-                                                                color: rgb(86, 90, 92);
-                                                                
-                                                            }
-                                                            .nav_list_subtitle {
-                                                                padding: 0px;
-                                                                text-transform: capitalize;
-                                                                line-height: 2.15;
-                                                                margin: 0px;
-                                                                text-decoration: none;
-                                                                letter-spacing: 1px;
-                                                                cursor: pointer;
-                                                            }
-                                                        // }
-                                                        &:hover {
-                                                            font-weight: bold;
-                                                            letter-spacing: 0.55px;
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                    
-                                }
+                            margin: 0px 2rem 0px 0px;
+                            >svg{
+                                width: 48px;
+                                height: 48px;
                             }
                         }
-                        &:nth-child(2){
-                            >span {
-                                display: block;
+                        &:nth-child(2) {
+                            display: block;
+                            flex-direction: column;
+                            flex: 0 1 auto;
+                            // width: 78%;
+                            >div {
                                 &:nth-child(1) {
                                     font-size: 0.928rem;
-                                    line-height: 2rem;
                                     letter-spacing: 0.2px;
                                     opacity: 1;
                                     color: rgb(51, 51, 51);
                                     font-weight: bold;
                                     text-transform: uppercase;
+                                    line-height: normal;
+                                    margin-top: 3px;
                                 }
                                 &:nth-child(2) {
-                                    font-weight: 300;
-                                    font-size: 12px;
-                                    line-height: 18px;
-                                    letter-spacing: 0.17px;
-                                    margin-top: 6px;
-                                }
-                            }
-                            >button {
-                                justify-content: center;
-                                width: 185px;
-                                height: 39px;
-                                margin-top: 12px;
-                                background: #333333;
-                                border-radius: 0px;
-                                text-transform: uppercase;
-                                font-size: 0.928rem;
-                                line-height: 2rem;
-                                letter-spacing: 0.2px;
-                                opacity: 1;
-                                font-weight: bold;
-                                color: #ffffff;
-                            }
-                            >ul {
-                                display: flex;
-                                list-style: none;
-                                margin: 15px auto;
-                                padding: 0px;
-                                height: 48px;
-                                >li {
-                                    margin:0px 8px;
-                                    margin-top: auto;
-                                    align-content: center;
-                                    >a {
-                                        text-decoration: none;
-                                    }
+                                    font-size: 0.928rem;
+                                    letter-spacing: 0.2px;
+                                    opacity: 1;
+                                    font-weight: lighter;
+                                    color: rgb(86, 90, 92);
+                                    line-height: 2.08;
                                 }
                             }
                         }
-                    }
-                    .foot_card_left {
-                        display: flex;
-                        width: 60%;
-                        flex-wrap: wrap;
-                        list-style: none;
-                        -webkit-box-pack: justify;
-                        justify-content: space-between;
-                    }
-                    .foot_card_right {
-                        flex-direction: column;
-                        max-width: 300px;
-                        width: 100%;
                     }
                 }
-                // .footer-bottom 
-                &:nth-child(5) {
-                    display: flex;
-                    -webkit-box-pack: justify;
-                    justify-content: space-between;
-                    flex-wrap: wrap;
-                    >div {
-                        &:nth-child(1) {
+            }
+            // .footer-customerservice
+            &:nth-child(3) {
+                display: flex;
+                -webkit-box-pack: justify;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                >div {
+                    &:nth-child(1){
+                        >div {
                             display: flex;
-                            list-style: none;
-                            -webkit-box-align: center;
-                            align-items: center;
-                            .shop_sites {
-                                margin-right: 7px;
-                                padding: 2px 2px 0px;
-                                cursor: pointer;
-                                &.active {
-                                    border: 1px solid;
+                            -webkit-box-pack: center;
+                            justify-content: center;
+                            width: 25%;
+                            >div {
+                                width: 16rem;
+                                &:nth-child(3) {
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: flex-start;
+                                    >div {
+                                        &:nth-child(1){
+                                            width: 13rem;
+                                        }
+                                        &:nth-child(2){
+                                            margin-top: 28px;
+                                            width: 16rem;
+                                        }
+                                       
+                                    }
                                 }
-                            }
-        
-                            .card_subheading {
-                                font-size: 0.928rem;
-                                line-height: 2rem;
-                                letter-spacing: 0.2px;
-                                opacity: 1;
-                                font-weight: lighter;
-                                color: #565a5c;
-                            }
-                            >ul{
-                                display: flex;
-                                list-style-type: none;
-                                padding: 0;
-                                margin: 0;
-                            }
-                        }
-                        &:nth-child(2) {
-                            text-align: center;
-                            font-weight: lighter;
-                            margin: 10px 0px;
-                            >a {
-                                text-decoration: none;
-                            }
-                        }
-                        &:nth-child(3) {
-                            display: flex;
-                            list-style: none;
-                            -webkit-box-align: center;
-                            align-items: center;
-                            .links {
-                                display: flex;
-                            }                    
-                            ul {
-                                
-                                list-style-type: none;
-                                padding: 0;
-                                margin: 0;
-                                >li {
-                                    display: list-item;
-                                    text-align: -webkit-match-parent;
-                                    >a {
+                                &:nth-child(1), &:nth-child(2), &:nth-child(4){
+                                    >span {
+                                        font-size: 0.928rem;
+                                        line-height: 2rem;
+                                        letter-spacing: 0.2px;
+                                        opacity: 1;
+                                        color: #333333;
+                                        font-weight: bold;
+                                        text-transform: uppercase;
+                                    }
+                                    >ul {
+                                        list-style-type: none;
+                                        padding: 0;
+                                        margin: 0;
+                                        display: flex;
+                                        flex-direction: column;
+                                        flex: 0 1 auto;
                                         font-size: 0.928rem;
                                         line-height: 2rem;
                                         letter-spacing: 0.2px;
                                         opacity: 1;
                                         font-weight: lighter;
-                                        color: #565a5c;
-                                        text-decoration: none;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-                
-                // .copyrights 
-                &:nth-child(6) {
-                    text-align: center;
-                    font-size: 0.928rem;
-                    line-height: 2rem;
-                    letter-spacing: 0.2px;
-                    opacity: 1;
-                    font-weight: lighter;
-                    color: #565a5c;
-                }
-            }
-        }
-    }
-    @media only screen and (max-width: 565px) {
-        .exported-element {
-            .foot_seperator {
-                display: none;
-            }
-            >div {
-                margin: auto;
-                padding: 1.2rem 4vw;
-                >div {
-                    &:nth-child(1) {
-                        display: block;
-                        >a, div {
-                            max-width: 100%;
-                            text-decoration: none;
-                            margin: 1rem 0px;
-                            >div {
-                                &:nth-child(2) {
-                                    width: 100%;
-                                }
-                            }
-                        }
-                    }
-                    &:nth-child(3) {
-                        >div {
-                            // input#switch {
-                            //     opacity: 0; width: 0; height: 0;
-                            // }
-                            // input:checked + .card_heading {
-                            //     background-color: red;
-                            // }
-                            display: block;
-                            &:nth-child(1) {
-                                width: 100%;
-                                margin: 1rem 0px;
-                                >div {
-                                    width: 80%;
-                                    margin: auto;
-                                    display: block;
-                                    div.i-handler {
-                                        width: 100%;
-                                        margin: 0px !important;
-                                        padding: 0px !important;
-                                        &:hover {
-                                            // background-color: red;
-                                            & > ul {
-                                                display: block !important;
-                                            }
-                                        }
-                                    }
-                                    span {
-                                        align-items: center;
-                                        box-sizing: border-box;
-                                        border-bottom: 0.1rem solid #000000;
-                                        cursor: pointer;
-                                        display: flex;
-                                        flex-basis: 100%;
-                                        font-size: 17px;
-                                        font-weight: 700;
-                                        height: 5rem;
-                                        justify-content: space-between;
-                                        letter-spacing: 0;
-                                        margin: 0;
-                                        padding: 0 1rem;
-                                        width: 100%;
+                                        color: #333333;
                                         
-                                        // >input:hover{
-                                        //     background-color: lightgray;
-                                        // }
-                                        &::after {
-                                            background-color: initial;
-                                            background-image: url(https://www.eddiebauer.com/view/static/images/svg/ydv/arrowDown.svg);
-                                            background-position: 50% center;
-                                            background-repeat: no-repeat;
-                                            background-size: contain;
-                                            content: "";
-                                            font-family: "Helvetica Neue", Helvetica, sans-serif;
-                                            font-size: 13px;
-                                            font-weight: 700;
-                                            height: 1.6rem;
-                                            line-height: 5.1rem;
-                                            margin: 0;
-                                            padding: 0;
-                                            transition: all 0.3s ease-in-out;
-                                            width: 1.6rem;
-                                        }
-                                        + ul {
-                                            display: none !important;
+                                        >li {
+                                            display: list-item;
+                                            text-align: -webkit-match-parent;
+                                            >div {
+                                                display: block;
+                                                >a {
+                                                    color: inherit;
+                                                    text-decoration: none;
+                                                    cursor: pointer;
+                                                    // >a {
+                                                        .card_subheading {
+                                                            background-color: red;
+                                                            font-size: 0.928rem;
+                                                            line-height: 2rem;
+                                                            letter-spacing: 0.2px;
+                                                            opacity: 1;
+                                                            font-weight: lighter;
+                                                            color: rgb(86, 90, 92);
+                                                            
+                                                        }
+                                                        .nav_list_subtitle {
+                                                            padding: 0px;
+                                                            text-transform: capitalize;
+                                                            line-height: 2.15;
+                                                            margin: 0px;
+                                                            text-decoration: none;
+                                                            letter-spacing: 1px;
+                                                            cursor: pointer;
+                                                        }
+                                                    // }
+                                                    &:hover {
+                                                        font-weight: bold;
+                                                        letter-spacing: 0.55px;
+                                                    }
+                                                }
+                                            }
                                         }
                                     }
                                 }
                                 
                             }
+                        }
+                    }
+                    &:nth-child(2){
+                        >span {
+                            display: block;
+                            &:nth-child(1) {
+                                font-size: 0.928rem;
+                                line-height: 2rem;
+                                letter-spacing: 0.2px;
+                                opacity: 1;
+                                color: rgb(51, 51, 51);
+                                font-weight: bold;
+                                text-transform: uppercase;
+                            }
                             &:nth-child(2) {
-                                text-align: center;
-                                max-width: 100%;
-                                width: 100%;
+                                font-weight: 300;
+                                font-size: 12px;
+                                line-height: 18px;
+                                letter-spacing: 0.17px;
+                                margin-top: 6px;
+                            }
+                        }
+                        >button {
+                            justify-content: center;
+                            width: 185px;
+                            height: 39px;
+                            margin-top: 12px;
+                            background: #333333;
+                            border-radius: 0px;
+                            text-transform: uppercase;
+                            font-size: 0.928rem;
+                            line-height: 2rem;
+                            letter-spacing: 0.2px;
+                            opacity: 1;
+                            font-weight: bold;
+                            color: #ffffff;
+                        }
+                        >ul {
+                            display: flex;
+                            list-style: none;
+                            margin: 15px auto;
+                            padding: 0px;
+                            height: 48px;
+                            >li {
+                                margin:0px 8px;
+                                margin-top: auto;
+                                align-content: center;
+                                >a {
+                                    text-decoration: none;
+                                }
                             }
                         }
                     }
                 }
+                .foot_card_left {
+                    display: flex;
+                    width: 60%;
+                    flex-wrap: wrap;
+                    list-style: none;
+                    -webkit-box-pack: justify;
+                    justify-content: space-between;
+                }
+                .foot_card_right {
+                    flex-direction: column;
+                    max-width: 300px;
+                    width: 100%;
+                }
             }
-        }
-    }
-    @media only screen and (min-width: 565px) and (max-width: 780px) {
-        .exported-element {
-            >div {
-                margin: auto;
-                padding: 1.2rem 4vw;
+            // .footer-bottom 
+            &:nth-child(5) {
+                display: flex;
+                -webkit-box-pack: justify;
+                justify-content: space-between;
+                flex-wrap: wrap;
                 >div {
                     &:nth-child(1) {
-                        display: block;
-                        >a, div {
-                            max-width: 100%;
-                            text-decoration: none;
-                            >div {
-                                &:nth-child(2) {
-                                    width: 100%;
-                                }
+                        display: flex;
+                        list-style: none;
+                        -webkit-box-align: center;
+                        align-items: center;
+                        .shop_sites {
+                            margin-right: 7px;
+                            padding: 2px 2px 0px;
+                            cursor: pointer;
+                            &.active {
+                                border: 1px solid;
                             }
+                        }
+    
+                        .card_subheading {
+                            font-size: 0.928rem;
+                            line-height: 2rem;
+                            letter-spacing: 0.2px;
+                            opacity: 1;
+                            font-weight: lighter;
+                            color: #565a5c;
+                        }
+                        >ul{
+                            display: flex;
+                            list-style-type: none;
+                            padding: 0;
+                            margin: 0;
+                        }
+                    }
+                    &:nth-child(2) {
+                        text-align: center;
+                        font-weight: lighter;
+                        margin: 10px 0px;
+                        >a {
+                            text-decoration: none;
                         }
                     }
                     &:nth-child(3) {
-                        >div {
-                            display: block;
-                            &:nth-child(1) {
-                                width: 100%;
-                                margin: 1rem 0px 2rem 0px;
-                                >div {
-                                    width: 45%;
-                                    display: block;
-                                    div {
-                                        width: 100%;
-                                        margin: 0px !important;
-                                        padding: 0px !important;
-                                    }
+                        display: flex;
+                        list-style: none;
+                        -webkit-box-align: center;
+                        align-items: center;
+                        .links {
+                            display: flex;
+                        }                    
+                        ul {
+                            
+                            list-style-type: none;
+                            padding: 0;
+                            margin: 0;
+                            >li {
+                                display: list-item;
+                                text-align: -webkit-match-parent;
+                                >a {
+                                    font-size: 0.928rem;
+                                    line-height: 2rem;
+                                    letter-spacing: 0.2px;
+                                    opacity: 1;
+                                    font-weight: lighter;
+                                    color: #565a5c;
+                                    text-decoration: none;
                                 }
-                            }
-                            &:nth-child(2) {
-                                > div {
-                                    width: 50%;
-                                }
-                                text-align: center;
-                                max-width: 100%;
-                                width: 100%;
                             }
                         }
                     }
                 }
             }
+            
+            // .copyrights 
+            &:nth-child(6) {
+                text-align: center;
+                font-size: 0.928rem;
+                line-height: 2rem;
+                letter-spacing: 0.2px;
+                opacity: 1;
+                font-weight: lighter;
+                color: #565a5c;
+            }
         }
     }
-    @media only screen and (min-width: 780px) and (max-width: 1135px) {
-        .exported-element {
+}
+@media only screen and (max-width: 565px) {
+    .exported-element {
+        .foot_seperator {
+            display: none;
+        }
+        >div {
+            margin: auto;
+            padding: 1.2rem 4vw;
             >div {
-                margin: auto;
-                padding: 1.2rem 7vm;
-                >div {
-                    &:nth-child(1) {
-                        >a, div {
-                            text-decoration: none;
+                &:nth-child(1) {
+                    display: block;
+                    >a, div {
+                        max-width: 100%;
+                        text-decoration: none;
+                        margin: 1rem 0px;
+                        >div {
+                            &:nth-child(2) {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+                &:nth-child(3) {
+                    >div {
+                        
+                        display: block;
+                        &:nth-child(1) {
+                            width: 100%;
                             margin: 1rem 0px;
                             >div {
-                                &:nth-child(2) {
+                                width: 80%;
+                                margin: auto;
+                                display: block;
+                                div.i-handler {
                                     width: 100%;
+                                    margin: 0px !important;
+                                    padding: 0px !important;
+                                    &:hover {
+                                        // background-color: red;
+                                        & > ul {
+                                            display: block !important;
+                                        }
+                                    }
                                 }
-                            }
-                        }
-                    }
-                    &:nth-child(3) {
-                        >div {
-                            display: block;
-                            &:nth-child(1) {
-                                width: 100%;
-                                margin: 1rem 0px 2rem 0px;
-                                >div {
-                                    div {
-                                        width: 100%;
-                                        margin: 0px !important;
-                                        padding: 0px !important;
+                                span {
+                                    align-items: center;
+                                    box-sizing: border-box;
+                                    border-bottom: 0.1rem solid #000000;
+                                    cursor: pointer;
+                                    display: flex;
+                                    flex-basis: 100%;
+                                    font-size: 17px;
+                                    font-weight: 700;
+                                    height: 5rem;
+                                    justify-content: space-between;
+                                    letter-spacing: 0;
+                                    margin: 0;
+                                    padding: 0 1rem;
+                                    width: 100%;
+                                    
+                                    // >input:hover{
+                                    //     background-color: lightgray;
+                                    // }
+                                    &::after {
+                                        background-color: initial;
+                                        background-image: url(https://www.eddiebauer.com/view/static/images/svg/ydv/arrowDown.svg);
+                                        background-position: 50% center;
+                                        background-repeat: no-repeat;
+                                        background-size: contain;
+                                        content: "";
+                                        font-family: "Helvetica Neue", Helvetica, sans-serif;
+                                        font-size: 13px;
+                                        font-weight: 700;
+                                        height: 1.6rem;
+                                        line-height: 5.1rem;
+                                        margin: 0;
+                                        padding: 0;
+                                        transition: all 0.3s ease-in-out;
+                                        width: 1.6rem;
+                                    }
+                                    + ul {
+                                        display: none !important;
                                     }
                                 }
                             }
-                            &:nth-child(2) {
-                                > div {
-                                    width: 50%;
-                                }
-                                text-align: center;
-                                max-width: 100%;
-                                width: 100%;
+                            
+                        }
+                        &:nth-child(2) {
+                            text-align: center;
+                            max-width: 100%;
+                            width: 100%;
+                            >ul {
+                                justify-content: center
                             }
                         }
                     }
@@ -566,3 +461,103 @@
             }
         }
     }
+}
+@media only screen and (min-width: 565px) and (max-width: 780px) {
+    .exported-element {
+        >div {
+            margin: auto;
+            padding: 1.2rem 4vw;
+            >div {
+                &:nth-child(1) {
+                    display: block;
+                    >a, div {
+                        max-width: 100%;
+                        text-decoration: none;
+                        >div {
+                            &:nth-child(2) {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+                &:nth-child(3) {
+                    >div {
+                        display: block;
+                        &:nth-child(1) {
+                            width: 100%;
+                            margin: 1rem 0px 2rem 0px;
+                            >div {
+                                width: 45%;
+                                display: block;
+                                div {
+                                    width: 100%;
+                                    margin: 0px !important;
+                                    padding: 0px !important;
+                                }
+                            }
+                        }
+                        &:nth-child(2) {
+                            text-align: center;
+                            max-width: 100%;
+                            width: 100%;
+                            > div {
+                                width: 50%;
+                            }
+                            >ul {
+                                justify-content: center
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width: 780px) and (max-width: 1135px) {
+    .exported-element {
+        >div {
+            margin: auto;
+            padding: 1.2rem 7vm;
+            >div {
+                &:nth-child(1) {
+                    >a, div {
+                        text-decoration: none;
+                        margin: 1rem 0px;
+                        >div {
+                            &:nth-child(2) {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+                &:nth-child(3) {
+                    >div {
+                        display: block;
+                        &:nth-child(1) {
+                            width: 100%;
+                            margin: 1rem 0px 2rem 0px;
+                            >div {
+                                div {
+                                    width: 100%;
+                                    margin: 0px !important;
+                                    padding: 0px !important;
+                                }
+                            }
+                        }
+                        &:nth-child(2) {
+                            text-align: center;
+                            max-width: 100%;
+                            width: 100%;
+                            > div {
+                                width: 50%;
+                            }
+                            >ul {
+                                justify-content: center
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

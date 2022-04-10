@@ -1,10 +1,3 @@
-@font-face {
-  font-family: 'Interstate-Regular';
-  src: url('./view/static/fonts/interstate-regular.eot');
-  src: url('./view/static/fonts/interstate-regular.eot?#iefix') format('embedded-opentype'), url('./view/static/fonts/interstate-regular.woff') format('woff'), url('./view/static/fonts/interstate-regular.ttf') format('truetype'), url('./view/static/fonts/interstate-regular.svg#interstate-regular') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
 html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
@@ -22,6 +15,7 @@ body {
   font-family: Interstate;
 }
 .footer .card_subheading {
+  text-transform: capitalize;
   font-size: 0.928rem;
   line-height: 2rem;
   letter-spacing: 0.2px;
@@ -394,6 +388,9 @@ body {
     max-width: 100%;
     width: 100%;
   }
+  .exported-element > div > div:nth-child(3) > div:nth-child(2) > ul {
+    justify-content: center;
+  }
 }
 @media only screen and (min-width: 565px) and (max-width: 780px) {
   .exported-element > div {
@@ -434,6 +431,9 @@ body {
   .exported-element > div > div:nth-child(3) > div:nth-child(2) > div {
     width: 50%;
   }
+  .exported-element > div > div:nth-child(3) > div:nth-child(2) > ul {
+    justify-content: center;
+  }
 }
 @media only screen and (min-width: 780px) and (max-width: 1135px) {
   .exported-element > div {
@@ -466,5 +466,8 @@ body {
   }
   .exported-element > div > div:nth-child(3) > div:nth-child(2) > div {
     width: 50%;
+  }
+  .exported-element > div > div:nth-child(3) > div:nth-child(2) > ul {
+    justify-content: center;
   }
 }
