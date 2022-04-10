@@ -19,6 +19,6 @@
   },
   "homepage": "https://github.com/MarketKarma/template-eddiebauer#readme",
   "devDependencies": {
-    "node-sass": "^7.0.1"
+    "node-sass": "7.0.1"
   }
 }
