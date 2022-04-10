@@ -4,7 +4,84 @@
     .eKWEuw * {
         box-sizing: border-box;
     }
-
+    .browsemenu-dropdown {
+        position: fixed;
+        left: 0px;
+        padding-top: 10px;
+        top: 134px;
+        border-bottom: 1px solid rgb(224, 224, 224);
+        z-index: 1000;
+        width: 100%;
+        max-height: 70vh;
+        overflow-y: scroll;
+        background: white;
+        >div {
+            background: white;
+            max-width: 1440px;
+            margin: 0px auto;
+            padding: 22px 0px 24px 16px;
+            height: 100%;
+            font-size: 0.928rem;
+            line-height: 2rem;
+            letter-spacing: 0.2px;
+            opacity: 1;
+            font-weight: lighter;
+            color: rgb(51, 51, 51);
+            display: flex;
+            > .column {
+                flex: 0 1 auto;
+                display: flex;
+                flex-wrap: wrap;
+                line-height: 28px;
+                &.featured {
+                    flex-direction: column;
+                    max-width: 320px;
+                    margin-left: 1.5rem;
+                    margin-right: 67px;
+                    border-right: 1px solid rgb(215, 215, 215);
+                }
+                > .group {
+                    margin: 8px 0px 26px 20px;
+                    width: 208px;
+                    height: auto;
+                    &.featured {
+                        flex: 0 1 auto;
+                        height: auto;
+                    }
+                    > span.tile {
+                        font-size: 1rem;
+                        opacity: 1;
+                        font-weight: bold;
+                        text-transform: capitalize;
+                        letter-spacing: 0.2px;
+                        margin: 0px 0px 6px;
+                        color: #333333;
+                    }
+                    > ul {
+                        list-style-type: none;
+                        padding: 0;
+                        margin: 0;
+                        >li {
+                            > a {
+                                text-decoration: none;
+                                > div.item {
+                                    width: 100%;
+                                    color: rgb(51, 51, 51);
+                                    height: 30px;
+                                    letter-spacing: 1.1px;
+                                    display: inline-block;
+                                    > .item-label {
+                                        width: 100%;
+                                        line-height: 1.5rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
     .eKWEuw {
         font-family: Interstate;
         position: fixed;
@@ -121,7 +198,7 @@
                                 cursor: pointer;
 
                                 >.store_icon {
-                                    background-image: url(./view/static/images/header/location.png);
+                                    background-image: url(./view/static/images/header/location.svg);
                                     background-repeat: no-repeat;
                                     width: 15px;
                                     height: 18px;
