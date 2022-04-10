@@ -2,57 +2,57 @@
 
 @font-face {
   font-family: Interstate;
-  src: url('https://www.eddiebauer.com/ystatic/fonts/Interstate-Bold.otf') format('opentype');
-  src: url('https://www.eddiebauer.com/ystatic/fonts/Interstate-Bold.woff') format('woff');
+  src: url('./view/static//fonts/Interstate-Bold.otf') format('opentype');
+  src: url('./view/static//fonts/Interstate-Bold.woff') format('woff');
   font-weight: bold;
   font-style: normal;
 }
 @font-face {
   font-family: Interstate;
-  src: url('https://www.eddiebauer.com/ystatic/fonts/Interstate-BoldItalic.otf') format('opentype');
-  src: url('https://www.eddiebauer.com/ystatic/fonts/Interstate-BoldItalic.woff') format('woff');
+  src: url('./view/static//fonts/Interstate-BoldItalic.otf') format('opentype');
+  src: url('./view/static//fonts/Interstate-BoldItalic.woff') format('woff');
   font-weight: bold;
   font-style: italic;
 }
 @font-face {
   font-family: Interstate;
-  src: url('https://www.eddiebauer.com/ystatic/fonts/Interstate-ExtraLight.otf') format('opentype');
-  src: url('https://www.eddiebauer.com/ystatic/fonts/Interstate-ExtraLight.woff') format('woff');
+  src: url('./view/static//fonts/Interstate-ExtraLight.otf') format('opentype');
+  src: url('./view/static//fonts/Interstate-ExtraLight.woff') format('woff');
   font-weight: 100;
   font-style: normal;
 }
 @font-face {
   font-family: Interstate;
-  src: url('https://www.eddiebauer.com/ystatic/fonts/Interstate-ExtraLightItalic.otf') format('opentype');
-  src: url('https://www.eddiebauer.com/ystatic/fonts/Interstate-ExtraLightItalic.woff') format('woff');
+  src: url('./view/static//fonts/Interstate-ExtraLightItalic.otf') format('opentype');
+  src: url('./view/static//fonts/Interstate-ExtraLightItalic.woff') format('woff');
   font-weight: 100;
   font-style: italic;
 }
 @font-face {
   font-family: Interstate;
-  src: url('https://www.eddiebauer.com/ystatic/fonts/Interstate-Light.otf') format('opentype');
-  src: url('https://www.eddiebauer.com/ystatic/fonts/Interstate-Light.woff') format('woff');
+  src: url('./view/static//fonts/Interstate-Light.otf') format('opentype');
+  src: url('./view/static//fonts/Interstate-Light.woff') format('woff');
   font-weight: lighter;
   font-style: normal;
 }
 @font-face {
   font-family: Interstate;
-  src: url('https://www.eddiebauer.com/ystatic/fonts/Interstate-LightItalic.otf') format('opentype');
-  src: url('https://www.eddiebauer.com/ystatic/fonts/Interstate-LightItalic.woff') format('woff');
+  src: url('./view/static//fonts/Interstate-LightItalic.otf') format('opentype');
+  src: url('./view/static//fonts/Interstate-LightItalic.woff') format('woff');
   font-weight: lighter;
   font-style: italic;
 }
 @font-face {
   font-family: Interstate;
-  src: url('https://www.eddiebauer.com/ystatic/fonts/Interstate-Regular.otf') format('opentype');
-  src: url('https://www.eddiebauer.com/ystatic/fonts/Interstate-Regular.woff') format('woff');
+  src: url('./view/static//fonts/Interstate-Regular.otf') format('opentype');
+  src: url('./view/static//fonts/Interstate-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: Interstate;
-  src: url('https://www.eddiebauer.com/ystatic/fonts/Interstate-RegularItalic.otf') format('opentype');
-  src: url('https://www.eddiebauer.com/ystatic/fonts/Interstate-RegularItalic.woff') format('woff');
+  src: url('./view/static//fonts/Interstate-RegularItalic.otf') format('opentype');
+  src: url('./view/static//fonts/Interstate-RegularItalic.woff') format('woff');
   font-weight: normal;
   font-style: italic;
 }
