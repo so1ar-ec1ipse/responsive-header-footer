@@ -1,10 +1,7 @@
 @font-face {
   font-family: 'Interstate-Regular';
   src: url('./view/static/fonts/interstate-regular.eot');
-  src: url('./view/static/fonts/interstate-regular.eot?#iefix') format('embedded-opentype'),
-      url('./view/static/fonts/interstate-regular.woff') format('woff'),
-      url('./view/static/fonts/interstate-regular.ttf') format('truetype'),
-      url('./view/static/fonts/interstate-regular.svg#interstate-regular') format('svg');
+  src: url('./view/static/fonts/interstate-regular.eot?#iefix') format('embedded-opentype'), url('./view/static/fonts/interstate-regular.woff') format('woff'), url('./view/static/fonts/interstate-regular.ttf') format('truetype'), url('./view/static/fonts/interstate-regular.svg#interstate-regular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -344,14 +341,17 @@ body {
     margin: 1rem 0px;
   }
   .exported-element > div > div:nth-child(3) > div:nth-child(1) > div {
-    width: 70%;
+    width: 80%;
     margin: auto;
     display: block;
   }
-  .exported-element > div > div:nth-child(3) > div:nth-child(1) > div div {
+  .exported-element > div > div:nth-child(3) > div:nth-child(1) > div div.i-handler {
     width: 100%;
     margin: 0px !important;
     padding: 0px !important;
+  }
+  .exported-element > div > div:nth-child(3) > div:nth-child(1) > div div.i-handler:hover > ul {
+    display: block !important;
   }
   .exported-element > div > div:nth-child(3) > div:nth-child(1) > div span {
     align-items: center;
@@ -369,9 +369,25 @@ body {
     padding: 0 1rem;
     width: 100%;
   }
+  .exported-element > div > div:nth-child(3) > div:nth-child(1) > div span::after {
+    background-color: initial;
+    background-image: url(https://www.eddiebauer.com/view/static/images/svg/ydv/arrowDown.svg);
+    background-position: 50% center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    height: 1.6rem;
+    line-height: 5.1rem;
+    margin: 0;
+    padding: 0;
+    transition: all 0.3s ease-in-out;
+    width: 1.6rem;
+  }
   .exported-element > div > div:nth-child(3) > div:nth-child(1) > div span + ul {
-    font-size: 1.3rem;
-    padding-left: 2rem !important;
+    display: none !important;
   }
   .exported-element > div > div:nth-child(3) > div:nth-child(2) {
     text-align: center;
@@ -390,7 +406,6 @@ body {
   .exported-element > div > div:nth-child(1) > a, .exported-element > div > div:nth-child(1) div {
     max-width: 100%;
     text-decoration: none;
-    margin: 1rem 0px;
   }
   .exported-element > div > div:nth-child(1) > a > div:nth-child(2), .exported-element > div > div:nth-child(1) div > div:nth-child(2) {
     width: 100%;
