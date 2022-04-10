@@ -22,6 +22,9 @@ body {
     font-family: Times;
     background: #eee;
 }
+* {
+    box-sizing: inherit;
+}
 .footer {
     background-color: $background-color_1;
     font-family: Interstate;
@@ -40,7 +43,8 @@ body {
     >div {
         max-width: 1440px;
         margin: auto;
-        padding: 3.6rem 11vw;
+        margin: 0px 48px;
+        padding: 36px 110px;
         
         .foot_seperator {
             max-width: 1440px;
@@ -67,7 +71,7 @@ body {
                     display: flex;
                     max-width: 300px;
                     text-decoration: none;
-                    margin: 1rem 0px;
+                    margin: 1rem 0 0 0;
                     >div {
                         &:nth-child(1){
                             margin: 0px 2rem 0px 0px;
@@ -80,7 +84,7 @@ body {
                             display: block;
                             flex-direction: column;
                             flex: 0 1 auto;
-                            width: 78%;
+                            // width: 78%;
                             >div {
                                 &:nth-child(1) {
                                     font-size: 0.928rem;
@@ -257,7 +261,7 @@ body {
                 }
                 .foot_card_left {
                     display: flex;
-                    width: 72%;
+                    width: 60%;
                     flex-wrap: wrap;
                     list-style: none;
                     -webkit-box-pack: justify;

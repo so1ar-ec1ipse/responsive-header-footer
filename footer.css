@@ -7,6 +7,9 @@ body {
   font-family: Times;
   background: #eee;
 }
+* {
+  box-sizing: inherit;
+}
 .footer {
   background-color: #f5f5f5;
   font-family: Interstate;
@@ -22,7 +25,8 @@ body {
 .exported-element > div {
   max-width: 1440px;
   margin: auto;
-  padding: 3.6rem 11vw;
+  margin: 0px 48px;
+  padding: 36px 110px;
 }
 .exported-element > div .foot_seperator {
   max-width: 1440px;
@@ -47,7 +51,7 @@ body {
   display: flex;
   max-width: 300px;
   text-decoration: none;
-  margin: 1rem 0px;
+  margin: 1rem 0 0 0;
 }
 .exported-element > div > div:nth-child(1) > a > div:nth-child(1), .exported-element > div > div:nth-child(1) div > div:nth-child(1) {
   margin: 0px 2rem 0px 0px;
@@ -60,7 +64,6 @@ body {
   display: block;
   flex-direction: column;
   flex: 0 1 auto;
-  width: 78%;
 }
 .exported-element > div > div:nth-child(1) > a > div:nth-child(2) > div:nth-child(1), .exported-element > div > div:nth-child(1) div > div:nth-child(2) > div:nth-child(1) {
   font-size: 0.928rem;
@@ -216,7 +219,7 @@ body {
 }
 .exported-element > div > div:nth-child(3) .foot_card_left {
   display: flex;
-  width: 72%;
+  width: 60%;
   flex-wrap: wrap;
   list-style: none;
   -webkit-box-pack: justify;
