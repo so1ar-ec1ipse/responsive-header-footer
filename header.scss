@@ -47,7 +47,7 @@
                     &.featured {
                         flex: 0 1 auto;
                         height: auto;
-                    }
+                    }   
                     > span.tile {
                         font-size: 1rem;
                         opacity: 1;
@@ -265,7 +265,7 @@
             height: 60px;
 
             >div.content {
-                &:nth-child(1) {
+                > .header_search_container  {
                     padding: 0px 12px 0px 0px;
                     position: relative;
                     width: 100%;
@@ -355,7 +355,7 @@
                                         }
                                     }
 
-                                    & .search_btn {
+                                    & span.search_btn {
                                         cursor: pointer;
                                         position: absolute;
 
@@ -464,7 +464,7 @@
                         }
                     }
 
-                    >.right {
+                    >ul.right {
                         flex-shrink: 0;
                         padding-right: 14px;
                         height: 100%;
@@ -563,6 +563,9 @@
                         }
                     }
                 }
+            }
+            >div :nth-child(3) {
+                display: none;
             }
         }
 
