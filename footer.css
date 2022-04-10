@@ -1,3 +1,13 @@
+@font-face {
+  font-family: 'Interstate-Regular';
+  src: url('./view/static/fonts/interstate-regular.eot');
+  src: url('./view/static/fonts/interstate-regular.eot?#iefix') format('embedded-opentype'),
+      url('./view/static/fonts/interstate-regular.woff') format('woff'),
+      url('./view/static/fonts/interstate-regular.ttf') format('truetype'),
+      url('./view/static/fonts/interstate-regular.svg#interstate-regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
@@ -51,7 +61,7 @@ body {
   display: flex;
   max-width: 300px;
   text-decoration: none;
-  margin: 1rem 0 0 0;
+  margin: 0;
 }
 .exported-element > div > div:nth-child(1) > a > div:nth-child(1), .exported-element > div > div:nth-child(1) div > div:nth-child(1) {
   margin: 0px 2rem 0px 0px;
@@ -203,7 +213,6 @@ body {
 }
 .exported-element > div > div:nth-child(3) > div:nth-child(2) > ul {
   display: flex;
-  justify-content: center;
   list-style: none;
   margin: 15px auto;
   padding: 0px;
@@ -227,7 +236,8 @@ body {
 }
 .exported-element > div > div:nth-child(3) .foot_card_right {
   flex-direction: column;
-  max-width: 30rem;
+  max-width: 300px;
+  width: 100%;
 }
 .exported-element > div > div:nth-child(5) {
   display: flex;
