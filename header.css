@@ -84,6 +84,10 @@
   width: 100%;
   line-height: 1.5rem;
 }
+.egsjPH > div > .column > .group ul > li > a .item:hover {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
 .eKWEuw {
   font-family: Interstate;
   position: fixed;
