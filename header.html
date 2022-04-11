@@ -46,12 +46,14 @@
                         <div class="search_input_container transform_in">
                             <div class="search_input">
                                 <div class="styles__StyledInputContainer-sc-jjctc6-0 dyrnsz">
-                                    <div class="input_parent"><input placeholder="Search"
+                                    <div class="input_parent">
+                                        <input placeholder="Search" onfocus="onSearch(true)"
                                             class="styles__StyledInput-sc-jjctc6-2 jSMZTw inputClassName " value=""
                                             id="search" name="search" tabindex="-1" role="combobox"
                                             aria-expanded="false"></div>
                                 </div>
-                            </div><span class="search_btn"><svg width="18" height="18" viewBox="0 0 18 18"
+                            </div>
+                            <span class="search_btn"><svg width="18" height="18" viewBox="0 0 18 18"
                                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                     <defs>
                                         <path
@@ -67,14 +69,6 @@
                                         </g>
                                     </g>
                                 </svg></span>
-                        </div>
-                        <div class="search_dropdown fade_out" role="listbox">
-                            <div id="text_suggestions_wrapper" class="text_suggestions_wrapper transform_out">
-                                <div id="search_terms"></div>
-                                <div id="searchProducts"></div>
-                                <div class="quick_links"></div>
-                            </div>
-                            <div class="vertical-row empty"></div>
                         </div>
                     </div>
                 </div>
@@ -106,6 +100,19 @@
                                 </g>
                             </svg></span><span class="bag"> Bag </span></a></li>
             </ul>
+            <span onclick="onSearch(false)" role="button" aria-label="close-search" tabindex="0" class="close_btn">
+                <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 32 32" id="closeBtn" x="0px" y="0px" focusable="false"><title>close</title><path d="M17.41,16l7.3-7.29a1,1,0,1,0-1.42-1.42L16,14.59,8.71,7.29A1,1,0,1,0,7.29,8.71L14.59,16l-7.3,7.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0L16,17.41l7.29,7.3a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42Z" fill="currentColor"></path></svg>
+            </span>
+        </div>
+        
+        <div id="search_dropdown" class="search_dropdown fade_out" role="listbox">
+            <!-- <div class="search_dropdown  fade_out" role="listbox"> -->
+            <div id="text_suggestions_wrapper" class="text_suggestions_wrapper transform_out">
+                <div id="search_terms"></div>
+                <div id="searchProducts"></div>
+                <div class="quick_links"></div>
+            </div>
+            <div class="vertical-row empty"></div>
         </div>
     </div>
     <div class="styles__StyledRow-sc-c9h0jf-1 styles__StyledCategoryRow-sc-c9h0jf-3 jCqRWz app_header_category_row">
@@ -186,19 +193,37 @@
 </header>
 
 <script>
-    let preDrop = ''
+    let preDrop = '', preSearch = false
     const showDDMenu = (ev) => {
-        if(preDrop != ev.target.innerHTML){
-            const prevDD = document.getElementById(preDrop)
-            if(prevDD != null) prevDD.style.display="none"
+        const prevDD = document.getElementById(preDrop)
+        if(prevDD != null) prevDD.style.display="none"
+        if(preSearch) return
+        if(ev != null){ 
             const newDD = document.getElementById(ev.target.innerHTML) 
             if(newDD != null) newDD.style.display="block"
             preDrop = ev.target.innerHTML
         }
+        // } 
     }
     const hideDDMenu = (ev) => {
         ev.target.style.display = "none"
         preDrop = ''
+    }
+    const onSearch = (iflag) => {
+        if(iflag){
+            preSearch = true
+            showDDMenu(preSearch)
+            document.querySelector('#search_dropdown').classList.replace('fade_out','fade_in');
+            document.getElementsByClassName('signedOut')[0].style.visibility = 'hidden';
+            document.getElementsByClassName('close_btn')[0].style.display = 'block';
+        }
+        else {
+            preSearch = false
+            document.querySelector('#search_dropdown').classList.replace('fade_in','fade_out');
+            document.getElementsByClassName('signedOut')[0].style.visibility = 'visible';
+            document.getElementsByClassName('close_btn')[0].style.display = 'none';
+        }
+
     }
 </script>
 
