@@ -1,4 +1,5 @@
-const siteMenuItems = [{
+const siteMenuItems = [
+        {
             "depth": 0,
             "repositoryBased": false,
             "properties": {
