@@ -565,6 +565,11 @@
     display: none;
   }
 }
+@media (max-width: 730px) {
+  .eKWEuw > .kNxzoi > div.content > .left.notification > div > .adventure_rewards > span {
+    display: none;
+  }
+}
 @media only screen and (max-width: 1024px) {
   .eKWEuw > .kNxzoi > .content > div:nth-child(2) > span {
     display: none;
