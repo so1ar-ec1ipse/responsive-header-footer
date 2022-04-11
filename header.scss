@@ -1,13 +1,10 @@
 // .search_input .input_parent {
 //     padding: 0px 30px 0px 20px;
 // }
-* {
-    font-family: Interstate;
-}
 .eKWEuw * {
     box-sizing: inherit;
     font-size: 14px;
-    font-family: Inst;
+    font-family: Interstate;
 }
 .egsjPH {
     display: none;
@@ -84,6 +81,10 @@
                                     width: 100%;
                                     line-height: 1.5rem;
                                 }
+                            }
+                            .item:hover {
+                                font-weight: 700;
+                                letter-spacing: 0.5px;
                             }
                         }
                     }
@@ -585,17 +586,6 @@
         // }
     }
 
-    // .egsjPH {
-    //     position: fixed;
-    //     left: 0px;
-    //     padding-top: 10px;
-    //     top: 134px;
-    //     border-bottom: 1px solid rgb(224, 224, 224);
-    //     z-index: 1000;
-    //     width: 100%;
-    //     max-height: 70vh;
-    //     overflow-y: scroll;
-    //     background: white;
     .jCqRWz {
         background: white;
         position: absolute;
@@ -698,7 +688,6 @@
             }
         }
     }
-    // }
 }
 
 
