@@ -5865,7 +5865,3 @@ const siteMenuItems = [
                 }
             }
         }]
-
-const changeShowData = (event) => {
-    console.log(event.target);
-  }
