@@ -1,7 +1,7 @@
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link rel="stylesheet" href="./fonts.css">
 <link rel="stylesheet" href="./header.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <header class="styles__StyledHeader-sc-c9h0jf-0 eKWEuw app_header">
     <div class="styles__StyledTophat-sc-zkwd5v-0 kNxzoi">
@@ -216,6 +216,7 @@
             document.querySelector('#search_dropdown').classList.replace('fade_out','fade_in');
             document.getElementsByClassName('signedOut')[0].style.visibility = 'hidden';
             document.getElementsByClassName('close_btn')[0].style.display = 'block';
+            console.log(document.getElementsByClassName('close_btn')[0])
         }
         else {
             preSearch = false
