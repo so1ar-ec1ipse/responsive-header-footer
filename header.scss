@@ -27,7 +27,7 @@
     position: fixed;
     left: 0px;
     padding-top: 10px;
-    top: 134px !important;
+    top: 135px !important;
     top: 0px;
     border-bottom: 1px solid #e0e0e0;
     z-index: 100;
@@ -644,22 +644,7 @@
         }
     }
 }
-// @media only screen and (max-width: 560px) {
-//     .eKWEuw {
-//         >.kNxzoi {
-//             >.content {
-//                 >div {
-//                     &:nth-child(2) {
-//                         display: none;
-//                     }
-//                 }
-//                 .left.offers > .cta span {
-//                     display: none;
-//                 }
-//             }
-//         }
-//     }
-// }
+
 @media (max-width: 730px) {
     .eKWEuw .dkolWV > div.content{ 
         width: 98%;
@@ -668,8 +653,7 @@
             height: 45px;
         }
     }
-    .eKWEuw > .kNxzoi > div.content > .left.notification,
-    .eKWEuw > .kNxzoi > div.content > .left.offers
+    .eKWEuw > .kNxzoi > div.content > .left.notification
     {
         visibility: hidden;
     }
@@ -705,10 +689,45 @@
             }
         }
     }
+    .eKWEuw > .kNxzoi > div.content > .left.offers {
+        background: #0098a8;
+        position: fixed;
+        height: 43px;
+        top: 143px;
+        width: 100%;
+        z-index: 1;
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        cursor: pointer;
+
+        >.cta {
+            max-width: 140px;
+            line-height: 13px;
+            margin-left: 10px;
+            display: inline-flex;
+            font-weight: bold;
+            min-width: 30vw;
+            max-width: 50px;
+        
+            >.icon-button {
+                transform: rotate(90deg);
+                transition: transform 0.2s ease 0s;
+                svg {
+                    margin: 0px 10px;
+                }
+            }
+        }
+        span {
+            max-width: 50%;
+            display: block;
+        }
+    }
+                        
     .eKWEuw .close_btn {
         z-index: 1900;
-        right: 67px;
-        top: 65px;
+        right: 12vw;
+        top: 61px;
     }
     .search_dropdown {
         top:100px;
@@ -758,7 +777,7 @@
         position: fixed;
         left: 0vw;
         padding-top: 1vw;
-        top: 13.4vw !important;
+        top: 13.5vw !important;
         top: 0vw;
         border-bottom: 1px solid #e0e0e0;
         z-index: 1000;
