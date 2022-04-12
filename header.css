@@ -585,15 +585,19 @@
   display: none;
 }
 @media (max-width: 730px) {
+  .eKWEuw .dkolWV > div.content > .left > a > svg {
+    width: 130px;
+    height: 45px;
+ }
   .eKWEuw > .kNxzoi > div.content > .left.notification, .eKWEuw > .kNxzoi > div.content > .left.offers {
     visibility: hidden;
  }
-  .eKWEuw > .kNxzoi > div.content > .fQsIIc > a:nth-child(1), .eKWEuw > .dkolWV > .content > .header_search_container > .dSOuAf, .eKWEuw > .kNxzoi > div.content > .left.notification > div > .adventure_rewards > span, .eKWEuw > .dkolWV > .content > .right .bag, .eKWEuw .jCqRWz {
+  .eKWEuw > .kNxzoi > .content > .fQsIIc > a:nth-child(1), .eKWEuw > .dkolWV > .content > .header_search_container > .dSOuAf, .eKWEuw > .kNxzoi > .content > .left.notification > div > .adventure_rewards > span, .eKWEuw > .dkolWV > .content > .right .bag, .eKWEuw .jCqRWz {
     display: none;
  }
 }
 @media (min-width: 731px) {
-  .eKWEuw > .dkolWV > .content > .header_search_container > .menu_icon, .eKWEuw > .dkolWV > .search_input_container, .dkolWV > .search_wrapper {
+  .eKWEuw > .dkolWV > .content > .header_search_container > .menu_icon {
     display: none;
  }
 }
