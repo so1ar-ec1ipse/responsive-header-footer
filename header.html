@@ -214,7 +214,8 @@
             preSearch = true
             showDDMenu(preSearch)
             document.querySelector('#search_dropdown').classList.replace('fade_out','fade_in');
-            document.getElementsByClassName('signedOut')[0].style.visibility = 'hidden';
+            if(document.body.clientWidth > 730)
+                document.getElementsByClassName('signedOut')[0].style.visibility = 'hidden';
             document.getElementsByClassName('close_btn')[0].style.display = 'block';
             console.log(document.getElementsByClassName('close_btn')[0])
         }

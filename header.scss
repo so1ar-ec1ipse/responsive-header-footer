@@ -14,8 +14,8 @@
     display: none;
     cursor: pointer;
     position: absolute;
-    right: 16px;
-    margin-top: 6px;
+    right: 24px;
+    // margin-top: 6px;
 }
 .eKWEuw * {
     box-sizing: inherit;
@@ -30,9 +30,9 @@
     top: 134px !important;
     top: 0px;
     border-bottom: 1px solid #e0e0e0;
-    z-index: 1000;
+    z-index: 100;
     width: 100%;
-    max-height: 70vh;
+    max-height: 60vh;
     overflow-y: scroll;
     background: white;
     >div {
@@ -114,7 +114,7 @@
     position: fixed;
     top: 0px;
     left: 0px;
-    z-index: 1100;
+    z-index: 110;
     width: 100%;
 
     >.kNxzoi {
@@ -584,21 +584,17 @@
 
 .search_dropdown {
     // display: none !important;
+    position: relative;
     box-shadow: rgb(0 0 0 / 15%) 1px 4px 6px 0px;
     display: flex;
-    border-right: 1px solid #cccccc;
-    border-bottom: 1px solid #cccccc;
-    border-left: 1px solid #cccccc;
+    border-top: 0 1px 1px 1px solid #cccccc;
     border-image: initial;
     background: #ffffff;
     z-index: 110;
-    position: relative;
-    border-top: none;
-    min-height: 400px;
     margin: 6px auto;
     flex-wrap: wrap;
     overflow-y: scroll;
-    max-height: 380px;
+    max-height: 240px;
     width: 100%;
     @media (max-width: 764px) {
         .hciudy #text_suggestions_wrapper {
@@ -665,9 +661,12 @@
 //     }
 // }
 @media (max-width: 730px) {
-    .eKWEuw .dkolWV > div.content > .left > a >svg {
-        width: 130px;
-        height: 45px;
+    .eKWEuw .dkolWV > div.content{ 
+        width: 98%;
+        > .left > a >svg {
+            width: 130px;
+            height: 45px;
+        }
     }
     .eKWEuw > .kNxzoi > div.content > .left.notification,
     .eKWEuw > .kNxzoi > div.content > .left.offers
@@ -675,11 +674,45 @@
         visibility: hidden;
     }
     .eKWEuw > .kNxzoi > .content > .fQsIIc > a:nth-child(1),
-    .eKWEuw > .dkolWV > .content > .header_search_container > .dSOuAf ,
     .eKWEuw > .kNxzoi > .content > .left.notification > div > .adventure_rewards > span,
     .eKWEuw > .dkolWV > .content > .right .bag,
     .eKWEuw   .jCqRWz  {
         display: none;
+    }
+    .eKWEuw > .dkolWV > .content > .header_search_container > .dSOuAf {
+        position: absolute;
+        top: 40px;
+        height: 47px;
+        width: 89vw;
+        border-bottom: 1px solid #e0e0e0;
+        border-top: 1px solid #e0e0e0;
+        padding: 0px 16px;
+        >div#search_wrapper {
+            padding: 0%;
+            // height: 41px;
+            >.search_input_container {
+                padding: 0%;
+                -webkit-box-pack: end;
+                justify-content: flex-end;
+                display: flex;
+                // height: 44px;
+                -webkit-box-align: center;
+                align-items: center;
+                .search_input {
+                    max-width: 100%;
+                    border:none;
+                }
+            }
+        }
+    }
+    .eKWEuw .close_btn {
+        z-index: 1900;
+        right: 67px;
+        top: 65px;
+    }
+    .search_dropdown {
+        top:100px;
+        position: absolute;
     }
 }
 
@@ -730,7 +763,7 @@
         border-bottom: 1px solid #e0e0e0;
         z-index: 1000;
         width: 100%;
-        max-height: 70vh;
+        max-height: 60vh;
         overflow-y: scroll;
         background: white;
         >div {
