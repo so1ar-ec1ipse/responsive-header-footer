@@ -115,7 +115,7 @@ body {
   line-height: 2rem;
   letter-spacing: 0.2px;
   opacity: 1;
-  color: #333333;
+  color: #333;
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -131,7 +131,7 @@ body {
   letter-spacing: 0.2px;
   opacity: 1;
   font-weight: lighter;
-  color: #333333;
+  color: #333;
 }
 .exported-element > div > div:nth-child(3) > div:nth-child(1) > div > div:nth-child(1) > ul > li, .exported-element > div > div:nth-child(3) > div:nth-child(1) > div > div:nth-child(2) > ul > li, .exported-element > div > div:nth-child(3) > div:nth-child(1) > div > div:nth-child(4) > ul > li {
   display: list-item;
@@ -191,7 +191,7 @@ body {
   width: 185px;
   height: 39px;
   margin-top: 12px;
-  background: #333333;
+  background: #333;
   border-radius: 0px;
   text-transform: uppercase;
   font-size: 0.928rem;
@@ -199,7 +199,7 @@ body {
   letter-spacing: 0.2px;
   opacity: 1;
   font-weight: bold;
-  color: #ffffff;
+  color: #fff;
 }
 .exported-element > div > div:nth-child(3) > div:nth-child(2) > ul {
   display: flex;
@@ -308,60 +308,64 @@ body {
   color: #565a5c;
 }
 @media (max-width: 565px) {
-  .exported-element .foot_seperator {
+  .foot_seperator {
     display: none;
-  }
+ }
   .exported-element > div {
     margin: auto;
     padding: 1.2rem 4vw;
-  }
+ }
   .exported-element > div > div:nth-child(1) {
-    display: block;
-  }
-  .exported-element > div > div:nth-child(1) > a, .exported-element > div > div:nth-child(1) div {
-    max-width: 100%;
+    margin: 1rem 0 0 0;
+ }
+  .exported-element > div > div:nth-child(1) > a, .exported-element > div > div:nth-child(1) > div {
+    text-align: center;
+    max-width: 94px;
+    color: #333;
     text-decoration: none;
-    margin: 1rem 0px;
-  }
-  .exported-element > div > div:nth-child(1) > a > div:nth-child(2), .exported-element > div > div:nth-child(1) div > div:nth-child(2) {
+    display: block;
+ }
+  .exported-element > div > div:nth-child(1) > a > div:nth-child(1), .exported-element > div > div:nth-child(1) > div > div:nth-child(1) {
+    width: 38px;
+    height: 38px;
+    margin: auto;
+ }
+  .exported-element > div > div:nth-child(1) > a > div:nth-child(1) > svg, .exported-element > div > div:nth-child(1) > div > div:nth-child(1) > svg {
+    width: 48px;
+    height: 32px;
+ }
+  .exported-element > div > div:nth-child(1) > a > div:nth-child(2) .card_heading, .exported-element > div > div:nth-child(1) > div > div:nth-child(2) .card_heading {
     width: 100%;
-  }
+ }
+  .exported-element > div > div:nth-child(1) > a > div:nth-child(2) .card_subheading, .exported-element > div > div:nth-child(1) > div > div:nth-child(2) .card_subheading {
+    display: none;
+ }
   .exported-element > div > div:nth-child(3) > div {
     display: block;
-  }
+ }
   .exported-element > div > div:nth-child(3) > div:nth-child(1) {
     width: 100%;
     margin: 1rem 0px;
-  }
+ }
   .exported-element > div > div:nth-child(3) > div:nth-child(1) > div {
-    width: 80%;
+    width: 100%;
     margin: auto;
     display: block;
-  }
-  .exported-element > div > div:nth-child(3) > div:nth-child(1) > div div.i-handler {
-    width: 100%;
-    margin: 0px !important;
-    padding: 0px !important;
-  }
-  .exported-element > div > div:nth-child(3) > div:nth-child(1) > div div.i-handler:hover > ul {
-    display: block !important;
-  }
+ }
   .exported-element > div > div:nth-child(3) > div:nth-child(1) > div span {
     align-items: center;
     box-sizing: border-box;
-    border-bottom: 0.1rem solid #000000;
     cursor: pointer;
     display: flex;
-    flex-basis: 100%;
-    font-size: 17px;
-    font-weight: 700;
-    height: 5rem;
+    height: 3.5rem;
     justify-content: space-between;
-    letter-spacing: 0;
     margin: 0;
-    padding: 0 1rem;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    padding: 6px 11px;
     width: 100%;
-  }
+ }
   .exported-element > div > div:nth-child(3) > div:nth-child(1) > div span::after {
     background-color: initial;
     background-image: url(https://www.eddiebauer.com/view/static/images/svg/ydv/arrowDown.svg);
@@ -370,153 +374,169 @@ body {
     background-size: contain;
     content: "";
     font-family: "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 13px;
-    font-weight: 700;
-    height: 1.6rem;
+    width: 0.8rem;
+    height: 0.8rem;
     line-height: 5.1rem;
     margin: 0;
     padding: 0;
     transition: all 0.3s ease-in-out;
-    width: 1.6rem;
-  }
+ }
+  .exported-element > div > div:nth-child(3) > div:nth-child(1) > div span:hover::after {
+    transform: scale(1, -1);
+    transition: all 0.3s ease-in-out;
+ }
   .exported-element > div > div:nth-child(3) > div:nth-child(1) > div span + ul {
     display: none !important;
-  }
+ }
+  .exported-element > div > div:nth-child(3) > div:nth-child(1) > div div.i-handler {
+    width: 100%;
+    margin: 0px !important;
+    padding: 0px !important;
+    border-bottom: 0.1rem solid #000;
+ }
+  .exported-element > div > div:nth-child(3) > div:nth-child(1) > div div.i-handler:hover > ul {
+    display: flex !important;
+    flex-direction: column;
+    letter-spacing: 0.2px;
+    text-transform: capitalize;
+    font-weight: 300;
+    padding: 0 11px;
+ }
   .exported-element > div > div:nth-child(3) > div:nth-child(2) {
     text-align: center;
     max-width: 100%;
     width: 100%;
-  }
+ }
   .exported-element > div > div:nth-child(3) > div:nth-child(2) > ul {
     justify-content: center;
-  }
+ }
 }
 @media (min-width: 565px) and (max-width: 780px) {
   .exported-element > div {
     margin: auto;
     padding: 1.2rem 4vw;
-  }
+ }
   .exported-element > div > div:nth-child(1) {
     display: block;
-  }
+ }
   .exported-element > div > div:nth-child(1) > a, .exported-element > div > div:nth-child(1) div {
     max-width: 100%;
     text-decoration: none;
     margin: 1rem 0;
-  }
+ }
   .exported-element > div > div:nth-child(1) > a > div:nth-child(2), .exported-element > div > div:nth-child(1) div > div:nth-child(2) {
     width: 100%;
-  }
+ }
   .exported-element > div > div:nth-child(3) > div {
     display: block;
-  }
+ }
   .exported-element > div > div:nth-child(3) > div:nth-child(1) {
     width: 100%;
     margin: 1rem 0px 2rem 0px;
-  }
+ }
   .exported-element > div > div:nth-child(3) > div:nth-child(1) > div {
     width: 45%;
     display: block;
-  }
+ }
   .exported-element > div > div:nth-child(3) > div:nth-child(1) > div div {
     width: 100%;
     margin: 0px !important;
     padding: 0px !important;
-  }
+ }
   .exported-element > div > div:nth-child(3) > div:nth-child(2) {
     text-align: center;
     max-width: 100%;
     width: 100%;
-  }
+ }
   .exported-element > div > div:nth-child(3) > div:nth-child(2) > div {
     width: 50%;
-  }
+ }
   .exported-element > div > div:nth-child(3) > div:nth-child(2) > ul {
     justify-content: center;
-  }
+ }
 }
 @media (min-width: 780px) and (max-width: 1135px) {
   .exported-element > div {
     margin: auto;
     padding: 1.2rem 7vm;
-  }
+ }
   .exported-element > div > div:nth-child(1) > a, .exported-element > div > div:nth-child(1) div {
     text-decoration: none;
     margin: 1rem 0px;
-  }
+ }
   .exported-element > div > div:nth-child(1) > a > div:nth-child(2), .exported-element > div > div:nth-child(1) div > div:nth-child(2) {
     width: 100%;
-  }
+ }
   .exported-element > div > div:nth-child(3) > div {
     display: block;
-  }
+ }
   .exported-element > div > div:nth-child(3) > div:nth-child(1) {
     width: 100%;
     margin: 1rem 0px 2rem 0px;
-  }
+ }
   .exported-element > div > div:nth-child(3) > div:nth-child(1) > div div {
     width: 100%;
     margin: 0px !important;
     padding: 0px !important;
-  }
+ }
   .exported-element > div > div:nth-child(3) > div:nth-child(2) {
     text-align: center;
     max-width: 100%;
     width: 100%;
-  }
+ }
   .exported-element > div > div:nth-child(3) > div:nth-child(2) > div {
     width: 50%;
-  }
+ }
   .exported-element > div > div:nth-child(3) > div:nth-child(2) > ul {
     justify-content: center;
-  }
+ }
 }
 @media (min-width: 1500px) {
   .exported-element {
     font-size: 1.4vw;
-  }
+ }
   .exported-element > div {
     margin: auto;
     margin: 0px 0.48vw;
     padding: 0.36vw 10vw;
-  }
+ }
   .exported-element > div .foot_seperator {
     opacity: 0.25;
     background-color: #424242;
     height: 1px;
     margin: 1.6rem 0px;
-  }
+ }
   .exported-element > div .footer-content {
     display: flex;
     -webkit-box-pack: justify;
     justify-content: space-between;
     flex-wrap: wrap;
-  }
+ }
   .exported-element > div > div.footer-cards {
     display: flex;
     -webkit-box-pack: justify;
     justify-content: space-between;
     flex-wrap: wrap;
     margin: 1vw 0vw;
-  }
+ }
   .exported-element > div > div.footer-cards > a, .exported-element > div > div.footer-cards div {
     display: flex;
     max-width: 25vw;
     text-decoration: none;
     margin: 0;
-  }
+ }
   .exported-element > div > div.footer-cards > a > div:nth-child(1), .exported-element > div > div.footer-cards div > div:nth-child(1) {
     margin: 0vw 2vw 0vw 0vw;
-  }
+ }
   .exported-element > div > div.footer-cards > a > div:nth-child(1) > svg, .exported-element > div > div.footer-cards div > div:nth-child(1) > svg {
     width: 4.8vw;
     height: 4.8vw;
-  }
+ }
   .exported-element > div > div.footer-cards > a > div:nth-child(2), .exported-element > div > div.footer-cards div > div:nth-child(2) {
     display: block;
     flex-direction: column;
     flex: 0 1 auto;
-  }
+ }
   .exported-element > div > div.footer-cards > a > div:nth-child(2) > div:nth-child(1), .exported-element > div > div.footer-cards div > div:nth-child(2) > div:nth-child(1) {
     font-size: 0.928vw;
     letter-spacing: 0.02vw;
@@ -526,7 +546,7 @@ body {
     text-transform: uppercase;
     line-height: normal;
     margin-top: 0.3vw;
-  }
+ }
   .exported-element > div > div.footer-cards > a > div:nth-child(2) > div:nth-child(2), .exported-element > div > div.footer-cards div > div:nth-child(2) > div:nth-child(2) {
     font-size: 0.928vw;
     letter-spacing: 0.02vw;
@@ -534,43 +554,43 @@ body {
     font-weight: lighter;
     color: #565a5c;
     line-height: 2.08;
-  }
+ }
   .exported-element > div > div.footer-customerservice {
     display: flex;
     -webkit-box-pack: justify;
     justify-content: space-between;
     flex-wrap: wrap;
-  }
+ }
   .exported-element > div > div.footer-customerservice > div:nth-child(1) > div {
     display: flex;
     -webkit-box-pack: center;
     justify-content: center;
     width: 25%;
-  }
+ }
   .exported-element > div > div.footer-customerservice > div:nth-child(1) > div > div {
     width: 16vw;
-  }
+ }
   .exported-element > div > div.footer-customerservice > div:nth-child(1) > div > div:nth-child(3) {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-  }
+ }
   .exported-element > div > div.footer-customerservice > div:nth-child(1) > div > div:nth-child(3) > div:nth-child(1) {
     width: 13vw;
-  }
+ }
   .exported-element > div > div.footer-customerservice > div:nth-child(1) > div > div:nth-child(3) > div:nth-child(2) {
     margin-top: 2.8vw;
     width: 16vw;
-  }
+ }
   .exported-element > div > div.footer-customerservice > div:nth-child(1) > div > div:nth-child(1) > span, .exported-element > div > div.footer-customerservice > div:nth-child(1) > div > div:nth-child(2) > span, .exported-element > div > div.footer-customerservice > div:nth-child(1) > div > div:nth-child(4) > span {
     font-size: 0.928vw;
     line-height: 2vw;
     letter-spacing: 0.02vw;
     opacity: 1;
-    color: #333333;
+    color: #333;
     font-weight: bold;
     text-transform: uppercase;
-  }
+ }
   .exported-element > div > div.footer-customerservice > div:nth-child(1) > div > div:nth-child(1) > ul, .exported-element > div > div.footer-customerservice > div:nth-child(1) > div > div:nth-child(2) > ul, .exported-element > div > div.footer-customerservice > div:nth-child(1) > div > div:nth-child(4) > ul {
     list-style-type: none;
     padding: 0;
@@ -583,22 +603,22 @@ body {
     letter-spacing: 0.02vw;
     opacity: 1;
     font-weight: lighter;
-    color: #333333;
-  }
+    color: #333;
+ }
   .exported-element > div > div.footer-customerservice > div:nth-child(1) > div > div:nth-child(1) > ul > li, .exported-element > div > div.footer-customerservice > div:nth-child(1) > div > div:nth-child(2) > ul > li, .exported-element > div > div.footer-customerservice > div:nth-child(1) > div > div:nth-child(4) > ul > li {
     display: list-item;
     text-align: -webkit-match-parent;
-  }
+ }
   .exported-element > div > div.footer-customerservice > div:nth-child(1) > div > div:nth-child(1) > ul > li > div, .exported-element > div > div.footer-customerservice > div:nth-child(1) > div > div:nth-child(2) > ul > li > div, .exported-element > div > div.footer-customerservice > div:nth-child(1) > div > div:nth-child(4) > ul > li > div {
     display: block;
-  }
+ }
   .exported-element > div > div.footer-customerservice > div:nth-child(1) > div > div:nth-child(1) > ul > li > div > a, .exported-element > div > div.footer-customerservice > div:nth-child(1) > div > div:nth-child(2) > ul > li > div > a, .exported-element > div > div.footer-customerservice > div:nth-child(1) > div > div:nth-child(4) > ul > li > div > a {
     color: inherit;
     text-decoration: none;
     cursor: pointer;
     font-size: 0.8vw;
     line-height: 2vw;
-  }
+ }
   .exported-element > div > div.footer-customerservice > div:nth-child(1) > div > div:nth-child(1) > ul > li > div > a .card_subheading, .exported-element > div > div.footer-customerservice > div:nth-child(1) > div > div:nth-child(2) > ul > li > div > a .card_subheading, .exported-element > div > div.footer-customerservice > div:nth-child(1) > div > div:nth-child(4) > ul > li > div > a .card_subheading {
     background-color: red;
     font-size: 0.928vw;
@@ -607,7 +627,7 @@ body {
     opacity: 1;
     font-weight: lighter;
     color: #565a5c;
-  }
+ }
   .exported-element > div > div.footer-customerservice > div:nth-child(1) > div > div:nth-child(1) > ul > li > div > a .nav_list_subtitle, .exported-element > div > div.footer-customerservice > div:nth-child(1) > div > div:nth-child(2) > ul > li > div > a .nav_list_subtitle, .exported-element > div > div.footer-customerservice > div:nth-child(1) > div > div:nth-child(4) > ul > li > div > a .nav_list_subtitle {
     padding: 0vw;
     text-transform: capitalize;
@@ -616,14 +636,14 @@ body {
     text-decoration: none;
     letter-spacing: 0.1vw;
     cursor: pointer;
-  }
+ }
   .exported-element > div > div.footer-customerservice > div:nth-child(1) > div > div:nth-child(1) > ul > li > div > a:hover, .exported-element > div > div.footer-customerservice > div:nth-child(1) > div > div:nth-child(2) > ul > li > div > a:hover, .exported-element > div > div.footer-customerservice > div:nth-child(1) > div > div:nth-child(4) > ul > li > div > a:hover {
     font-weight: bold;
     letter-spacing: 0.055vw;
-  }
+ }
   .exported-element > div > div.footer-customerservice > div:nth-child(2) > span {
     display: block;
-  }
+ }
   .exported-element > div > div.footer-customerservice > div:nth-child(2) > span:nth-child(1) {
     font-size: 0.928vw;
     line-height: 2vw;
@@ -632,20 +652,20 @@ body {
     color: #333;
     font-weight: bold;
     text-transform: uppercase;
-  }
+ }
   .exported-element > div > div.footer-customerservice > div:nth-child(2) > span:nth-child(2) {
     font-weight: 300;
     font-size: 1.2vw;
     line-height: 1.8vw;
     letter-spacing: 0.017vw;
     margin-top: 0.6vw;
-  }
+ }
   .exported-element > div > div.footer-customerservice > div:nth-child(2) > button {
     justify-content: center;
     width: 18.5vw;
     height: 3.9vw;
     margin-top: 1.2vw;
-    background: #333333;
+    background: #333;
     border-radius: 0vw;
     text-transform: uppercase;
     font-size: 0.928vw;
@@ -653,26 +673,26 @@ body {
     letter-spacing: 0.02vw;
     opacity: 1;
     font-weight: bold;
-    color: #ffffff;
-  }
+    color: #fff;
+ }
   .exported-element > div > div.footer-customerservice > div:nth-child(2) > ul {
     display: flex;
     list-style: none;
     margin: 1.5vw auto;
     padding: 0vw;
-  }
+ }
   .exported-element > div > div.footer-customerservice > div:nth-child(2) > ul > li {
     margin: 0vw 0.8vw;
     margin-top: auto;
     align-content: center;
-  }
+ }
   .exported-element > div > div.footer-customerservice > div:nth-child(2) > ul > li > a {
     text-decoration: none;
-  }
+ }
   .exported-element > div > div.footer-customerservice > div:nth-child(2) > ul > li > a svg {
     width: 1.6vw;
     height: 1.6vw;
-  }
+ }
   .exported-element > div > div.footer-customerservice .foot_card_left {
     display: flex;
     width: 60%;
@@ -680,32 +700,32 @@ body {
     list-style: none;
     -webkit-box-pack: justify;
     justify-content: space-between;
-  }
+ }
   .exported-element > div > div.footer-customerservice .foot_card_right {
     flex-direction: column;
     max-width: 30vw;
     width: 100%;
-  }
+ }
   .exported-element > div > div.footer-bottom {
     display: flex;
     -webkit-box-pack: justify;
     justify-content: space-between;
     flex-wrap: wrap;
-  }
+ }
   .exported-element > div > div.footer-bottom > div:nth-child(1) {
     display: flex;
     list-style: none;
     -webkit-box-align: center;
     align-items: center;
-  }
+ }
   .exported-element > div > div.footer-bottom > div:nth-child(1) .shop_sites {
     margin-right: 0.7vw;
     padding: 0.2vw 0.2vw 0vw;
     cursor: pointer;
-  }
+ }
   .exported-element > div > div.footer-bottom > div:nth-child(1) .shop_sites.active {
     border: 1px solid;
-  }
+ }
   .exported-element > div > div.footer-bottom > div:nth-child(1) .card_subheading {
     font-size: 1.4vw;
     line-height: 2vw;
@@ -713,43 +733,43 @@ body {
     opacity: 1;
     font-weight: lighter;
     color: #565a5c;
-  }
+ }
   .exported-element > div > div.footer-bottom > div:nth-child(1) > ul {
     display: flex;
     list-style-type: none;
     padding: 0;
     margin: 0;
-  }
+ }
   .exported-element > div > div.footer-bottom > div:nth-child(1) > ul svg {
     height: 1.6vw;
     width: max-content;
-  }
+ }
   .exported-element > div > div.footer-bottom > div:nth-child(2) {
     text-align: center;
     font-weight: lighter;
     margin: 1vw 0vw;
-  }
+ }
   .exported-element > div > div.footer-bottom > div:nth-child(2) > a {
     text-decoration: none;
-  }
+ }
   .exported-element > div > div.footer-bottom > div:nth-child(3) {
     display: flex;
     list-style: none;
     -webkit-box-align: center;
     align-items: center;
-  }
+ }
   .exported-element > div > div.footer-bottom > div:nth-child(3) .links {
     display: flex;
-  }
+ }
   .exported-element > div > div.footer-bottom > div:nth-child(3) ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
-  }
+ }
   .exported-element > div > div.footer-bottom > div:nth-child(3) ul > li {
     display: list-item;
     text-align: -webkit-match-parent;
-  }
+ }
   .exported-element > div > div.footer-bottom > div:nth-child(3) ul > li > a {
     font-size: 1.4vw;
     line-height: 2vw;
@@ -758,7 +778,7 @@ body {
     font-weight: lighter;
     color: #565a5c;
     text-decoration: none;
-  }
+ }
   .exported-element > div > div.copyrights {
     text-align: center;
     margin-top: 1vw;
@@ -768,5 +788,5 @@ body {
     opacity: 1;
     font-weight: lighter;
     color: #565a5c;
-  }
+ }
 }

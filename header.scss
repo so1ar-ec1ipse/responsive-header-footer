@@ -677,12 +677,13 @@
     .eKWEuw   .jCqRWz  {
         display: none;
     }
+    .eKWEuw > .dkolWV div.search_modal_container {
+        display: block !important;
+    }
 }
+
 @media (min-width: 731px) {
-    .eKWEuw>.dkolWV>.content>.header_search_container>.menu_icon,
-    .eKWEuw>.dkolWV>.search_input_container
-    // .eKWEuw>.dkolWV>.search_modal_container
-     {
+    .eKWEuw>.dkolWV>.content>.header_search_container>.menu_icon {
         display: none;
     }
 }
@@ -691,12 +692,7 @@
         >.kNxzoi {
             >.content {
                 >div {
-                    // &:nth-child(1) {
-                    //     span {
-                    //         display: none;
-                    //     }
-                    // }
-
+                   
                     &:nth-child(2) {
                         >span {
                             display: none;
