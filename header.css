@@ -26,7 +26,7 @@
   position: fixed;
   left: 0px;
   padding-top: 10px;
-  top: 134px !important;
+  top: 135px !important;
   top: 0px;
   border-bottom: 1px solid #e0e0e0;
   z-index: 100;
@@ -313,7 +313,7 @@
   padding: 15px 15px 0px;
 }
 .eKWEuw .dkolWV > div.content > .header_search_container > div > .hciudy > .search_input_container > .search_input {
-  max-width: 352px;
+  max-width: 21vw;
   border-bottom: 1px solid #979797;
   flex: 1 1 0%;
 }
@@ -387,6 +387,7 @@
   -webkit-box-pack: center;
   justify-content: center;
   flex: 1 1 0%;
+  margin-left: -16vw;
 }
 .eKWEuw .dkolWV > div.content > .left > a {
   text-decoration: none;
@@ -434,6 +435,9 @@
   text-decoration: none;
   -webkit-box-align: center;
   align-items: center;
+}
+.eKWEuw .dkolWV > div.content > .right > li.signedOut > .iQwjGn > span {
+  font-size: 11px;
 }
 .eKWEuw .jCqRWz {
   background: white;
@@ -587,7 +591,7 @@
     width: 130px;
     height: 45px;
  }
-  .eKWEuw > .kNxzoi > div.content > .left.notification, .eKWEuw > .kNxzoi > div.content > .left.offers {
+  .eKWEuw > .kNxzoi > div.content > .left.notification {
     visibility: hidden;
  }
   .eKWEuw > .kNxzoi > .content > .fQsIIc > a:nth-child(1), .eKWEuw > .kNxzoi > .content > .left.notification > div > .adventure_rewards > span, .eKWEuw > .dkolWV > .content > .right .bag, .eKWEuw .jCqRWz {
@@ -617,9 +621,41 @@
     max-width: 100%;
     border: none;
  }
+  .eKWEuw > .kNxzoi > div.content > .left.offers {
+    background: #0098a8;
+    position: fixed;
+    height: 43px;
+    top: 143px;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    cursor: pointer;
+ }
+  .eKWEuw > .kNxzoi > div.content > .left.offers > .cta {
+    max-width: 140px;
+    line-height: 13px;
+    margin-left: 10px;
+    display: inline-flex;
+    font-weight: bold;
+    min-width: 30vw;
+    max-width: 50px;
+ }
+  .eKWEuw > .kNxzoi > div.content > .left.offers > .cta > .icon-button {
+    transform: rotate(90deg);
+    transition: transform 0.2s ease 0s;
+ }
+  .eKWEuw > .kNxzoi > div.content > .left.offers > .cta > .icon-button svg {
+    margin: 0px 10px;
+ }
+  .eKWEuw > .kNxzoi > div.content > .left.offers span {
+    max-width: 50%;
+    display: block;
+ }
   .eKWEuw .close_btn {
     z-index: 1900;
-    right: 67px;
+    right: 12vw;
     top: 65px;
  }
   .search_dropdown {
@@ -637,7 +673,7 @@
     display: none;
  }
 }
-@media (min-width: 1500px) {
+@media (min-width: 1800px) {
   .close_btn {
     width: 3vw;
     height: 3vw;
@@ -657,7 +693,7 @@
     position: fixed;
     left: 0vw;
     padding-top: 1vw;
-    top: 13.4vw !important;
+    top: 13.5vw !important;
     top: 0vw;
     border-bottom: 1px solid #e0e0e0;
     z-index: 1000;

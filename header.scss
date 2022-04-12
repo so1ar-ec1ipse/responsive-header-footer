@@ -331,7 +331,7 @@
                                 padding: 15px 15px 0px;
     
                                 >.search_input {
-                                    max-width: 352px;
+                                    max-width: 21vw;
                                     border-bottom: 1px solid #979797;
                                     flex: 1 1 0%;
     
@@ -420,6 +420,7 @@
                     -webkit-box-pack: center;
                     justify-content: center;
                     flex: 1 1 0%;
+                    margin-left: -16vw;
     
                     >a {
                         text-decoration: none;
@@ -429,7 +430,6 @@
                             cursor: pointer;
                             z-index: 999;
                             margin-left: 74px;
-    
                             >svg {
                                 max-width: 180px;
                                 min-width: 130px;
@@ -470,6 +470,9 @@
                                 text-decoration: none;
                                 -webkit-box-align: center;
                                 align-items: center;
+                                >span {
+                                    font-size: 11px;
+                                }
                             }
                         }
                     }
@@ -727,7 +730,7 @@
     .eKWEuw .close_btn {
         z-index: 1900;
         right: 12vw;
-        top: 61px;
+        top: 65px;
     }
     .search_dropdown {
         top:100px;
@@ -757,7 +760,7 @@
     }
 
 }
-@media (min-width: 1500px) {
+@media (min-width: 1800px) {
     .close_btn {
         width: 3vw;
         height: 3vw;
