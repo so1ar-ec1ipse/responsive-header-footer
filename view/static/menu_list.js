@@ -5865,3 +5865,18 @@ const siteMenuItems = [
                 }
             }
         }]
+
+const findNextChild = (title, source) => {
+    for(let i = 0; i < source.length; i++){
+        if(title === source[i].name)
+            return source[i].childMenuItems
+    }
+} 
+const findNode = (data) => {
+    let source = siteMenuItems, title
+    for(let i = 1; i < data.length; i++) {
+        title = data[i]
+        source = findNextChild(data[i], source)
+    }
+    return {title, source}
+}
