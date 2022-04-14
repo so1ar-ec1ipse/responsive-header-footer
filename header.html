@@ -237,8 +237,8 @@
                         fill="currentColor"></path>
                 </svg></button>
             <div class="fzUHih">
-                <div onclick="moveScrollLeft" class="nav_btn slide_left_btn"><span class="arrows left_arrow"></span></div>
-                <div onclick="moveScrollRight" class="nav_btn slide_right_btn"><span class="arrows right_arrow"></span></div>
+                <div class="nav_btn slide_left_btn"><span class="arrows left_arrow"></span></div>
+                <div class="nav_btn slide_right_btn"><span class="arrows right_arrow"></span></div>
                 <div id = "top-nav-scroll-view" class="scroll_wrapper">
                     <div style="margin-left: 48px; margin-top: 48px;"></div>
                     <div class="hIyUxA">
@@ -458,9 +458,16 @@
         }
     }
     
-    
+
     const moveScroll = (step) => {
-        document.querySelector("#top-nav-scroll-view").scrollLeft += window.innerWidth*step;
+        let icounter = 0;
+        const seqMoveScroll = (step) => {
+            document.querySelector("#top-nav-scroll-view").scrollLeft += 50*step;
+            icounter += 50
+            if(icounter > window.innerWidth)
+                clearInterval(timerHandler)
+        }
+        const timerHandler = setInterval(seqMoveScroll, 10, step)
     }
     document.querySelector(".slide_left_btn").addEventListener("click", () => { moveScroll(-1) });
     document.querySelector(".slide_right_btn").addEventListener("click", () => { moveScroll(1) });
