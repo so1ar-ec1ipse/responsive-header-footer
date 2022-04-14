@@ -1,3 +1,8 @@
+header {
+  box-sizing: inherit;
+  font-family: Interstate;
+  box-sizing: inherit;
+}
 .fade_out {
   opacity: 0;
   pointer-events: none;
@@ -11,18 +16,12 @@
 .close_btn {
   width: 30px;
   height: 30px;
-  display: none;
-  cursor: pointer;
   position: absolute;
   right: 24px;
-}
-.eKWEuw * {
-  box-sizing: inherit;
-  font-size: 14px;
-  font-family: Interstate;
+  display: none;
+  cursor: pointer;
 }
 .egsjPH {
-  display: none;
   position: fixed;
   left: 0px;
   padding-top: 10px;
@@ -310,7 +309,7 @@
   height: 44px;
   -webkit-box-align: center;
   align-items: center;
-  padding: 15px 15px 0px;
+  padding: 7px 15px;
 }
 .eKWEuw .dkolWV > div.content > .header_search_container > div > .hciudy > .search_input_container > .search_input {
   max-width: 21vw;
@@ -1192,9 +1191,7 @@
   .search_dropdown {
     box-shadow: #000 1 4px 6px 0px;
     display: flex;
-    border-right: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
-    border-left: 1px solid #ccc;
+    border: 0 1px 1px 1px solid #ccc;
     border-image: initial;
     background: #fff;
     z-index: 110;
@@ -1239,7 +1236,7 @@
     display: none;
  }
 }
-#side-menu, #side-menu_sub {
+#side-menu, #side-menu_sub, #nav_dropdown {
   display: none;
 }
 div#sub-menu_title {
@@ -1257,7 +1254,6 @@ div#sub-menu_title svg {
 }
 .fuWQyr {
   display: none;
-  pointer-events: none;
   background: rgba(0, 0, 0, 0.35);
   outline: none;
   border: none;
@@ -1268,7 +1264,6 @@ div#sub-menu_title svg {
   width: 100%;
   z-index: 1300;
   animation: 0.2s ease-out 0s 1 normal none running eMLfYp;
-  pointer-events: none;
 }
 .epYlWY {
   height: 100%;
