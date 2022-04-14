@@ -5866,6 +5866,18 @@ const siteMenuItems = [
             }
         }]
 
+const handleElementById = (id) => {
+    return document.getElementById(id)
+}
+const showElement = (id) => {
+    handleElementById(id).style.display = "block"
+    handleElementById(id).style.pointerEvents = "auto"
+}
+const hideElement = (id) => {
+    handleElementById(id).style.display = "none"
+    handleElementById(id).style.pointerEvents = "none"
+}
+
 const findNextChild = (title, source) => {
     for(let i = 0; i < source.length; i++){
         if(title === source[i].name)
@@ -5880,36 +5892,32 @@ const findNode = (data) => {
     }
     return {title, source}
 }
-const showDDMenu = (ev) => {
-    const prevDD = document.getElementById(header_state.preDrop)
-    if(prevDD != null) prevDD.style.display="none"
-    if(header_state.preSearch) return
-    if(ev != null){ 
-        const newDD = document.getElementById(ev.target.innerHTML) 
-        if(newDD != null) newDD.style.display="block"
-        header_state.preDrop = ev.target.innerHTML
-    }
+const getShowForm = (title, data_list, isfear = false) => {
+    let featured = isfear?"featured":''
+    let ret_Data = '<div class="group'+' featured'+'">'
+        ret_Data += '<h2 class="title">' + title.toUpperCase() + '</h2><ul>'
+    data_list.map(data => {
+        ret_Data += '<li><a href="'
+        ret_Data += data._links.site.href
+        ret_Data += '"><div class="item"><div class="item-label">'
+        ret_Data += data.name.toUpperCase()
+        ret_Data += '</div></div></a></li>'
+    })
+    return ret_Data+'</ul></div>'
 }
-const hideDDMenu = (ev) => {
-    ev.target.style.display = "none"
-    preDrop = ''
-}
-const onSearch = (iflag) => {
-    if(iflag){
-        header_state.preSearch = true
-        showDDMenu(header_state.preSearch)
-        document.querySelector('#search_dropdown').classList.replace('fade_out','fade_in');
-        if(document.body.clientWidth > 730)
-            document.getElementsByClassName('signedOut')[0].style.visibility = 'hidden';
-        document.getElementsByClassName('close_btn')[0].style.display = 'block';
+const findNodeObj = (data) => {
+    const source = findNextChild(data, siteMenuItems)
+    let featured = '', extra = ''
+    for(x of source){
+        if(x.name.toLowerCase() === "featured"){
+            featured = getShowForm(x.name, findNextChild(x.name, source), true)
+        }
+        else
+            extra += getShowForm(x.name, findNextChild(x.name, source))
     }
-    else {
-        preSearch = false
-        document.querySelector('#search_dropdown').classList.replace('fade_in','fade_out');
-        document.getElementsByClassName('signedOut')[0].style.visibility = 'visible';
-        document.getElementsByClassName('close_btn')[0].style.display = 'none';
-    }
+    return {featured, extra}    
 }
+
 /**
  * Side Menu
  * **/
@@ -5934,18 +5942,20 @@ const addMenuList = (source) => {
 const updateSideMenu = (data) => {
     if(data.length>1){
         const targetNode = findNode(data)
-        document.getElementById("sub-menu_title_span").innerHTML = targetNode.title
-        document.getElementById("sub-menu_content").innerHTML = addMenuList(targetNode.source)
-        document.getElementById("side-menu_sub").style.display = "block"
+        handleElementById("sub-menu_title_span").innerHTML = targetNode.title
+        handleElementById("sub-menu_content").innerHTML = addMenuList(targetNode.source)
+        hideElement("side-menu")//.style.display = "none"
+        showElement("side-menu_sub")//.style.display = "block"
     }
     else if(data.length == 1){
-        document.getElementById("side-menu_sub").style.display = "none"
-        document.getElementById("bck-btn").style.display = "block"
-        document.getElementById("side-menu").style.display = "block"
+        hideElement("side-menu_sub")//.style.display = "none"
+        showElement("bck-btn")//.style.display = "block"
+        showElement("side-menu")//.style.display = "block"
     }
     else{
-        document.getElementById("bck-btn").style.display = "none"
-        document.getElementById("side-menu").style.display = "none"
+        hideElement("bck-btn")//.style.display = "none"
+        hideElement("side-menu")//.style.display = "none"
+        hideElement("side-menu_sub")//.style.display = "none"
     }
     const temp = document.querySelectorAll("div#sub-menu_content .bBUYMN")
     for(element in temp){

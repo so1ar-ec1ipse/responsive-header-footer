@@ -1,3 +1,8 @@
+header {
+  box-sizing: inherit;
+  font-family: Interstate;
+  box-sizing: inherit;
+}
 .fade_out {
   opacity: 0;
   pointer-events: none;
@@ -11,17 +16,12 @@
 .close_btn {
   width: 30px;
   height: 30px;
-  display: none;
-  cursor: pointer;
   position: absolute;
   right: 24px;
-}
-header {
-  box-sizing: inherit;
-  font-family: Interstate;
+  display: none;
+  cursor: pointer;
 }
 .egsjPH {
-  display: none;
   position: fixed;
   left: 0px;
   padding-top: 10px;
@@ -309,7 +309,7 @@ header {
   height: 44px;
   -webkit-box-align: center;
   align-items: center;
-  padding: 15px 15px 0px;
+  padding: 7px 15px;
 }
 .eKWEuw .dkolWV > div.content > .header_search_container > div > .hciudy > .search_input_container > .search_input {
   max-width: 21vw;
@@ -1236,7 +1236,7 @@ header {
     display: none;
  }
 }
-#side-menu, #side-menu_sub {
+#side-menu, #side-menu_sub, #nav_dropdown {
   display: none;
 }
 div#sub-menu_title {

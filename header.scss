@@ -1,6 +1,7 @@
 header {
     box-sizing: inherit;
     font-family: Interstate;
+    box-sizing: inherit;
 }
 .fade_out {
     opacity: 0;
@@ -21,7 +22,6 @@ header {
     cursor: pointer;
 }
 .egsjPH {
-    display: none;
     position: fixed;
     left: 0px;
     padding-top: 10px;
@@ -313,20 +313,17 @@ header {
                     >div {
                         flex: 1 1 0%;
                         z-index: 1;
-    
                         >.hciudy {
                             margin: 0px auto;
                             height: 60px;
-    
                             >.search_input_container {
-                                // width: 24.45%;
                                 -webkit-box-pack: end;
                                 justify-content: flex-end;
                                 display: flex;
                                 height: 44px;
                                 -webkit-box-align: center;
                                 align-items: center;
-                                padding: 15px 15px 0px;
+                                padding: 7px 15px;
     
                                 >.search_input {
                                     max-width: 21vw;
@@ -375,11 +372,9 @@ header {
     
                                     }
                                 }
-    
                                 & span.search_btn {
                                     cursor: pointer;
                                     position: absolute;
-    
                                     >svg {
                                         width: 18px;
                                         height: 18px;
@@ -399,8 +394,6 @@ header {
                                     border: none;
                                 }
                             }
-                            
-    
                             .transform_in {
                                 opacity: 1;
                                 transform: translate3d(0px, 0px, 0px);
@@ -622,10 +615,6 @@ header {
             & #search_terms {
                 margin-top: 10px;
             }
-
-            // & searchProducts {
-
-            // }
             & .quick_links {
                 display: flex;
                 flex-direction: column;
@@ -1377,7 +1366,7 @@ header {
         }
     }
 }
-#side-menu, #side-menu_sub {
+#side-menu, #side-menu_sub, #nav_dropdown {
     display: none;
 }
 div#sub-menu_title {
