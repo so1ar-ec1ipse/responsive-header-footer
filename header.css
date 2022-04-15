@@ -1,6 +1,8 @@
 header {
   box-sizing: inherit;
   font-family: Interstate;
+}
+header * {
   box-sizing: inherit;
 }
 .fade_out {
@@ -513,14 +515,6 @@ header {
   padding-bottom: 4px;
 }
 .eKWEuw .jCqRWz > .content > .cms-container > div > ul > li > a:hover {
-  display: flex;
-  height: 100%;
-  -webkit-box-align: center;
-  align-items: center;
-  letter-spacing: 0.6px;
-  opacity: 1;
-  font-weight: bold;
-  font-size: 14px;
   border-bottom: 4px solid #0098a8;
   padding-bottom: 0px;
 }

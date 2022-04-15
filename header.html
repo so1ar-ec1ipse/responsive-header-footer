@@ -34,7 +34,7 @@
             </div>
             <div class="fQsIIc"><a class="store_locator" href="/store-locator">
                     <div class="store_icon"></div><span class="store">Stores&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</span>
-                </a><a class="account">
+                </a><a id="login-account" class="account">
                     <div class="account_icon"></div><span class="store signin">Sign In / Sign Up</span>
                 </a></div>
         </div>
@@ -420,9 +420,9 @@
         </div>
     </div>
 <!-- Log In Box -->
-    <div class="log-in-box">
+    <div id="log-in-box" class="log-in-box">
         <div class="content">
-            <div class="close_icon" aria-label="Close" role="button"><svg data-name="Layer 1" viewBox="0 0 32 32" id="closeBtn" x="0px" y="0px" focusable="false">
+            <div id="log-in-close" class="close_icon" aria-label="Close" role="button"><svg data-name="Layer 1" viewBox="0 0 32 32" id="closeBtn" x="0px" y="0px" focusable="false">
                     <title>close</title>
                     <path
                         d="M17.41,16l7.3-7.29a1,1,0,1,0-1.42-1.42L16,14.59,8.71,7.29A1,1,0,1,0,7.29,8.71L14.59,16l-7.3,7.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0L16,17.41l7.29,7.3a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42Z"
@@ -485,11 +485,14 @@
         getElementByQuery(".top-hat-close-icon").addEventListener("click", () => { hideElement('#top-hat')})
         getElementByQuery('#top-hat_hit').addEventListener("click", () => {showElement('#top-hat')})
         getElementByQuery("#bck-btn").addEventListener("onclick", () => { closeMenu()})
-        getElementByQuery(".log-in-box > .content .close_icon").addEventListener("onclick", ()=> {
-            hideElement(".log-in-box > .content")
+
+        getElementByQuery("#log-in-close")
+        .addEventListener("onclick", ()=> {
+            hideElement("#log-in-box")
          })
-        getElementByQuery(".fQsIIc > a.account").addEventListener("onclick", () =>{
-            showElement(".log-in-box > .content")
+        getElementByQuery("#login-account")
+        .addEventListener("onclick", () =>{
+            showElement("#log-in-box")
         })
         const temp = document.querySelectorAll("div#side-menu .bBUYMN")
         for(element in temp){
