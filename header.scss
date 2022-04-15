@@ -107,7 +107,7 @@ header {
         }
     }
 }
-.eKWEuw {
+.app-header {
     font-family: Interstate;
     position: fixed;
     top: 0px;
@@ -115,14 +115,15 @@ header {
     z-index: 110;
     width: 100%;
 
-    >.kNxzoi {
+    >.header-top {
         position: absolute;
         top: 0px;
         left: 0px;
-        width: 100vw;
+        width: 100%;
         height: 34px;
         background: #333333;
         color: #ffffff;
+        font-size: 12px;
         font-weight: lighter;
         >div{
             padding-right: 0px;
@@ -141,13 +142,15 @@ header {
                     -webkit-box-align: center;
                     align-items: center;
                     cursor: pointer;
+                    font-weight: 12px;
+                    width: 50%;
                     &.notification {
                         width: 20%;
                         >div {
                             display: flex;
                             height: 34px;
 
-                            >.adventure_rewards {
+                            >.rewards-rewares_link {
                                 text-decoration: none;
                                 color: white;
                                 padding: 0px 15px;
@@ -204,7 +207,7 @@ header {
                         }
                     }
                 }
-                >.fQsIIc {
+                >.rewards-rewares {
                     display: flex;
                     height: 34px;
 
@@ -277,7 +280,7 @@ header {
         }
 
     }
-    .dkolWV {
+    .header-mid {
         background: white;
         z-index: 1;
         position: absolute;
@@ -301,7 +304,7 @@ header {
                 >:only-child{
                     width: 30%;
                 }
-                > .header_search_container  {
+                > .header-search  {
                     padding: 0px 12px 0px 0px;
                     position: relative;
                     display: flex;
@@ -316,7 +319,7 @@ header {
                         >.hciudy {
                             margin: 0px auto;
                             height: 60px;
-                            >.search_input_container {
+                            >.search-input-container {
                                 -webkit-box-pack: end;
                                 justify-content: flex-end;
                                 display: flex;
@@ -325,7 +328,7 @@ header {
                                 align-items: center;
                                 padding: 7px 15px;
     
-                                >.search_input {
+                                >.search-input-box {
                                     max-width: 21vw;
                                     border-bottom: 1px solid #979797;
                                     flex: 1 1 0%;
@@ -549,7 +552,7 @@ header {
 
                                 &:hover {
                                     border-bottom: 4px solid #0098a8;
-                                    // padding-bottom: 0px;
+                                    padding-bottom: 0px;
                                     & > div {
                                         display: block;
                                     }
@@ -639,20 +642,20 @@ header {
             right: 20px !important;
         }
     }
-    .eKWEuw .dkolWV > div.content{ 
+    .app-header .header-mid > div.content{ 
         width: 98%;
         > .left > a >svg {
             width: 130px;
             height: 45px;
         }
     }
-    .eKWEuw > .kNxzoi > .content > .fQsIIc > a:nth-child(1),
-    .eKWEuw > .kNxzoi > .content > .left.notification > div > .adventure_rewards > span,
-    .eKWEuw > .dkolWV > .content > .right .bag,
-    .eKWEuw   .jCqRWz  {
+    // .app-header > .header-top > .content > .rewards-rewares > a:nth-child(1),
+    .app-header > .header-top > .content > .left.notification > div > .rewards-rewares_link > span,
+    .app-header > .header-mid > .content > .right .bag,
+    .app-header   .jCqRWz  {
         display: none;
     }
-    .eKWEuw > .dkolWV > .content > .header_search_container > .dSOuAf {
+    .app-header > .header-mid > .content > .header-search > .header-search-dev {
         position: absolute;
         top: 40px;
         height: 47px;
@@ -663,7 +666,7 @@ header {
         >div#search_wrapper {
             padding: 0%;
             // height: 41px;
-            >.search_input_container {
+            >.search-input-container {
                 padding: 0%;
                 -webkit-box-pack: end;
                 justify-content: flex-end;
@@ -671,14 +674,14 @@ header {
                 // height: 44px;
                 -webkit-box-align: center;
                 align-items: center;
-                .search_input {
+                .search-input-box {
                     max-width: 100%;
                     border:none;
                 }
             }
         }
     }
-    .eKWEuw > .kNxzoi > div.content > .left.offers {
+    .app-header > .header-top > div.content > .left.offers {
         background: #0098a8;
         position: fixed;
         height: 43px;
@@ -713,7 +716,7 @@ header {
             padding-left: 4px;
         }
     }
-    .eKWEuw .close_btn {
+    .app-header .close_btn {
         z-index: 1900;
         right: 12vw;
         top: 65px;
@@ -725,7 +728,7 @@ header {
 }
 
 @media (min-width: 731px) {
-    .eKWEuw>.dkolWV>.content>.header_search_container .menu_icon {
+    .app-header>.header-mid>.content>.header-search .menu_icon {
         display: none;
         cursor: pointer;
     }
@@ -734,22 +737,6 @@ header {
         min-height: 200px;
         width: 100%;
     }
-}
-@media (max-width: 1024px) {
-    .eKWEuw {
-        >.kNxzoi {
-            >.content {
-                >div {
-                    &:nth-child(2) {
-                        >span {
-                            display: none;
-                        }
-                    }
-                }
-            }
-        }
-    }
-
 }
 @media (min-width: 1800px) {
     .close_btn {
@@ -761,7 +748,7 @@ header {
         right: 1.6vw;
         margin-top: 0.8vw;
     }
-    .eKWEuw * {
+    .app-header * {
         box-sizing: inherit;
         font-size: 1.4vw;
         font-family: Interstate;
@@ -852,7 +839,7 @@ header {
             }
         }
     }
-    .eKWEuw {
+    .app-header {
         font-family: Interstate;
         position: fixed;
         top: 0vw;
@@ -860,7 +847,7 @@ header {
         z-index: 1100;
         width: 100%;
     
-        >.kNxzoi {
+        >.header-top {
             position: absolute;
             top: 0vw;
             left: 0vw;
@@ -892,7 +879,7 @@ header {
                                 display: flex;
                                 height: 3.4vw;
     
-                                >.adventure_rewards {
+                                >.rewards-rewares_link {
                                     text-decoration: none;
                                     color: white;
                                     padding: 0vw 1.5vw;
@@ -943,7 +930,7 @@ header {
                             }
                         }
                     }
-                    >.fQsIIc {
+                    >.rewards-rewares {
                         display: flex;
                         height: 3.4vw;
     
@@ -1016,7 +1003,7 @@ header {
             }
     
         }
-        .dkolWV {
+        .header-mid {
             background: white;
             z-index: 1;
             position: absolute;
@@ -1025,7 +1012,7 @@ header {
             width: 100%;
             height: 6vw;
         
-            .search_input_container {
+            .search-input-container {
                 -webkit-box-pack: end;
                 justify-content: flex-end;
                 display: flex;
@@ -1034,7 +1021,7 @@ header {
                 align-items: center;
                 padding: 1.5vw 1.5vw 0vw;
 
-                >.search_input {
+                >.search-input-box {
                     max-width: 35.2vw;
                     border-bottom: 1px solid #979797;
                     flex: 1 1 0%;
@@ -1120,7 +1107,7 @@ header {
                     >:only-child{
                         width: 30%;
                     }
-                    > .header_search_container  {
+                    > .header-search  {
                         padding: 0vw 1.2vw 0vw 0vw;
                         position: relative;
                         display: flex;
@@ -1741,7 +1728,7 @@ div#sub-menu_title {
                         .input {
                             margin-bottom: 17px;
                             margin-top: 5px;
-                            .dyrnsz {
+                            .search-input-format {
                                 display: flex;
                                 -webkit-box-pack: center;
                                 justify-content: center;

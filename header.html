@@ -3,16 +3,16 @@
 <link rel="stylesheet" href="./header.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="./view/static/menu_list.js"></script>
-<header class="eKWEuw app_header">
-    <div class="kNxzoi">
+<header class="app-header">
+    <div class="header-top">
         <div class="content">
             <div class="left notification">
-                <div class="fQsIIc"><a class="adventure_rewards"
+                <div class="rewards-rewares"><a class="rewards-rewares_link"
                         href="/content/adventurerewards">
                         <div class="adventure_icon"></div><span class="rewards">Earn Rewards On Purchases</span>
                     </a></div>
             </div>
-            <div class="left offers" tabindex="1"><span>LIMITED TIME! BUY MORE, SAVE MORE SELECT
+            <div class="left offers" ><span>LIMITED TIME! BUY MORE, SAVE MORE SELECT
                     PANTS</span>
                 <div id="top-hat_hit" class="cta"><span>VIEW ALL OFFERS</span>
                     <div class="icon-button">
@@ -32,86 +32,22 @@
                     </div>
                 </div>
             </div>
-            <div class="fQsIIc"><a class="store_locator" href="/store-locator">
+            <div class="rewards-rewares"><a class="store_locator" href="/store-locator">
                     <div class="store_icon"></div><span class="store">Stores&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</span>
                 </a><a id="login-account" class="account">
                     <div class="account_icon"></div><span class="store signin">Sign In / Sign Up</span>
                 </a></div>
         </div>
     </div>
-<!-- Menu List -->
-    <div class="jCqRWz app_header_category_row">
+  <!-- Dropdown Menu -->
+    <div id="drop-down-view" class="header-mid" onmouseover="showDDMenu()">
         <div class="content">
-            <div class="cms-container">
-                <div role="navigation" aria-label="Main" class="LKhvz">
-                    <div style="position: relative;"><span></span></div>
-                    <ul class="ejJEHh">
-                        <!-- hover="chageShowData(event)" -->
-                        <li id="NEW!-menu" class="kSpLxQ">
-                            <a onmouseover="showDDMenu(event)"
-                            aria-expanded="false" aria-controls="NEW!-submenu" href="/content/new-arrivals?cm_sp=topnav_new">NEW!</a>
-                        </li>
-                        <li id="WOMEN-menu" class="kSpLxQ">
-                            <a onmouseover="showDDMenu(event)"
-                            aria-expanded="false" aria-controls="WOMEN-submenu"   href="/content/women?cm_sp=topnav_w">WOMEN</a>
-                        </li>
-                        <li id="MEN-menu" class="kSpLxQ">
-                            <a onmouseover="showDDMenu(event)"
-                            aria-expanded="false" aria-controls="MEN-submenu"   href="/content/men?cm_sp=topnav_m">MEN</a>
-                        </li>
-                        <li id="KIDS-menu" class="kSpLxQ">
-                            <a onmouseover="showDDMenu(event)"
-                            aria-expanded="false" aria-controls="KIDS-submenu"   href="/content/kids?cm_sp=topnav_k">KIDS</a>
-                        </li>
-                        <li id="OUTERWEAR-menu" class="kSpLxQ">
-                            <a onmouseover="showDDMenu(event)"
-                            aria-expanded="false" aria-controls="OUTERWEAR-submenu"  href="/content/outerwear?cm_sp=topnav_o">OUTERWEAR</a>
-                        </li>
-                        <li id="GEAR-menu" class="kSpLxQ">
-                            <a onmouseover="showDDMenu(event)"
-                            aria-expanded="false" aria-controls="GEAR-submenu"   href="/content/gear?cm_sp=topnav_g">GEAR</a>
-                        </li>
-                        <li id="FOOTWEAR-menu" class="kSpLxQ">
-                            <a onmouseover="showDDMenu(event)"
-                            aria-expanded="false" aria-controls="FOOTWEAR-submenu"  href="/content/footwear?cm_sp=topnav_f">FOOTWEAR</a>
-                        </li>
-                        <li id="HOME-menu" class="kSpLxQ">
-                            <a onmouseover="showDDMenu(event)"
-                            aria-expanded="false" aria-controls="HOME-submenu"   href="/content/home?cm_sp=topnav_h">HOME</a>
-                        </li>
-                        <!-- <li id="SALE-menu" class="kSpLxQ">
-                            <a onmouseover="showDDMenu(event)"
-                            href="/s/-?keyword=*&amp;cm_sp=topnav_sale&amp;facets=sale_attr%3A%22Yes%22" aria-expanded="false" aria-controls="SALE-submenu" >SALE</a> 
-
-                        </li> -->
-                        <li id="CLEARANCE-menu" class="kSpLxQ">
-                            <a onmouseover="showDDMenu(event)"
-                            aria-expanded="false" aria-controls="CLEARANCE-submenu"  href="/content/clearance?cm_sp=topnav_c"
-                                style="color: rgb(203, 31, 29);">CLEARANCE</a>
-                        </li>
-                        <li id="GUIDEPOST-menu" class="kSpLxQ">
-                            <a onmouseover="showDDMenu(event)"
-                            aria-expanded="false" aria-controls="GUIDEPOST-submenu"  href="/campaign/guidepost?cm_sp=topnav_guide">GUIDEPOST</a>
-                        </li>
-                        <li id="RENTAL-menu" class="kSpLxQ"><a onmouseover="showDDMenu(event)"
-                                href="https://rentals.eddiebauer.com?utm_source=EB&amp;utm_campaign=&amp;utm_medium=Topnav&amp;utm_term=Site"
-                                target="_blank" aria-expanded="false" aria-controls="RENTAL-submenu" >RENTAL</a>
-                            
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Dropdown Menu -->
-    <div id="drop-down-view" class="dkolWV" onmouseover="showDDMenu()">
-        <div class="content">
-            <div class="header_search_container animate_in">
-                <div class="dSOuAf">
+            <div class="header-search animate_in">
+                <div class="header-search-dev">
                     <div id="search_wrapper" class="hciudy">
-                        <div class="search_input_container transform_in">
-                            <div class="search_input">
-                                <div class="dyrnsz">
+                        <div class="search-input-container transform_in">
+                            <div class="search-input-box">
+                                <div class="search-input-format">
                                     <div class="input_parent">
                                         <input placeholder="Search" onfocus="onSearch(true)"
                                             class="inputClassName " value=""
@@ -181,6 +117,71 @@
             <div class="vertical-row empty"></div>
         </div>
     </div>
+    <!-- Menu List -->
+    <div class="jCqRWz app-header_category_row">
+        <div class="content">
+            <div class="cms-container">
+                <div role="navigation" aria-label="Main" class="LKhvz">
+                    <div style="position: relative;"><span></span></div>
+                    <ul class="ejJEHh">
+                        <!-- hover="chageShowData(event)" -->
+                        <li id="NEW!-menu" class="kSpLxQ">
+                            <a onmouseover="showDDMenu(event)"
+                            aria-expanded="false" aria-controls="NEW!-submenu" href="/content/new-arrivals?cm_sp=topnav_new">NEW!</a>
+                        </li>
+                        <li id="WOMEN-menu" class="kSpLxQ">
+                            <a onmouseover="showDDMenu(event)"
+                            aria-expanded="false" aria-controls="WOMEN-submenu"   href="/content/women?cm_sp=topnav_w">WOMEN</a>
+                        </li>
+                        <li id="MEN-menu" class="kSpLxQ">
+                            <a onmouseover="showDDMenu(event)"
+                            aria-expanded="false" aria-controls="MEN-submenu"   href="/content/men?cm_sp=topnav_m">MEN</a>
+                        </li>
+                        <li id="KIDS-menu" class="kSpLxQ">
+                            <a onmouseover="showDDMenu(event)"
+                            aria-expanded="false" aria-controls="KIDS-submenu"   href="/content/kids?cm_sp=topnav_k">KIDS</a>
+                        </li>
+                        <li id="OUTERWEAR-menu" class="kSpLxQ">
+                            <a onmouseover="showDDMenu(event)"
+                            aria-expanded="false" aria-controls="OUTERWEAR-submenu"  href="/content/outerwear?cm_sp=topnav_o">OUTERWEAR</a>
+                        </li>
+                        <li id="GEAR-menu" class="kSpLxQ">
+                            <a onmouseover="showDDMenu(event)"
+                            aria-expanded="false" aria-controls="GEAR-submenu"   href="/content/gear?cm_sp=topnav_g">GEAR</a>
+                        </li>
+                        <li id="FOOTWEAR-menu" class="kSpLxQ">
+                            <a onmouseover="showDDMenu(event)"
+                            aria-expanded="false" aria-controls="FOOTWEAR-submenu"  href="/content/footwear?cm_sp=topnav_f">FOOTWEAR</a>
+                        </li>
+                        <li id="HOME-menu" class="kSpLxQ">
+                            <a onmouseover="showDDMenu(event)"
+                            aria-expanded="false" aria-controls="HOME-submenu"   href="/content/home?cm_sp=topnav_h">HOME</a>
+                        </li>
+                        <!-- <li id="SALE-menu" class="kSpLxQ">
+                            <a onmouseover="showDDMenu(event)"
+                            href="/s/-?keyword=*&amp;cm_sp=topnav_sale&amp;facets=sale_attr%3A%22Yes%22" aria-expanded="false" aria-controls="SALE-submenu" >SALE</a> 
+
+                        </li> -->
+                        <li id="CLEARANCE-menu" class="kSpLxQ">
+                            <a onmouseover="showDDMenu(event)"
+                            aria-expanded="false" aria-controls="CLEARANCE-submenu"  href="/content/clearance?cm_sp=topnav_c"
+                                style="color: rgb(203, 31, 29);">CLEARANCE</a>
+                        </li>
+                        <li id="GUIDEPOST-menu" class="kSpLxQ">
+                            <a onmouseover="showDDMenu(event)"
+                            aria-expanded="false" aria-controls="GUIDEPOST-submenu"  href="/campaign/guidepost?cm_sp=topnav_guide">GUIDEPOST</a>
+                        </li>
+                        <li id="RENTAL-menu" class="kSpLxQ"><a onmouseover="showDDMenu(event)"
+                                href="https://rentals.eddiebauer.com?utm_source=EB&amp;utm_campaign=&amp;utm_medium=Topnav&amp;utm_term=Site"
+                                target="_blank" aria-expanded="false" aria-controls="RENTAL-submenu" >RENTAL</a>
+                            
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+  
 
 <!-- Mobile menu -->
     <button id="bck-btn" onclick = "closeMenu(true)" class="fuWQyr"></button>
@@ -229,6 +230,7 @@
         </div>
     </div>
 <!-- TopHat -->
+<div>
     <div id="top-hat" class="cVCqiW fUpAVW" tabindex="0">
         <div tabindex="0" class="content"><button class="fIDdUG top-hat-close-icon" role="button" aria-label="Close">
                 <svg data-name="Layer 1"
@@ -419,6 +421,7 @@
             </div>
         </div>
     </div>
+</div>
 <!-- Log In Box -->
     <div id="log-in-box" class="log-in-box">
         <div class="content">
@@ -434,14 +437,14 @@
                         <h1 class="title">Sign In to your account</h1>
                         <div class="input_fields"><label>Email</label>
                             <div class="input">
-                                <div class="dyrnsz">
+                                <div class="search-input-format">
                                     <div class="input_parent"><input placeholder="example@email.com"
                                             class="inputClassName " id="email-signin"
                                             name="email" value=""></div>
                                 </div>
                             </div><label>Password</label>
                             <div class="input">
-                                <div class="dyrnsz">
+                                <div class="search-input-format">
                                     <div class="input_parent"><input placeholder="Password"
                                             class="inputClassName " id="password"
                                             name="password" type="password" value=""></div>
@@ -466,6 +469,59 @@
     </div>
 </header>
 
+<style>
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+</style>
+<!-- Trigger/Open The Modal -->
+<body>
+    <button id="myBtn">Open Modal</button>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+    
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Some text in the Modal..</p>
+      </div>
+    
+    </div>
+</body>
+
 <script>
     const header_state = {
         preDrop:'', 
@@ -480,6 +536,31 @@
         console.log(handleElementById('#top-nav-scroll-view').scrollX)
     }
     const init = () => {
+        // Get the modal
+      var modal = document.getElementById("myModal");
+
+      // Get the button that opens the modal
+      var btn = document.getElementById("myBtn");
+
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+
+      // When the user clicks on the button, open the modal
+      btn.onclick = function() {
+        modal.style.display = "block";
+      }
+
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function() {
+        modal.style.display = "none";
+      }
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
         getElementByQuery(".slide_left_btn").addEventListener("click", () => { moveScroll(-1) });
         getElementByQuery(".slide_right_btn").addEventListener("click", () => { moveScroll(1) });
         getElementByQuery(".top-hat-close-icon").addEventListener("click", () => { hideElement('#top-hat')})
