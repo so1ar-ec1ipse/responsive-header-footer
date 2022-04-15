@@ -1,3 +1,187 @@
+
+const DOM_EVENTS = {
+    
+}
+/**
+ * 
+ * @param {*} CSS selector Query 
+ * @returns element that has #id
+ */ 
+const getElementByQuery = (query) => {
+    return document.body.querySelector(query)
+    // const ret = document.body.querySelector(query)
+    // return ret
+}
+/**
+ * 
+ * @param {*} CSS selector Query
+ */
+const showElement = (query) => {
+    getElementByQuery(query).style.display = "block"
+}
+const hideElement = (query) => {
+    getElementByQuery(query).style.display = "none"
+}
+const invisibleElement = (query) => {
+    getElementByQuery(query).style.visibility = "hidden"
+}
+const visibleElement = (query) => {
+    getElementByQuery(query).style.visibility = "visible"
+}
+const findNextChild = (title, source) => {
+    for(let i = 0; i < source.length; i++){
+        if(title === source[i].name)
+            return source[i].childMenuItems
+    }
+} 
+const findNode = (data) => {
+    let source = siteMenuItems, title
+    for(let i = 1; i < data.length; i++) {
+        title = data[i]
+        source = findNextChild(data[i], source)
+    }
+    return {title, source}
+}
+
+/**
+ * 
+ * @param {*} title 
+ * @param {*} data_list 
+ * @param {*} isfear 
+ * @returns 
+ */
+const buildDroping = (title, data_list, isfear = false) => {
+    let featured = isfear?"featured":''
+    let ret_Data = '<div class="group'+' featured'+'">'
+        ret_Data += '<h2 class="title">' + title.toUpperCase() + '</h2><ul>'
+    data_list.map(data => {
+        ret_Data += '<li><a href="'
+        ret_Data += data._links.site.href
+        ret_Data += '"><div class="item"><div class="item-label">'
+        ret_Data += data.name.toUpperCase()
+        ret_Data += '</div></div></a></li>'
+    })
+    return ret_Data+'</ul></div>'
+}
+const buildDropDown = (data) => {
+    const source = findNextChild(data, siteMenuItems)
+    let featured = '', extra = ''
+    for(x of source){
+        if(x.name.toLowerCase() === "featured"){
+            featured = buildDroping(x.name, findNextChild(x.name, source), true)
+        }
+        else
+            extra += buildDroping(x.name, findNextChild(x.name, source))
+    }
+    return {featured, extra}    
+}
+
+
+const addMenuList = (source) => {
+    let retTagList = ''
+    for(let i = 0; i < source.length; i++){
+        if(source[i].childMenuItems.length) {
+            retTagList += '<div class="bBUYMN">'
+            retTagList += '<span id="sub-menu-title">'+source[i].name+'</span>'
+            retTagList += '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" focusable="false">'
+            retTagList += '<path fill="#050608" fill-rule="nonzero" d="M20.453 6l-8.372 8.126-8.335-8.09L2 7.73l10.08 9.784L22.2 7.694z"></path>'
+            retTagList += '</svg></div>'
+        }
+        else {
+            retTagList += '<a href="'+source[i]._links.site.href+'"target="_blank">'
+            retTagList += '<div class="styles__StyledLinkItem-sc-d3eg2d-2 gSCwQT"><span class="">'
+            retTagList += source[i].name+'</span></div></a>'
+        }
+    }
+    return retTagList
+}
+const updateSideMenu = (data) => {
+    if(data.length>1){
+        const targetNode = findNode(data)
+        getElementByQuery("#sub-menu_title_span").innerHTML = targetNode.title
+        getElementByQuery("#sub-menu_content").innerHTML = addMenuList(targetNode.source)
+        hideElement("#side-menu")
+        showElement("#side-menu_sub")
+    }
+    else if(data.length == 1){
+        hideElement("#side-menu_sub")
+        showElement("#bck-btn")
+        showElement("#side-menu")
+    }
+    else{
+        hideElement("#bck-btn")
+        hideElement("#side-menu")
+        hideElement("#side-menu_sub")
+    }
+    const temp = document.querySelectorAll("div#sub-menu_content .bBUYMN")
+    for(element in temp){
+        if(typeof(temp[element]) === "object")
+            temp[element].addEventListener("click", showSubMenu)
+    }
+}
+const closeMenu = (iflag = false) => {
+    if(iflag) header_state.side_menu = []
+    else header_state.side_menu.pop()
+    updateSideMenu(header_state.side_menu)
+}
+const showSubMenu = (ev) => {
+    onSearch(false)
+    if(header_state.side_menu.length) {
+        header_state.side_menu.push(ev.target.innerText)
+    }
+    else{
+        header_state.side_menu.push(ev)
+    } 
+    updateSideMenu(header_state.side_menu)
+    
+}
+
+const showDDMenu = (ev) => {
+    if(typeof(ev) === "object"){ 
+        const dropNavList = buildDropDown(ev.target.innerHTML)
+        if(dropNavList.featured === '' && dropNavList.extra === '')
+            hideElement('#nav_dropdown')
+        else showElement('#nav_dropdown')
+        getElementByQuery("#nav-drop_featured").innerHTML = dropNavList.featured
+        getElementByQuery("#nav-drop_extra").innerHTML = dropNavList.extra
+    }
+    else hideElement('#nav_dropdown')
+}
+const hideDDMenu = (ev) => {
+    showElement("#drop-down-view")
+    preDrop = ''
+}
+const onSearch = (iflag) => {
+    if(iflag){
+        invisibleElement(".app_header_category_row")
+        header_state.preSearch = true
+        showDDMenu(header_state.preSearch)
+        getElementByQuery('#search_dropdown').classList.replace('fade_out','fade_in');
+        if(document.body.clientWidth > 730)
+            document.getElementsByClassName('signedOut')[0].style.visibility = 'hidden';
+        document.getElementsByClassName('close_btn')[0].style.display = 'block';
+    }
+    else {
+        visibleElement(".app_header_category_row")
+        header_state.preSearch = false
+        getElementByQuery('#search_dropdown').classList.replace('fade_in','fade_out');
+        document.getElementsByClassName('signedOut')[0].style.visibility = 'visible';
+        document.getElementsByClassName('close_btn')[0].style.display = 'none';
+    }
+}
+
+
+const moveScroll = (step) => {
+    let icounter = 0;
+    const seqMoveScroll = (step) => {
+        getElementByQuery("#top-nav-scroll-view").scrollLeft += 50*step;
+        icounter += 50
+        if(icounter > window.innerWidth)
+            clearInterval(timerHandler)
+    }
+    const timerHandler = setInterval(seqMoveScroll, 10, step)
+}
+ 
 const siteMenuItems = [
     {
         "depth": 0,
@@ -5866,124 +6050,3 @@ const siteMenuItems = [
         }
     }
 ]
-const DOM_EVENTS = {
-    
-}
-/**
- * 
- * @param {#id} id 
- * @returns element that has #id
- */ 
-const handleElementById = (id) => {
-    return document.getElementById(id)
-}
-/**
- * 
- * @param {*} id 
- */
-const showElement = (id) => {
-    handleElementById(id).style.display = "block"
-}
-const hideElement = (id) => {
-    handleElementById(id).style.display = "none"
-}
-
-const findNextChild = (title, source) => {
-    for(let i = 0; i < source.length; i++){
-        if(title === source[i].name)
-            return source[i].childMenuItems
-    }
-} 
-const findNode = (data) => {
-    let source = siteMenuItems, title
-    for(let i = 1; i < data.length; i++) {
-        title = data[i]
-        source = findNextChild(data[i], source)
-    }
-    return {title, source}
-}
-const getShowForm = (title, data_list, isfear = false) => {
-    let featured = isfear?"featured":''
-    let ret_Data = '<div class="group'+' featured'+'">'
-        ret_Data += '<h2 class="title">' + title.toUpperCase() + '</h2><ul>'
-    data_list.map(data => {
-        ret_Data += '<li><a href="'
-        ret_Data += data._links.site.href
-        ret_Data += '"><div class="item"><div class="item-label">'
-        ret_Data += data.name.toUpperCase()
-        ret_Data += '</div></div></a></li>'
-    })
-    return ret_Data+'</ul></div>'
-}
-const findNodeObj = (data) => {
-    const source = findNextChild(data, siteMenuItems)
-    let featured = '', extra = ''
-    for(x of source){
-        if(x.name.toLowerCase() === "featured"){
-            featured = getShowForm(x.name, findNextChild(x.name, source), true)
-        }
-        else
-            extra += getShowForm(x.name, findNextChild(x.name, source))
-    }
-    return {featured, extra}    
-}
-
-
-const addMenuList = (source) => {
-    let retTagList = ''
-    for(let i = 0; i < source.length; i++){
-        if(source[i].childMenuItems.length) {
-            retTagList += '<div class="bBUYMN">'
-            retTagList += '<span id="sub-menu-title">'+source[i].name+'</span>'
-            retTagList += '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" focusable="false">'
-            retTagList += '<path fill="#050608" fill-rule="nonzero" d="M20.453 6l-8.372 8.126-8.335-8.09L2 7.73l10.08 9.784L22.2 7.694z"></path>'
-            retTagList += '</svg></div>'
-        }
-        else {
-            retTagList += '<a href="'+source[i]._links.site.href+'"target="_blank">'
-            retTagList += '<div class="styles__StyledLinkItem-sc-d3eg2d-2 gSCwQT"><span class="">'
-            retTagList += source[i].name+'</span></div></a>'
-        }
-    }
-    return retTagList
-}
-const updateSideMenu = (data) => {
-    if(data.length>1){
-        const targetNode = findNode(data)
-        handleElementById("sub-menu_title_span").innerHTML = targetNode.title
-        handleElementById("sub-menu_content").innerHTML = addMenuList(targetNode.source)
-        hideElement("side-menu")
-        showElement("side-menu_sub")
-    }
-    else if(data.length == 1){
-        hideElement("side-menu_sub")
-        showElement("bck-btn")
-        showElement("side-menu")
-    }
-    else{
-        hideElement("bck-btn")
-        hideElement("side-menu")
-        hideElement("side-menu_sub")
-    }
-    const temp = document.querySelectorAll("div#sub-menu_content .bBUYMN")
-    for(element in temp){
-        if(typeof(temp[element]) === "object")
-            temp[element].addEventListener("click", showSubMenu)
-    }
-}
-const closeMenu = (iflag = false) => {
-    if(iflag) header_state.side_menu = []
-    else header_state.side_menu.pop()
-    updateSideMenu(header_state.side_menu)
-}
-const showSubMenu = (ev) => {
-    onSearch(false)
-    if(header_state.side_menu.length) {
-        header_state.side_menu.push(ev.target.innerText)
-    }
-    else{
-        header_state.side_menu.push(ev)
-    } 
-    updateSideMenu(header_state.side_menu)
-    
-}

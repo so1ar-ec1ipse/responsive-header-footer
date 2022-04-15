@@ -621,7 +621,6 @@ header {
             }
         }
     }
-
     >.vertical-row {
         float: left;
         height: 352px;
@@ -636,6 +635,18 @@ header {
 }
 
 @media (max-width: 730px) {
+    
+    .log-in-box>.content {
+        width: 90%;
+        right: auto !important;
+        padding: 2rem 3rem !important;
+        form > .iQrLtD {
+            width: auto !important;
+        }
+        .close_icon {
+            right: 20px !important;
+        }
+    }
     .eKWEuw .dkolWV > div.content{ 
         width: 98%;
         > .left > a >svg {
@@ -643,10 +654,6 @@ header {
             height: 45px;
         }
     }
-    // .eKWEuw > .kNxzoi > div.content > .left.notification
-    // {
-    //     visibility: hidden;
-    // }
     .eKWEuw > .kNxzoi > .content > .fQsIIc > a:nth-child(1),
     .eKWEuw > .kNxzoi > .content > .left.notification > div > .adventure_rewards > span,
     .eKWEuw > .dkolWV > .content > .right .bag,
@@ -714,7 +721,6 @@ header {
             padding-left: 4px;
         }
     }
-                        
     .eKWEuw .close_btn {
         z-index: 1900;
         right: 12vw;
@@ -730,6 +736,11 @@ header {
     .eKWEuw>.dkolWV>.content>.header_search_container .menu_icon {
         display: none;
         cursor: pointer;
+    }
+    .cVCqiW {
+        height: auto;
+        min-height: 200px;
+        width: 100%;
     }
 }
 @media (max-width: 1024px) {
@@ -1490,14 +1501,6 @@ div#sub-menu_title {
         }
     }
 }
-
-@media (min-width: 765px){
-    .cVCqiW {
-        height: auto;
-        min-height: 200px;
-        width: 100%;
-    }
-}
 .cVCqiW {
     position: fixed;
     left: 0px;
@@ -1523,8 +1526,8 @@ div#sub-menu_title {
             padding: 30px 24px 30px 16px;
             .top-hat-close-icon {
                 position: absolute;
-                top: 16px;
-                right: 27px;
+                top: 15px;
+                right: 21px;
                 z-index: 1500;
                 width: 30px;
                 cursor: pointer;
@@ -1532,7 +1535,11 @@ div#sub-menu_title {
                 color: white;
                 border: 1px solid white;
                 border-radius: 50%;
-                padding: 2px 2px 0px;
+                padding: 2px 2px;
+                // svg {
+                //     width: 16px;
+                //     height: 16px;
+                // }
             }
             .fzUHih {
                 width: 100%;
@@ -1556,18 +1563,8 @@ div#sub-menu_title {
                     cursor: pointer;
                     margin-top: -30px;
                     z-index: 1000;
-                    .nav_btn {
-                        display: block;
-                        opacity: 0.8;
-                        background: rgb(255, 255, 255);
-                        cursor: pointer;
-                        position: absolute;
-                        top: 45%;
-                        margin-top: -30px;
-                        z-index: 1000;
-                        &:hover {
-                            opacity: 1;
-                        }
+                    &:hover {
+                        opacity: 1;
                     }
                     .arrows {
                         border-style: solid;
@@ -1579,8 +1576,6 @@ div#sub-menu_title {
                         transform: rotate(135deg);
                         cursor: pointer;
                     }
-
-
                 }
                 > .scroll_wrapper {
                     overflow: hidden;
@@ -1682,4 +1677,197 @@ div#sub-menu_title {
             }
         }
     }
+}
+
+.log-in-box {
+    display: none !important;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    z-index: 1300;
+    transform: translate3d(0px, 0px, 0px);
+    animation: 0.2s ease-out 0s 1 normal none running eMLfYp;
+    > .content {
+        position: absolute;
+        top: 34px;
+        right: 0px;
+        padding: 38px 24px 36px 26px;
+        border-right: 1px solid rgb(189, 189, 189);
+        border-bottom: 1px solid rgb(189, 189, 189);
+        border-left: 1px solid rgb(189, 189, 189);
+        border-image: initial;
+        border-top: none;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        justify-content: center;
+        .close_icon {
+            width: 24px;
+            height: 24px;
+            position: absolute;
+            right: 11px;
+            top: 11px;
+            z-index: 999;
+            cursor: pointer;
+            color: black;
+            object-fit: contain;
+        }
+        form {
+            margin-top: 0px;
+            >.iQrLtD {
+                text-align: left;
+                position: relative;
+                margin: 0px auto;
+                width: 338px;
+                    .title {
+                        font-size: 1.428rem;
+                        opacity: 1;
+                        font-weight: bold;
+                        letter-spacing: 0.2px;
+                        margin-bottom: 14px;
+                        margin-top: 10px;
+                    }
+                    .input_fields {
+                        margin: 0px auto;
+                        label {
+                            font-size: 12px;
+                            font-weight: 300;
+                            font-stretch: normal;
+                            font-style: normal;
+                            line-height: 1.17;
+                            letter-spacing: normal;
+                            color: rgb(85, 85, 85);
+                        }
+                        .input {
+                            margin-bottom: 17px;
+                            margin-top: 5px;
+                            .dyrnsz {
+                                display: flex;
+                                -webkit-box-pack: center;
+                                justify-content: center;
+                                -webkit-box-align: center;
+                                align-items: center;
+                                height: 44px;
+                                border: 1px solid rgb(162, 164, 163);
+                                border-radius: 0px;
+                                width: 100%;
+                                background: rgb(255, 255, 255);
+                                > .input_parent {
+                                    display: flex;
+                                    width: 100%;
+                                    height: 100%;
+                                    position: relative;
+                                    flex: 0 1 auto;
+                                    padding: 0px 0.75rem;
+                                    input {
+                                        font-size: 1rem;
+                                        line-height: 1.428rem;
+                                        letter-spacing: 0.2px;
+                                        opacity: 1;
+                                        font-weight: lighter;
+                                        color: rgb(51, 51, 51);
+                                        background: transparent;
+                                        border: none;
+                                        outline: none;
+                                        height: 100%;
+                                        flex: 0 1 auto;
+                                        padding-left: 0px;
+                                        padding-top: 0px;
+                                        width: 100%;
+                                    }
+                                }
+                                .show_password {
+                                    text-decoration: underline;
+                                    margin-right: 15px;
+                                    cursor: pointer;
+                                    font-weight: lighter;
+                                }
+                            }
+                        }
+                    }
+                    .forgot_password {
+                        font-size: 1rem;
+                        opacity: 1;
+                        color: rgb(51, 51, 51);
+                        margin: 13px 0px 28px;
+                        cursor: pointer;
+                        font-weight: 300;
+                        font-stretch: normal;
+                        font-style: normal;
+                        line-height: 1;
+                        letter-spacing: normal;
+                        text-decoration: underline;
+                    }
+                    .seperator_line {
+                        // max-width: 1440px;
+                        opacity: 0.25;
+                        background-color: rgb(66, 66, 66);
+                        height: 1px;
+                        margin: 43px 0px 19px;
+                    }
+                    span {
+                        opacity: 1;
+                        margin-top: 35px;
+                        padding-right: 5px;
+                        font-size: 16px;
+                        font-weight: bold;
+                        font-stretch: normal;
+                        font-style: normal;
+                        line-height: normal;
+                        letter-spacing: 0.48px;
+                    }
+                    button {
+                        cursor: pointer;
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        position: relative;
+                        width: inherit;
+                        height: inherit;
+                        min-width: inherit;
+                        padding: 12px 24px;
+                        background-color: rgb(51, 51, 51);
+                        color: rgb(255, 255, 255);
+                        border: 1px solid rgb(51, 51, 51);
+                        display: inline-block;
+                        &[disabled] {
+                            pointer-events: none;
+                            opacity: 0.25;
+                        }
+                        &.login_button {
+                            letter-spacing: 0.5px;
+                            width: 100%;
+                        }
+                        &.create_button {
+                            width: 100%;
+                            height: 32px;
+                            margin-top: 19px;
+                            padding: 8px;
+                            font-weight: bold;
+                            font-stretch: normal;
+                            font-style: normal;
+                            line-height: 14px;
+                            letter-spacing: 0.6px;
+                            text-align: center;
+                        }
+                        >div {
+                            display: flex;
+                            -webkit-box-align: center;
+                            align-items: center;
+                            -webkit-box-pack: center;
+                            justify-content: center;
+                            width: 100%;
+                        }
+                    }
+                }
+        }
+    }
+    
 }
