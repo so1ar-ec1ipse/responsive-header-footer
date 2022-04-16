@@ -159,13 +159,13 @@ const showDDMenu = (ev) => {
     }
     else hideElement('#nav_dropdown')
 }
-const hideDDMenu = (ev) => {
-    showElement("#drop-down-view")
-    preDrop = ''
-}
+// const hideDDMenu = (ev) => {
+//     showElement("#drop-down-view")
+//     preDrop = ''
+// }
 const onSearch = (iflag) => {
     if(iflag){
-        // invisibleElement(".header-bot")
+        invisibleElement(".header-bot")
         header_state.preSearch = true
         showDDMenu(header_state.preSearch)
         getElementByQuery('#search_dropdown').classList.replace('fade_out','fade_in');
@@ -223,8 +223,10 @@ const init = () => {
     getElementByQuery(".slide_right_btn").onclick = () => { moveScroll(1) }
 
     // Dropdwon Menu
-    console.log(getElementByQuery("#drop-down-view"))
-    // .onmouseover = () => { hideDDMenu() }
+    getElementByQuery("#drop-down-view").onmouseenter = () => { 
+        console.log("getElementByQuery()")
+        showDDMenu() 
+    }
     // getElementByQuery("#drop-down-view")
     
     // side-menu EventListeners
