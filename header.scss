@@ -21,7 +21,7 @@ header {
     display: none;
     cursor: pointer;
 }
-.egsjPH {
+.drop-down-menu {
     position: fixed;
     left: 0px;
     padding-top: 10px;
@@ -448,11 +448,11 @@ header {
                     >li {
                         z-index: 999;
     
-                        &.signedOut {
+                        &.signed-out {
                             cursor: pointer;
                             align-self: flex-start;
                             padding-top: 14px;
-                            >.iQwjGn {
+                            >.signed-out-link {
                                 width: 45px;
                                 cursor: pointer;
                                 width: 60px;
@@ -475,7 +475,7 @@ header {
         }
     }
 
-    .jCqRWz {
+    .header-bot {
         background: white;
         position: absolute;
         left: 0px;
@@ -632,13 +632,13 @@ header {
 @media (max-width: 730px) {
     
     .log-in-box>.content {
-        width: 90%;
-        right: auto !important;
+        // width: 90%;
+        // right: auto !important;
         padding: 2rem 3rem !important;
-        form > .iQrLtD {
+        form > .log-in-form {
             width: auto !important;
         }
-        .close_icon {
+        .close-icon {
             right: 20px !important;
         }
     }
@@ -652,7 +652,7 @@ header {
     // .app-header > .header-top > .content > .rewards-rewares > a:nth-child(1),
     .app-header > .header-top > .content > .left.notification > div > .rewards-rewares_link > span,
     .app-header > .header-mid > .content > .right .bag,
-    .app-header   .jCqRWz  {
+    .app-header   .header-bot  {
         display: none;
     }
     .app-header > .header-mid > .content > .header-search > .header-search-dev {
@@ -665,13 +665,11 @@ header {
         padding: 0px 16px;
         >div#search_wrapper {
             padding: 0%;
-            // height: 41px;
             >.search-input-container {
                 padding: 0%;
                 -webkit-box-pack: end;
                 justify-content: flex-end;
                 display: flex;
-                // height: 44px;
                 -webkit-box-align: center;
                 align-items: center;
                 .search-input-box {
@@ -692,7 +690,6 @@ header {
         -webkit-box-align: center;
         align-items: center;
         cursor: pointer;
-
         >.cta {
             max-width: 140px;
             line-height: 13px;
@@ -753,7 +750,7 @@ header {
         font-size: 1.4vw;
         font-family: Interstate;
     }
-    .egsjPH {
+    .drop-down-menu {
         display: none;
         position: fixed;
         left: 0vw;
@@ -1169,11 +1166,11 @@ header {
                         >li {
                             z-index: 999;
         
-                            &.signedOut {
+                            &.signed-out {
                                 cursor: pointer;
                                 align-self: flex-start;
                                 padding-top: 1.4vw;
-                                >.iQwjGn {
+                                >.signed-out-link {
                                     width: 4.5vw;
                                     cursor: pointer;
                                     width: 6vw;
@@ -1197,7 +1194,7 @@ header {
             }
         }
     
-        .jCqRWz {
+        .header-bot {
             background: white;
             position: absolute;
             left: 0vw;
@@ -1388,7 +1385,7 @@ div#sub-menu_title {
     z-index: 1300;
     animation: 0.2s ease-out 0s 1 normal none running eMLfYp;
 }
-.epYlWY {
+.side-menu {
     height: 100%;
     width: 90vw;
     max-width: 240px;
@@ -1397,10 +1394,9 @@ div#sub-menu_title {
     padding: 20px;
     overflow: hidden scroll;
     z-index: 1301;
-    &.fwplnv {
+    &.side-menu-container {
         position: fixed;
         left: 0px;
-        top: 0px;
         width: 100%;
         height: 100%;
         display: flex;
@@ -1411,7 +1407,7 @@ div#sub-menu_title {
         transform: translate3d(0px, 0px, 0px);
         animation: 0.1s ease 0s 1 normal none running cekvef;
         }
-    .close_icon {
+    .close-icon {
         position: absolute;
         top: 33px;
         right: 20px;
@@ -1419,7 +1415,7 @@ div#sub-menu_title {
             width: 20px;
         }
     }
-    .rpqWC {
+    .side-menu-list {
         width: 100%;
         height: 100%;
         display: flex;
@@ -1437,7 +1433,7 @@ div#sub-menu_title {
                     height: 45px;
                 }
             }
-            .bBUYMN, div>a {
+            .list-setting, div>a {
                 cursor: pointer;
                 display: flex;
                 font-size: 14px;
@@ -1659,13 +1655,12 @@ div#sub-menu_title {
 }
 
 .log-in-box {
-    display: none !important;
+    display: none;
     position: fixed;
     left: 0px;
     top: 0px;
     width: 100%;
     height: 100%;
-    display: flex;
     -webkit-box-align: center;
     align-items: center;
     -webkit-box-pack: center;
@@ -1674,6 +1669,7 @@ div#sub-menu_title {
     transform: translate3d(0px, 0px, 0px);
     animation: 0.2s ease-out 0s 1 normal none running eMLfYp;
     > .content {
+        width: 345px;
         position: absolute;
         top: 34px;
         right: 0px;
@@ -1688,20 +1684,20 @@ div#sub-menu_title {
         flex-direction: column;
         -webkit-box-pack: center;
         justify-content: center;
-        .close_icon {
-            width: 24px;
-            height: 24px;
+        .close-icon {
             position: absolute;
             right: 11px;
             top: 11px;
             z-index: 999;
             cursor: pointer;
             color: black;
+            width: 20px;
+            height: 20px;
             object-fit: contain;
         }
         form {
             margin-top: 0px;
-            >.iQrLtD {
+            >.log-in-form {
                 text-align: left;
                 position: relative;
                 margin: 0px auto;
@@ -1786,7 +1782,6 @@ div#sub-menu_title {
                         text-decoration: underline;
                     }
                     .seperator_line {
-                        // max-width: 1440px;
                         opacity: 0.25;
                         background-color: rgb(66, 66, 66);
                         height: 1px;
@@ -1804,6 +1799,7 @@ div#sub-menu_title {
                         letter-spacing: 0.48px;
                     }
                     button {
+                        width: 288px !important;
                         cursor: pointer;
                         text-decoration: none;
                         text-transform: uppercase;
@@ -1828,13 +1824,18 @@ div#sub-menu_title {
                             width: 100%;
                             height: 32px;
                             margin-top: 19px;
-                            padding: 8px;
                             font-weight: bold;
                             font-stretch: normal;
                             font-style: normal;
                             line-height: 14px;
                             letter-spacing: 0.6px;
                             text-align: center;
+                        }
+                        &:hover:not([disabled]), 
+                        &:focus:not([disabled]) {
+                            background-color: rgb(255, 255, 255);
+                            color: rgb(51, 51, 51);
+                            border: 1px solid rgb(51, 51, 51);
                         }
                         >div {
                             display: flex;

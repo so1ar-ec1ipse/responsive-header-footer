@@ -81,7 +81,7 @@ const addMenuList = (source) => {
     let retTagList = ''
     for(let i = 0; i < source.length; i++){
         if(source[i].childMenuItems.length) {
-            retTagList += '<div class="bBUYMN">'
+            retTagList += '<div class="list-setting">'
             retTagList += '<span id="sub-menu-title">'+source[i].name+'</span>'
             retTagList += '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" focusable="false">'
             retTagList += '<path fill="#050608" fill-rule="nonzero" d="M20.453 6l-8.372 8.126-8.335-8.09L2 7.73l10.08 9.784L22.2 7.694z"></path>'
@@ -113,7 +113,7 @@ const updateSideMenu = (data) => {
         hideElement("#side-menu")
         hideElement("#side-menu_sub")
     }
-    const temp = document.querySelectorAll("div#sub-menu_content .bBUYMN")
+    const temp = document.querySelectorAll("div#sub-menu_content .list-setting")
     for(element in temp){
         if(typeof(temp[element]) === "object")
             temp[element].addEventListener("click", showSubMenu)
@@ -153,19 +153,19 @@ const hideDDMenu = (ev) => {
 }
 const onSearch = (iflag) => {
     if(iflag){
-        invisibleElement(".app_header_category_row")
+        invisibleElement(".header-bot")
         header_state.preSearch = true
         showDDMenu(header_state.preSearch)
         getElementByQuery('#search_dropdown').classList.replace('fade_out','fade_in');
         if(document.body.clientWidth > 730)
-            document.getElementsByClassName('signedOut')[0].style.visibility = 'hidden';
+            document.getElementsByClassName('signed-out')[0].style.visibility = 'hidden';
         document.getElementsByClassName('close_btn')[0].style.display = 'block';
     }
     else {
-        visibleElement(".app_header_category_row")
+        visibleElement(".header-bot")
         header_state.preSearch = false
         getElementByQuery('#search_dropdown').classList.replace('fade_in','fade_out');
-        document.getElementsByClassName('signedOut')[0].style.visibility = 'visible';
+        document.getElementsByClassName('signed-out')[0].style.visibility = 'visible';
         document.getElementsByClassName('close_btn')[0].style.display = 'none';
     }
 }
@@ -181,7 +181,37 @@ const moveScroll = (step) => {
     }
     const timerHandler = setInterval(seqMoveScroll, 10, step)
 }
- 
+
+/**
+ * 
+ */
+
+const init = () => {
+    // top-hat EventListeners
+    getElementByQuery('#top-hat_hit').onclick = () => { showElement('#top-hat') }
+    getElementByQuery(".top-hat-close-icon").onclick = () => { hideElement('#top-hat') }
+    getElementByQuery(".slide_left_btn").onclick = () => { moveScroll(-1) }
+    getElementByQuery(".slide_right_btn").onclick = () => { moveScroll(1) }
+
+    // Dropdwon Menu
+    getElementByQuery("#drop-down-view").onmouseover = () => { showDDMenu() }
+
+    
+    // side-menu EventListeners
+    getElementByQuery(".menu_icon").onmouseover = () => { showSubMenu(0) }
+    getElementByQuery("#bck-btn").onclick = () => { closeMenu() }
+
+    getElementByQuery("#login-account").onclick = () =>{ showElement("#log-in-box") }
+    getElementByQuery("#log-in-close").onclick = () => { hideElement("#log-in-box") }
+    const temp = document.querySelectorAll("div#side-menu .list-setting")
+    for(element in temp){
+        if(typeof(temp[element]) === "object")
+            temp[element].addEventListener("click", showSubMenu)
+    }
+}
+/**
+ * Data of Site Menu
+ */ 
 const siteMenuItems = [
     {
         "depth": 0,
