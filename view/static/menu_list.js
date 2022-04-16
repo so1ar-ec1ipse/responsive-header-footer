@@ -16,6 +16,18 @@ const getElementByQuery = (query) => {
  * 
  * @param {*} CSS selector Query
  */
+const doModalDialog = (query) => {
+    let header_modal = getElementByQuery("#my-modal")
+    let header_modal_content = getElementByQuery("#my-content")
+    console.log(header_modal_content)
+    // header_modal_content.removeChild(header_modal_content[0])
+    header_modal_content.appendChild(getElementByQuery(query))
+    // header_modal_content.appendChild(getElementByQuery("#search_dropdown"))
+    header_modal.style.display = "block"
+}
+const hideModalDialog = () => {
+    getElementByQuery("#my-modal").style.display = "none"
+}
 const showElement = (query) => {
     getElementByQuery(query).style.display = "block"
 }
@@ -153,7 +165,7 @@ const hideDDMenu = (ev) => {
 }
 const onSearch = (iflag) => {
     if(iflag){
-        invisibleElement(".header-bot")
+        // invisibleElement(".header-bot")
         header_state.preSearch = true
         showDDMenu(header_state.preSearch)
         getElementByQuery('#search_dropdown').classList.replace('fade_out','fade_in');
@@ -174,7 +186,7 @@ const onSearch = (iflag) => {
 const moveScroll = (step) => {
     let icounter = 0;
     const seqMoveScroll = (step) => {
-        getElementByQuery("#top-nav-scroll-view").scrollLeft += 50*step;
+        getElementByQuery("#top-hat-slide-view").scrollLeft += 50*step;
         icounter += 50
         if(icounter > window.innerWidth)
             clearInterval(timerHandler)
@@ -187,15 +199,33 @@ const moveScroll = (step) => {
  */
 
 const init = () => {
+    getElementByQuery(".modal-close").onclick = () => { hideModalDialog() }
+    window.onclick = (event) => {
+        if(event.target == getElementByQuery("#my-modal")) {
+            hideModalDialog()
+        }
+    }
+    /**
+     * When focusing the search line edit
+     */
+    getElementByQuery("#search").onfocus = () => { onSearch(true) }
+
+    /**
+     * set Evet handlers to menu
+     */
+    //.onmouseover = (event) => { showDDMenu(event) }
+
     // top-hat EventListeners
-    getElementByQuery('#top-hat_hit').onclick = () => { showElement('#top-hat') }
-    getElementByQuery(".top-hat-close-icon").onclick = () => { hideElement('#top-hat') }
+    // getElementByQuery('#top-hat_hit').onclick = () => { showElement('#top-hat-box') }
+    getElementByQuery('#top-hat_hit').onclick = () => { doModalDialog('#top-hat-box') }
+    // getElementByQuery(".top-hat-close-icon").onclick = () => { hideElement('#top-hat-box') }
     getElementByQuery(".slide_left_btn").onclick = () => { moveScroll(-1) }
     getElementByQuery(".slide_right_btn").onclick = () => { moveScroll(1) }
 
     // Dropdwon Menu
-    getElementByQuery("#drop-down-view").onmouseover = () => { showDDMenu() }
-
+    console.log(getElementByQuery("#drop-down-view"))
+    // .onmouseover = () => { hideDDMenu() }
+    // getElementByQuery("#drop-down-view")
     
     // side-menu EventListeners
     getElementByQuery(".menu_icon").onmouseover = () => { showSubMenu(0) }
