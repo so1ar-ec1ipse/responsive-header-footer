@@ -242,17 +242,37 @@ const init = () => {
     // LOGIN:: log-in dialog EventListeners
     getElementByQuery("#login-account").onclick = () =>{ showElement("#log-in-box") }
     getElementByQuery("#log-in-close").onclick = () => { hideElement("#log-in-box") }
+    getElementByQuery('.show_password').onmousedown = () => { 
+        getElementByQuery("#password").type = "text"
+    }
+    getElementByQuery('.show_password').onmouseleave = () => {
+        getElementByQuery("#password").type = "password"
+    }
+    const checkLogin = () => {
+        if(getElementByQuery("#password").value && getElementByQuery("#email-signin").value){
+            getElementByQuery(".login_button").disabled = false
+            // delete(getElementByQuery(".login_button").disabled)
+        }
+        else {
+            getElementByQuery(".login_button").disabled = true
+        }
+        console.log(getElementByQuery(".login_button").disabled)
+    }
+    getElementByQuery('#email-signin').oninput = (event) => {
+        getElementByQuery("#email-signin").value = event.target.value
+        checkLogin()
+    }
+    getElementByQuery('#password').oninput = (event) => {
+        getElementByQuery("#password").value = event.target.value
+        checkLogin()
+    }
+
     const temp = document.querySelectorAll("div#side-menu .list-setting")
     for(element in temp){
         if(typeof(temp[element]) === "object")
             temp[element].addEventListener("click", showSubMenu)
     }
-    getElementByQuery('.show_password').onmousedown = () => { 
-        getElementByQuery("#password").type = ""
-    }
-    getElementByQuery('.show_password').onmouseleave = () => {
-        getElementByQuery("#password").type = "password"
-    }
+    
 }
 /**
  * TOP-NAV:: Data of Site Menu

@@ -240,26 +240,27 @@
                 <div class="search-input-format">
                   <div class="input_parent"><input placeholder="example@email.com"
                       class="inputClassName " id="email-signin"
-                      name="email" value=""></div>
+                      name="email" type="email" value="" required></div>
                 </div>
               </div><label>Password</label>
               <div class="input">
                 <div class="search-input-format">
                   <div class="input_parent"><input placeholder="Password"
                       class="inputClassName " id="password"
-                      name="password" type="password" value=""></div>
+                      name="password" type="password" value="" required></div>
                   <div class="show_password">Show</div>
                 </div>
               </div>
             </div>
-            <div class="forgot_password">Forgot password?</div><button disabled="" type="submit" color="primary"
-              class="hOzTDN login_button">
+            <div class="forgot_password">Forgot password?</div>
+              <button disabled type="submit" color="primary"
+              class="login_button">
               <div class="content" aria-describedby="Sign In">Sign In</div>
             </button>
             <div class="seperator_line"></div><span class="new_account_title">Don't Have An
               Account?&nbsp;</span><button color="primary"
-              class="hOzTDN create_button">
-              <div class="content" aria-describedby="Create a new account">Create a new account
+              class="create_button">
+              <div id="create-btn" class="content" aria-describedby="Create a new account">Create a new account
               </div>
             </button>
           </div>
