@@ -4,6 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="./view/static/menu_list.js"></script>
 <header class="app-header">
+  <div class="bg-back"></div>
   <div class="header-top">
     <div class="content">
       <div class="left notification">
@@ -129,7 +130,7 @@
     </div>
   </div>
 <!-- DropDown Menu list-->
-  <div onmouseleave="visibleDDMenu()" id="nav_dropdown" class="drop-down-menu">
+  <div id="nav_dropdown" class="drop-down-menu">
     <div class="">
       <div id="nav-drop_featured" class="column featured"></div>
       <div id="nav-drop_extra" class="column"></div>
@@ -468,7 +469,11 @@
   </div>
 </header>
 <!-- Trigger/Open The Modal -->
-
+<body style="overflow: auto;">
+  <div style="height: 500px; background-color: #c1d82f;"></div>
+  <div style="height: 500px; background-color: aquamarine;"></div>
+  <div style="height: 500px; background-color: brown;"></div>
+</body>
 <script>
   const HEADER_STATE = {
     statusTOPHAT:false, 

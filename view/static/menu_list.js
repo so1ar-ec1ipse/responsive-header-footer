@@ -69,7 +69,6 @@ const findNode = (data) => {
  * @returns 
  */
 const buildDroping = (title, data_list, isfear = false) => {
-    console.log(title)
     let featured = isfear?"featured":''
     let ret_Data = '<div class="group'+' featured'+'">'
         ret_Data += '<h2 class="title">' + title + '</h2><ul>'
@@ -234,6 +233,7 @@ const init = () => {
     getElementByQuery("#drop-down-view").onmouseenter = () => { 
         visibleDDMenu() 
     }
+    getElementByQuery("#nav_dropdown").onmouseleave = () => {visibleDDMenu()}
     
     // MOBILE:: side-menu EventListeners
     getElementByQuery(".menu_icon").onmouseover = () => { showSubMenu(0) }
@@ -246,6 +246,12 @@ const init = () => {
     for(element in temp){
         if(typeof(temp[element]) === "object")
             temp[element].addEventListener("click", showSubMenu)
+    }
+    getElementByQuery('.show_password').onmousedown = () => { 
+        getElementByQuery("#password").type = ""
+    }
+    getElementByQuery('.show_password').onmouseleave = () => {
+        getElementByQuery("#password").type = "password"
     }
 }
 /**
