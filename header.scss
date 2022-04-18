@@ -51,7 +51,7 @@ header {
       line-height: 2rem;
       letter-spacing: 0.2px;
       opacity: 1;
-      font-weight: lighter;
+      font-weight: 400;
       color: #333333;
       display: flex;
       > .column {
@@ -124,7 +124,7 @@ header {
     background: #333333;
     color: #ffffff;
     font-size: 12px;
-    font-weight: lighter;
+    font-weight: 400;
     >div{
       padding-right: 0px;
       &.content {
@@ -360,7 +360,7 @@ header {
                         line-height: 1.428rem;
                         letter-spacing: 0.2px;
                         opacity: 1;
-                        font-weight: lighter;
+                        font-weight: 400;
                         color: #333333;
                         background: transparent;
                         border: none;
@@ -487,7 +487,7 @@ header {
       transform: rotate(90deg);
     }
   }
-  .fuWQyr {
+  .side-menu_back {
     display: none;
     background: rgba(0, 0, 0, 0.35);
     outline: none;
@@ -574,7 +574,7 @@ header {
           line-height: 1.428rem;
           letter-spacing: 0.2px;
           opacity: 1;
-          font-weight: lighter;
+          font-weight: 400;
           color: #333333;
           height: 45px;
           -webkit-box-align: center;
@@ -954,7 +954,7 @@ header {
                       line-height: 1.428rem;
                       letter-spacing: 0.2px;
                       opacity: 1;
-                      font-weight: lighter;
+                      font-weight: 400;
                       color: rgb(51, 51, 51);
                       background: transparent;
                       border: none;
@@ -970,7 +970,7 @@ header {
                     text-decoration: underline;
                     margin-right: 15px;
                     cursor: pointer;
-                    font-weight: lighter;
+                    font-weight: 400;
                   }
                 }
               }
@@ -1067,7 +1067,6 @@ header {
     border-image: initial;
     background: #ffffff;
     z-index: 110;
-    margin: 6px auto;
     flex-wrap: wrap;
     overflow-y: scroll;
     max-height: 240px;
@@ -1080,7 +1079,7 @@ header {
     }
     #text_suggestions_wrapper {
       font-size: 13px;
-      font-weight: lighter;
+      font-weight: 400;
       color: #333333;
       background: #ffffff;
       margin-top: 24px;
@@ -1143,8 +1142,8 @@ header {
       background-color: lightblue;
       border: white 1px solid;
       border-radius: 50%;
-      top: 12px;
-      right: 11px;
+      top: 50px;
+      right: 5px;
       width: 20px;
       height: 20px;
       background-image: url(./view/static/images/svgs/closex.svg);
@@ -1270,6 +1269,9 @@ header {
     right: 12vw;
     top: 65px;
   }
+  .app-header .do-modal{
+    top: 133px;
+  }
   .app-header .search_dropdown {
     top:100px;
     position: absolute;
@@ -1318,7 +1320,7 @@ header {
       height: 3.4vw;
       background: #333333;
       color: #ffffff;
-      font-weight: lighter;
+      font-weight: 400;
       >div{
         padding-right: 0vw;
         &.content {
@@ -1516,7 +1518,7 @@ header {
                 line-height: 2.2vw;
                 letter-spacing: 0.1vw;
                 opacity: 1;
-                font-weight: lighter;
+                font-weight: 400;
                 color: #333333;
                 background: transparent;
                 border: none;
@@ -1784,7 +1786,7 @@ header {
         line-height: 3.2vw;
         letter-spacing: 0.2vw;
         opacity: 1;
-        font-weight: lighter;
+        font-weight: 400;
         color: #333333;
         display: flex;
         > .column {
@@ -1866,7 +1868,7 @@ header {
       width: 100%;
       #text_suggestions_wrapper {
         font-size: 1.3vw;
-        font-weight: lighter;
+        font-weight: 400;
         color: #333333;
         background: #ffffff;
         margin-top: 2.4vw;

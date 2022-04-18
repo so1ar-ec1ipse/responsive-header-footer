@@ -18,14 +18,24 @@ const getElementByQuery = (query) => {
  */
 const doModalDialog = (query) => {
     let header_modal = getElementByQuery("#my-modal")
-    let header_modal_content = getElementByQuery("#my-content")
-    console.log(header_modal_content)
-    // header_modal_content.removeChild(header_modal_content[0])
-    header_modal_content.appendChild(getElementByQuery(query))
-    // header_modal_content.appendChild(getElementByQuery("#search_dropdown"))
+    // let header_modal_content = getElementByQuery("#my-content")
+    // console.log(header_modal_content)
+    // header_modal_content.appendChild(getElementByQuery(query))
+    if(HEADER_STATE.statusTOPHAT){
+        showElement("#top-hat-box")
+        hideElement("#search_dropdown")
+        showElement(".modal-close")
+    }
+    else if(HEADER_STATE.statusSEARCH){
+        hideElement("#top-hat-box")
+        showElement("#search_dropdown")
+        hideElement(".modal-close")
+    }
     header_modal.style.display = "block"
 }
 const hideModalDialog = () => {
+    HEADER_STATE.statusSEARCH = false
+    HEADER_STATE.statusTOPHAT = false
     getElementByQuery("#my-modal").style.display = "none"
 }
 const showElement = (query) => {
@@ -132,23 +142,23 @@ const updateSideMenu = (data) => {
     }
 }
 const closeMenu = (iflag = false) => {
-    if(iflag) header_state.side_menu = []
-    else header_state.side_menu.pop()
-    updateSideMenu(header_state.side_menu)
+    if(iflag) HEADER_STATE.statusSIDEMENU = []
+    else HEADER_STATE.statusSIDEMENU.pop()
+    updateSideMenu(HEADER_STATE.statusSIDEMENU)
 }
 const showSubMenu = (ev) => {
     onSearch(false)
-    if(header_state.side_menu.length) {
-        header_state.side_menu.push(ev.target.innerText)
+    if(HEADER_STATE.statusSIDEMENU.length) {
+        HEADER_STATE.statusSIDEMENU.push(ev.target.innerText)
     }
     else{
-        header_state.side_menu.push(ev)
+        HEADER_STATE.statusSIDEMENU.push(ev)
     } 
-    updateSideMenu(header_state.side_menu)
+    updateSideMenu(HEADER_STATE.statusSIDEMENU)
     
 }
 
-const showDDMenu = (ev) => {
+const visibleDDMenu = (ev) => {
     if(typeof(ev) === "object"){ 
         const dropNavList = buildDropDown(ev.target.innerHTML)
         if(dropNavList.featured === '' && dropNavList.extra === '')
@@ -159,29 +169,27 @@ const showDDMenu = (ev) => {
     }
     else hideElement('#nav_dropdown')
 }
-// const hideDDMenu = (ev) => {
-//     showElement("#drop-down-view")
-//     preDrop = ''
-// }
 const onSearch = (iflag) => {
     if(iflag){
         invisibleElement(".header-bot")
-        header_state.preSearch = true
-        showDDMenu(header_state.preSearch)
+        HEADER_STATE.statusSEARCH = true
+        HEADER_STATE.statusTOPHAT = false
+        visibleDDMenu(HEADER_STATE.statusSEARCH)
         getElementByQuery('#search_dropdown').classList.replace('fade_out','fade_in');
         if(document.body.clientWidth > 730)
             document.getElementsByClassName('signed-out')[0].style.visibility = 'hidden';
         document.getElementsByClassName('close_btn')[0].style.display = 'block';
+        doModalDialog()
     }
     else {
         visibleElement(".header-bot")
-        header_state.preSearch = false
+        HEADER_STATE.statusSEARCH = false
         getElementByQuery('#search_dropdown').classList.replace('fade_in','fade_out');
         document.getElementsByClassName('signed-out')[0].style.visibility = 'visible';
         document.getElementsByClassName('close_btn')[0].style.display = 'none';
+        hideModalDialog()
     }
 }
-
 
 const moveScroll = (step) => {
     let icounter = 0;
@@ -202,6 +210,10 @@ const init = () => {
     getElementByQuery(".modal-close").onclick = () => { hideModalDialog() }
     window.onclick = (event) => {
         if(event.target == getElementByQuery("#my-modal")) {
+            if(HEADER_STATE.statusSEARCH)
+                onSearch()
+            HEADER_STATE.statusTOPHAT = false
+            HEADER_STATE.statusSEARCH = false
             hideModalDialog()
         }
     }
@@ -209,15 +221,19 @@ const init = () => {
      * When focusing the search line edit
      */
     getElementByQuery("#search").onfocus = () => { onSearch(true) }
-
     /**
      * set Evet handlers to menu
      */
-    //.onmouseover = (event) => { showDDMenu(event) }
+    //.onmouseover = (event) => { visibleDDMenu(event) }
 
     // top-hat EventListeners
     // getElementByQuery('#top-hat_hit').onclick = () => { showElement('#top-hat-box') }
-    getElementByQuery('#top-hat_hit').onclick = () => { doModalDialog('#top-hat-box') }
+    getElementByQuery('#top-hat_hit').onclick = () => { 
+        HEADER_STATE.statusTOPHAT = true
+        HEADER_STATE.statusSEARCH = false
+        // doModalDialog('#top-hat-box') 
+        doModalDialog() 
+    }
     // getElementByQuery(".top-hat-close-icon").onclick = () => { hideElement('#top-hat-box') }
     getElementByQuery(".slide_left_btn").onclick = () => { moveScroll(-1) }
     getElementByQuery(".slide_right_btn").onclick = () => { moveScroll(1) }
@@ -225,13 +241,13 @@ const init = () => {
     // Dropdwon Menu
     getElementByQuery("#drop-down-view").onmouseenter = () => { 
         console.log("getElementByQuery()")
-        showDDMenu() 
+        visibleDDMenu() 
     }
     // getElementByQuery("#drop-down-view")
     
     // side-menu EventListeners
     getElementByQuery(".menu_icon").onmouseover = () => { showSubMenu(0) }
-    getElementByQuery("#bck-btn").onclick = () => { closeMenu() }
+    getElementByQuery("#bck-btn").onclick = () => { closeMenu(true) }
 
     getElementByQuery("#login-account").onclick = () =>{ showElement("#log-in-box") }
     getElementByQuery("#log-in-close").onclick = () => { hideElement("#log-in-box") }

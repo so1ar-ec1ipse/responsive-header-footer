@@ -456,7 +456,7 @@ header * {
   width: 18px;
   transform: rotate(90deg);
 }
-.app-header .fuWQyr {
+.app-header .side-menu_back {
   display: none;
   background: rgba(0, 0, 0, 0.35);
   outline: none;
@@ -1206,9 +1206,11 @@ header * {
     top: 65px;
  }
   .app-header .search_dropdown {
-    top: 100px;
     position: absolute;
  }
+ .app-header .do-modal{
+  top: 133px;
+  }
 }
 @media (min-width: 731px) {
   .app-header > .header-mid > .content > .header-search .menu_icon {
