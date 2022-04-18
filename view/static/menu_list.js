@@ -207,6 +207,9 @@ const moveScroll = (step) => {
  */
 
 const init = () => {
+    /**
+     * MODAL-DIALOG:: EventListeners
+     */
     getElementByQuery(".modal-close").onclick = () => { hideModalDialog() }
     window.onclick = (event) => {
         if(event.target == getElementByQuery("#my-modal")) {
@@ -218,37 +221,29 @@ const init = () => {
         }
     }
     /**
-     * When focusing the search line edit
+     * SEARCH:: When focusing the search line edit
      */
     getElementByQuery("#search").onfocus = () => { onSearch(true) }
-    /**
-     * set Evet handlers to menu
-     */
-    //.onmouseover = (event) => { visibleDDMenu(event) }
 
-    // top-hat EventListeners
-    // getElementByQuery('#top-hat_hit').onclick = () => { showElement('#top-hat-box') }
+    // TOP-HAT:: EventListeners
     getElementByQuery('#top-hat_hit').onclick = () => { 
         HEADER_STATE.statusTOPHAT = true
         HEADER_STATE.statusSEARCH = false
-        // doModalDialog('#top-hat-box') 
         doModalDialog() 
     }
-    // getElementByQuery(".top-hat-close-icon").onclick = () => { hideElement('#top-hat-box') }
     getElementByQuery(".slide_left_btn").onclick = () => { moveScroll(-1) }
     getElementByQuery(".slide_right_btn").onclick = () => { moveScroll(1) }
 
-    // Dropdwon Menu
+    // DEKTOP:: Top Dropdwon Menu
     getElementByQuery("#drop-down-view").onmouseenter = () => { 
-        console.log("getElementByQuery()")
         visibleDDMenu() 
     }
-    // getElementByQuery("#drop-down-view")
     
-    // side-menu EventListeners
+    // MOBILE:: side-menu EventListeners
     getElementByQuery(".menu_icon").onmouseover = () => { showSubMenu(0) }
     getElementByQuery("#bck-btn").onclick = () => { closeMenu(true) }
 
+    // LOGIN:: log-in dialog EventListeners
     getElementByQuery("#login-account").onclick = () =>{ showElement("#log-in-box") }
     getElementByQuery("#log-in-close").onclick = () => { hideElement("#log-in-box") }
     const temp = document.querySelectorAll("div#side-menu .list-setting")
@@ -258,7 +253,7 @@ const init = () => {
     }
 }
 /**
- * Data of Site Menu
+ * TOP-NAV:: Data of Site Menu
  */ 
 const siteMenuItems = [
     {

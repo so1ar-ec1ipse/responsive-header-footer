@@ -1021,7 +1021,7 @@ header * {
   border-image: initial;
   background: #fff;
   z-index: 110;
-  margin: 6px auto;
+  margin: 1px auto;
   flex-wrap: wrap;
   overflow-y: scroll;
   max-height: 240px;
