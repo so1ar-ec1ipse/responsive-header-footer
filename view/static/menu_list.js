@@ -9,21 +9,16 @@ const DOM_EVENTS = {
  */ 
 const getElementByQuery = (query) => {
     return document.body.querySelector(query)
-    // const ret = document.body.querySelector(query)
-    // return ret
 }
 /**
  * 
  * @param {*} CSS selector Query
  */
-const doModalDialog = (query) => {
+const doModalDialog = () => {
     let header_modal = getElementByQuery("#my-modal")
-    // let header_modal_content = getElementByQuery("#my-content")
-    // console.log(header_modal_content)
-    // header_modal_content.appendChild(getElementByQuery(query))
     if(HEADER_STATE.statusTOPHAT){
+        onSearch()
         showElement("#top-hat-box")
-        hideElement("#search_dropdown")
         showElement(".modal-close")
     }
     else if(HEADER_STATE.statusSEARCH){
@@ -208,7 +203,7 @@ const moveScroll = (step) => {
 
 const init = () => {
     /**
-     * MODAL-DIALOG:: EventListeners
+     * MODAL-DIALOG CLOSE:: EventListeners
      */
     getElementByQuery(".modal-close").onclick = () => { hideModalDialog() }
     window.onclick = (event) => {
