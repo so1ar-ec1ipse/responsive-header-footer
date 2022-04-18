@@ -104,10 +104,12 @@ header * {
   height: 30px;
   letter-spacing: 1.1px;
   display: inline-block;
+  text-transform: capitalize;
 }
 .app-header .drop-down-menu > div > .column > .group ul > li > a > div.item > .item-label {
   width: 100%;
   line-height: 1.5rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 }
 .app-header .drop-down-menu > div > .column > .group ul > li > a .item:hover {
   font-weight: 700;

@@ -23,556 +23,15 @@ body {
         font-weight: 100;
         color: #565a5c;
     } 
-}
-
-.exported-element {
-    
-    >div {
-        margin: auto;
-        margin: 0px 48px;
-        padding: 36px 110px;
+    .exported-element {
         
-        .foot_seperator {
-            max-width: 1500px;
-            opacity: 0.25;
-            background-color: #424242;
-            height: 1px;
-            margin: 1.6rem 0px;
-        }
-        .footer-content {
-            display: flex;
-            -webkit-box-pack: justify;
-            justify-content: space-between;
-            flex-wrap: wrap;
-        }
-        >div {
-
-            // .footer-cards
-            &:nth-child(1) {
-                display: flex;
-                -webkit-box-pack: justify;
-                justify-content: space-between;
-                flex-wrap: wrap;
-                >a, div {
-                    display: flex;
-                    max-width: 300px;
-                    text-decoration: none;
-                    margin: 0;
-                    >div {
-                        &:nth-child(1){
-                            margin: 0px 2rem 0px 0px;
-                            >svg, img {
-                                width: 48px;
-                                height: 48px;
-                            }
-                        }
-                        &:nth-child(2) {
-                            display: block;
-                            flex-direction: column;
-                            flex: 0 1 auto;
-                            // width: 78%;
-                            >div {
-                                &:nth-child(1) {
-                                    font-size: 0.928rem;
-                                    letter-spacing: 0.2px;
-                                    opacity: 1;
-                                    color: rgb(51, 51, 51);
-                                    font-weight: bold;
-                                    text-transform: uppercase;
-                                    line-height: normal;
-                                    margin-top: 3px;
-                                }
-                                &:nth-child(2) {
-                                    font-size: 0.928rem;
-                                    letter-spacing: 0.2px;
-                                    opacity: 1;
-                                    font-weight: 100;
-                                    color: rgb(86, 90, 92);
-                                    line-height: 2.08;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-            // .footer-customerservice
-            &:nth-child(3) {
-                display: flex;
-                -webkit-box-pack: justify;
-                justify-content: space-between;
-                flex-wrap: wrap;
-                >div {
-                    &:nth-child(1){
-                        >div {
-                            display: flex;
-                            -webkit-box-pack: center;
-                            justify-content: center;
-                            width: 25%;
-                            >div {
-                                width: 16rem;
-                                &:nth-child(3) {
-                                    display: flex;
-                                    flex-direction: column;
-                                    justify-content: flex-start;
-                                    >div {
-                                        &:nth-child(1){
-                                            width: 13rem;
-                                        }
-                                        &:nth-child(2){
-                                            margin-top: 28px;
-                                            width: 16rem;
-                                        }
-                                       
-                                    }
-                                }
-                                &:nth-child(1), &:nth-child(2), &:nth-child(4){
-                                    >span {
-                                        font-size: 0.928rem;
-                                        line-height: 2rem;
-                                        letter-spacing: 0.2px;
-                                        opacity: 1;
-                                        color: #333333;
-                                        font-weight: bold;
-                                        text-transform: uppercase;
-                                    }
-                                    >ul {
-                                        list-style-type: none;
-                                        padding: 0;
-                                        margin: 0;
-                                        display: flex;
-                                        flex-direction: column;
-                                        flex: 0 1 auto;
-                                        font-size: 0.928rem;
-                                        line-height: 2rem;
-                                        letter-spacing: 0.2px;
-                                        opacity: 1;
-                                        font-weight: 100;
-                                        color: #333333;
-                                        
-                                        >li {
-                                            display: list-item;
-                                            text-align: -webkit-match-parent;
-                                            >div {
-                                                display: block;
-                                                >a {
-                                                    color: inherit;
-                                                    text-decoration: none;
-                                                    cursor: pointer;
-                                                    // >a {
-                                                        .card_subheading {
-                                                            background-color: red;
-                                                            font-size: 0.928rem;
-                                                            line-height: 2rem;
-                                                            letter-spacing: 0.2px;
-                                                            opacity: 1;
-                                                            font-weight: 100;
-                                                            color: rgb(86, 90, 92);
-                                                            
-                                                        }
-                                                        .nav_list_subtitle {
-                                                            padding: 0px;
-                                                            text-transform: capitalize;
-                                                            line-height: 2.15;
-                                                            margin: 0px;
-                                                            text-decoration: none;
-                                                            letter-spacing: 1px;
-                                                            cursor: pointer;
-                                                        }
-                                                    // }
-                                                    &:hover {
-                                                        font-weight: bold;
-                                                        letter-spacing: 0.55px;
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                                
-                            }
-                        }
-                    }
-                    &:nth-child(2){
-                        >span {
-                            display: block;
-                            &:nth-child(1) {
-                                font-size: 0.928rem;
-                                line-height: 2rem;
-                                letter-spacing: 0.2px;
-                                opacity: 1;
-                                color: rgb(51, 51, 51);
-                                font-weight: bold;
-                                text-transform: uppercase;
-                            }
-                            &:nth-child(2) {
-                                font-weight: 300;
-                                font-size: 12px;
-                                line-height: 18px;
-                                letter-spacing: 0.17px;
-                                margin-top: 6px;
-                            }
-                        }
-                        >button {
-                            justify-content: center;
-                            width: 185px;
-                            height: 39px;
-                            margin-top: 12px;
-                            background: #333333;
-                            border-radius: 0px;
-                            text-transform: uppercase;
-                            font-size: 0.928rem;
-                            line-height: 2rem;
-                            letter-spacing: 0.2px;
-                            opacity: 1;
-                            font-weight: bold;
-                            color: #ffffff;
-                        }
-                        >ul {
-                            display: flex;
-                            list-style: none;
-                            margin: 15px auto;
-                            padding: 0px;
-                            height: 48px;
-                            >li {
-                                margin:0px 8px;
-                                margin-top: auto;
-                                align-content: center;
-                                >a {
-                                    text-decoration: none;
-                                }
-                            }
-                        }
-                    }
-                }
-                .foot_card_left {
-                    display: flex;
-                    width: 60%;
-                    flex-wrap: wrap;
-                    list-style: none;
-                    -webkit-box-pack: justify;
-                    justify-content: space-between;
-                }
-                .foot_card_right {
-                    flex-direction: column;
-                    max-width: 300px;
-                    width: 100%;
-                }
-            }
-            // .footer-bottom 
-            &:nth-child(5) {
-                display: flex;
-                -webkit-box-pack: justify;
-                justify-content: space-between;
-                flex-wrap: wrap;
-                >div {
-                    &:nth-child(1) {
-                        display: flex;
-                        list-style: none;
-                        -webkit-box-align: center;
-                        align-items: center;
-                        .shop_sites {
-                            margin-right: 7px;
-                            padding: 2px 2px 0px;
-                            cursor: pointer;
-                            &.active {
-                                border: 1px solid;
-                            }
-                        }
-    
-                        .card_subheading {
-                            font-size: 0.928rem;
-                            line-height: 2rem;
-                            letter-spacing: 0.2px;
-                            opacity: 1;
-                            font-weight: 100;
-                            color: #565a5c;
-                        }
-                        >ul{
-                            display: flex;
-                            list-style-type: none;
-                            padding: 0;
-                            margin: 0;
-                        }
-                    }
-                    &:nth-child(2) {
-                        text-align: center;
-                        font-weight: 100;
-                        margin: 10px 0px;
-                        >a {
-                            text-decoration: none;
-                        }
-                    }
-                    &:nth-child(3) {
-                        display: flex;
-                        list-style: none;
-                        -webkit-box-align: center;
-                        align-items: center;
-                        .links {
-                            display: flex;
-                        }                    
-                        ul {
-                            
-                            list-style-type: none;
-                            padding: 0;
-                            margin: 0;
-                            >li {
-                                display: list-item;
-                                text-align: -webkit-match-parent;
-                                >a {
-                                    font-size: 0.928rem;
-                                    line-height: 2rem;
-                                    letter-spacing: 0.2px;
-                                    opacity: 1;
-                                    font-weight: 100;
-                                    color: #565a5c;
-                                    text-decoration: none;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-            
-            // .copyrights 
-            &:nth-child(6) {
-                text-align: center;
-                font-size: 0.928rem;
-                line-height: 2rem;
-                letter-spacing: 0.2px;
-                opacity: 1;
-                font-weight: 100;
-                color: #565a5c;
-            }
-        }
-    }
-}
-@media (max-width: 565px) {
-    .foot_seperator {
-        display: none;
-    }
-    .exported-element {
         >div {
             margin: auto;
-            padding: 1.2rem 4vw;
-            >div {
-                &:nth-child(1) {
-                    margin: 1rem 0 0 0;
-                    >a, >div {
-                        text-align: center;
-                        max-width: 94px;
-                        color: rgb(51, 51, 51);
-                        text-decoration: none;
-                        display: block;
-                        >div {
-                            &:nth-child(1) {
-                                width: 38px;
-                                height: 38px;
-                                margin: auto;
-                                >svg, img {
-                                    width: 48px;
-                                    height: 32px;
-                                }
-                            }
-                            &:nth-child(2) {
-                                .card_heading {
-                                    width: 100%;
-                                }
-                                .card_subheading{
-                                    display: none;
-                                }
-                            }
-                        }
-                    }
-                }
-                &:nth-child(3) {
-                    >div {
-                        display: block;
-                        &:nth-child(1) {
-                            width: 100%;
-                            margin: 1rem 0px;
-                            >div {
-                                width: 100%;
-                                margin: auto;
-                                display: block;
-                                span {
-                                    align-items: center;
-                                    box-sizing: border-box;
-                                    cursor: pointer;
-                                    display: flex;
-                                    height: 3.5rem;
-                                    justify-content: space-between;
-                                    margin: 0;
-                                    font-weight: 900;
-                                    letter-spacing: 0.5px;
-                                    text-transform: uppercase;
-                                    padding: 6px 11px;
-                                    width: 100%;
-                                    &::after {
-                                        background-color: initial;
-                                        background-image: url(https://www.eddiebauer.com/view/static/images/svg/ydv/arrowDown.svg);
-                                        background-position: 50% center;
-                                        background-repeat: no-repeat;
-                                        background-size: contain;
-                                        content: "";
-                                        font-family: "Helvetica Neue", Helvetica, sans-serif;
-                                        width: 0.8rem;
-                                        height: 0.8rem;
-                                        line-height: 5.1rem;
-                                        margin: 0;
-                                        padding: 0;
-                                        transition: all 0.3s ease-in-out;
-                                    }
-                                    &:hover::after {
-                                        transform: scale(1, -1);
-                                        transition: all 0.3s ease-in-out;
-                                    }
-
-                                    + ul {
-                                        display: none !important;
-                                    }
-                                }
-                                div.i-handler {
-                                    width: 100%;
-                                    margin: 0px !important;
-                                    padding: 0px !important;
-                                    &:hover {
-                                        & > ul {
-                                            display: flex !important;
-                                            flex-direction: column;
-                                            letter-spacing: 0.2px;
-                                            text-transform: capitalize;
-                                            font-weight: 300;
-                                            padding: 0 11px;
-                                        }
-                                    }
-                                    border-bottom: 0.1rem solid #000000;
-                                }
-                            }
-                            
-                        }
-                        &:nth-child(2) {
-                            text-align: center;
-                            max-width: 100%;
-                            width: 100%;
-                            >ul {
-                                justify-content: center
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-@media (min-width: 565px) and (max-width: 780px) {
-    .exported-element {
-        >div {
-            margin: auto;
-            padding: 1.2rem 4vw;
-            >div {
-                &:nth-child(1) {
-                    display: block;
-                    >a, div {
-                        max-width: 100%;
-                        text-decoration: none;
-                        margin: 1rem 0;
-                        >div {
-                            &:nth-child(2) {
-                                width: 100%;
-                            }
-                        }
-                    }
-                }
-                &:nth-child(3) {
-                    >div {
-                        display: block;
-                        &:nth-child(1) {
-                            width: 100%;
-                            margin: 1rem 0px 2rem 0px;
-                            >div {
-                                width: 45%;
-                                display: block;
-                                div {
-                                    width: 100%;
-                                    margin: 0px !important;
-                                    padding: 0px !important;
-                                }
-                            }
-                        }
-                        &:nth-child(2) {
-                            text-align: center;
-                            max-width: 100%;
-                            width: 100%;
-                            > div {
-                                width: 50%;
-                            }
-                            >ul {
-                                justify-content: center
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-@media  (min-width: 780px) and (max-width: 1135px) {
-    .exported-element {
-        >div {
-            margin: auto;
-            padding: 1.2rem 7vm;
-            >div {
-                &:nth-child(1) {
-                    >a, div {
-                        text-decoration: none;
-                        margin: 1rem 0px;
-                        >div {
-                            &:nth-child(2) {
-                                width: 100%;
-                            }
-                        }
-                    }
-                }
-                &:nth-child(3) {
-                    >div {
-                        display: block;
-                        &:nth-child(1) {
-                            width: 100%;
-                            margin: 1rem 0px 2rem 0px;
-                            >div {
-                                div {
-                                    width: 100%;
-                                    margin: 0px !important;
-                                    padding: 0px !important;
-                                }
-                            }
-                        }
-                        &:nth-child(2) {
-                            text-align: center;
-                            max-width: 100%;
-                            width: 100%;
-                            > div {
-                                width: 50%;
-                            }
-                            >ul {
-                                justify-content: center
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-@media  (min-width: 1500px) {
-    .exported-element {
-        font-size: 1.4vw;
-        >div {
-            margin: auto;
-            margin: 0px 0.48vw;
-            padding: .36vw 10vw;
+            margin: 0px 48px;
+            padding: 36px 110px;
             
             .foot_seperator {
+                max-width: 1500px;
                 opacity: 0.25;
                 background-color: #424242;
                 height: 1px;
@@ -585,46 +44,45 @@ body {
                 flex-wrap: wrap;
             }
             >div {
-    
+
                 // .footer-cards
-                &.footer-cards {
+                &:nth-child(1) {
                     display: flex;
                     -webkit-box-pack: justify;
                     justify-content: space-between;
                     flex-wrap: wrap;
-                    margin: 1vw 0vw;
-
                     >a, div {
                         display: flex;
-                        max-width: 25vw;
+                        max-width: 300px;
                         text-decoration: none;
                         margin: 0;
                         >div {
                             &:nth-child(1){
-                                margin: 0*0.1vw 2vw 0*0.1vw 0*0.1vw;
+                                margin: 0px 2rem 0px 0px;
                                 >svg, img {
-                                    width: 48*0.1vw;
-                                    height: 48*0.1vw;
+                                    width: 48px;
+                                    height: 48px;
                                 }
                             }
                             &:nth-child(2) {
                                 display: block;
                                 flex-direction: column;
                                 flex: 0 1 auto;
+                                // width: 78%;
                                 >div {
                                     &:nth-child(1) {
-                                        font-size: 0.928vw;
-                                        letter-spacing: 0.2*0.1vw;
+                                        font-size: 0.928rem;
+                                        letter-spacing: 0.2px;
                                         opacity: 1;
                                         color: rgb(51, 51, 51);
                                         font-weight: bold;
                                         text-transform: uppercase;
                                         line-height: normal;
-                                        margin-top: 3*0.1vw;
+                                        margin-top: 3px;
                                     }
                                     &:nth-child(2) {
-                                        font-size: 0.928vw;
-                                        letter-spacing: 0.2*0.1vw;
+                                        font-size: 0.928rem;
+                                        letter-spacing: 0.2px;
                                         opacity: 1;
                                         font-weight: 100;
                                         color: rgb(86, 90, 92);
@@ -636,7 +94,7 @@ body {
                     }
                 }
                 // .footer-customerservice
-                &.footer-customerservice {
+                &:nth-child(3) {
                     display: flex;
                     -webkit-box-pack: justify;
                     justify-content: space-between;
@@ -649,27 +107,27 @@ body {
                                 justify-content: center;
                                 width: 25%;
                                 >div {
-                                    width: 16vw;
+                                    width: 16rem;
                                     &:nth-child(3) {
                                         display: flex;
                                         flex-direction: column;
                                         justify-content: flex-start;
                                         >div {
                                             &:nth-child(1){
-                                                width: 13vw;
+                                                width: 13rem;
                                             }
                                             &:nth-child(2){
-                                                margin-top: 2.8vw;
-                                                width: 16vw;
+                                                margin-top: 28px;
+                                                width: 16rem;
                                             }
-                                           
+                                        
                                         }
                                     }
                                     &:nth-child(1), &:nth-child(2), &:nth-child(4){
                                         >span {
-                                            font-size: 0.928vw;
-                                            line-height: 2vw;
-                                            letter-spacing: 0.2*0.1vw;
+                                            font-size: 0.928rem;
+                                            line-height: 2rem;
+                                            letter-spacing: 0.2px;
                                             opacity: 1;
                                             color: #333333;
                                             font-weight: bold;
@@ -682,9 +140,9 @@ body {
                                             display: flex;
                                             flex-direction: column;
                                             flex: 0 1 auto;
-                                            font-size: 0.928vw;
-                                            line-height: 2vw;
-                                            letter-spacing: 0.2*0.1vw;
+                                            font-size: 0.928rem;
+                                            line-height: 2rem;
+                                            letter-spacing: 0.2px;
                                             opacity: 1;
                                             font-weight: 100;
                                             color: #333333;
@@ -698,33 +156,30 @@ body {
                                                         color: inherit;
                                                         text-decoration: none;
                                                         cursor: pointer;
-                                                        font-size: 0.8vw;
-                                                        line-height: 2vw;
                                                         // >a {
                                                             .card_subheading {
                                                                 background-color: red;
-                                                                font-size: 0.928vw;
-                                                                line-height: 2vw;
-                                                                letter-spacing: 0.2*0.1vw;
+                                                                font-size: 0.928rem;
+                                                                line-height: 2rem;
+                                                                letter-spacing: 0.2px;
                                                                 opacity: 1;
                                                                 font-weight: 100;
                                                                 color: rgb(86, 90, 92);
                                                                 
                                                             }
                                                             .nav_list_subtitle {
-                                                                padding: 0*0.1vw;
+                                                                padding: 0px;
                                                                 text-transform: capitalize;
                                                                 line-height: 2.15;
-                                                                margin: 0*0.1vw;
+                                                                margin: 0px;
                                                                 text-decoration: none;
-                                                                letter-spacing: 1*0.1vw;
+                                                                letter-spacing: 1px;
                                                                 cursor: pointer;
                                                             }
                                                         // }
-                                                        
                                                         &:hover {
                                                             font-weight: bold;
-                                                            letter-spacing: 0.55*0.1vw;
+                                                            letter-spacing: 0.55px;
                                                         }
                                                     }
                                                 }
@@ -739,9 +194,9 @@ body {
                             >span {
                                 display: block;
                                 &:nth-child(1) {
-                                    font-size: 0.928vw;
-                                    line-height: 2vw;
-                                    letter-spacing: 0.2*0.1vw;
+                                    font-size: 0.928rem;
+                                    line-height: 2rem;
+                                    letter-spacing: 0.2px;
                                     opacity: 1;
                                     color: rgb(51, 51, 51);
                                     font-weight: bold;
@@ -749,23 +204,23 @@ body {
                                 }
                                 &:nth-child(2) {
                                     font-weight: 300;
-                                    font-size: 12*0.1vw;
-                                    line-height: 18*0.1vw;
-                                    letter-spacing: 0.17*0.1vw;
-                                    margin-top: 6*0.1vw;
+                                    font-size: 12px;
+                                    line-height: 18px;
+                                    letter-spacing: 0.17px;
+                                    margin-top: 6px;
                                 }
                             }
                             >button {
                                 justify-content: center;
-                                width: 185*0.1vw;
-                                height: 39*0.1vw;
-                                margin-top: 12*0.1vw;
+                                width: 185px;
+                                height: 39px;
+                                margin-top: 12px;
                                 background: #333333;
-                                border-radius: 0*0.1vw;
+                                border-radius: 0px;
                                 text-transform: uppercase;
-                                font-size: 0.928vw;
-                                line-height: 2vw;
-                                letter-spacing: 0.2*0.1vw;
+                                font-size: 0.928rem;
+                                line-height: 2rem;
+                                letter-spacing: 0.2px;
                                 opacity: 1;
                                 font-weight: bold;
                                 color: #ffffff;
@@ -773,18 +228,15 @@ body {
                             >ul {
                                 display: flex;
                                 list-style: none;
-                                margin: 1.5vw auto;
-                                padding: 0vw;
+                                margin: 15px auto;
+                                padding: 0px;
+                                height: 48px;
                                 >li {
-                                    margin:0vw 0.8vw;
+                                    margin:0px 8px;
                                     margin-top: auto;
                                     align-content: center;
                                     >a {
                                         text-decoration: none;
-                                        svg, img {
-                                            width: 1.6vw;
-                                            height: 1.6vw;
-                                        }
                                     }
                                 }
                             }
@@ -800,12 +252,12 @@ body {
                     }
                     .foot_card_right {
                         flex-direction: column;
-                        max-width: 300*0.1vw;
+                        max-width: 300px;
                         width: 100%;
                     }
                 }
                 // .footer-bottom 
-                &.footer-bottom  {
+                &:nth-child(5) {
                     display: flex;
                     -webkit-box-pack: justify;
                     justify-content: space-between;
@@ -817,8 +269,8 @@ body {
                             -webkit-box-align: center;
                             align-items: center;
                             .shop_sites {
-                                margin-right: 7*0.1vw;
-                                padding: 0.2vw 0.2vw 0*0.1vw;
+                                margin-right: 7px;
+                                padding: 2px 2px 0px;
                                 cursor: pointer;
                                 &.active {
                                     border: 1px solid;
@@ -826,9 +278,9 @@ body {
                             }
         
                             .card_subheading {
-                                font-size: 1.4vw;
-                                line-height: 2vw;
-                                letter-spacing: 0.2*0.1vw;
+                                font-size: 0.928rem;
+                                line-height: 2rem;
+                                letter-spacing: 0.2px;
                                 opacity: 1;
                                 font-weight: 100;
                                 color: #565a5c;
@@ -838,16 +290,12 @@ body {
                                 list-style-type: none;
                                 padding: 0;
                                 margin: 0;
-                                svg, img {
-                                    height: 1.6vw;
-                                    width: max-content;
-                                }
                             }
                         }
                         &:nth-child(2) {
                             text-align: center;
                             font-weight: 100;
-                            margin: 10*0.1vw 0*0.1vw;
+                            margin: 10px 0px;
                             >a {
                                 text-decoration: none;
                             }
@@ -869,9 +317,9 @@ body {
                                     display: list-item;
                                     text-align: -webkit-match-parent;
                                     >a {
-                                        font-size: 1.4vw;
-                                        line-height: 2vw;
-                                        letter-spacing: 0.2*0.1vw;
+                                        font-size: 0.928rem;
+                                        line-height: 2rem;
+                                        letter-spacing: 0.2px;
                                         opacity: 1;
                                         font-weight: 100;
                                         color: #565a5c;
@@ -884,15 +332,566 @@ body {
                 }
                 
                 // .copyrights 
-                &.copyrights  {
+                &:nth-child(6) {
                     text-align: center;
-                    margin-top: 1vw;
-                    font-size: 1.2vw;
-                    line-height: 4rem;
-                    letter-spacing: 0.02vw;
+                    font-size: 0.928rem;
+                    line-height: 2rem;
+                    letter-spacing: 0.2px;
                     opacity: 1;
                     font-weight: 100;
                     color: #565a5c;
+                }
+            }
+        }
+    }
+    @media (max-width: 565px) {
+        .foot_seperator {
+            display: none;
+        }
+        .exported-element {
+            >div {
+                margin: auto;
+                padding: 1.2rem 4vw;
+                >div {
+                    &:nth-child(1) {
+                        margin: 1rem 0 0 0;
+                        >a, >div {
+                            text-align: center;
+                            max-width: 94px;
+                            color: rgb(51, 51, 51);
+                            text-decoration: none;
+                            display: block;
+                            >div {
+                                &:nth-child(1) {
+                                    width: 38px;
+                                    height: 38px;
+                                    margin: auto;
+                                    >svg, img {
+                                        width: 48px;
+                                        height: 32px;
+                                    }
+                                }
+                                &:nth-child(2) {
+                                    .card_heading {
+                                        width: 100%;
+                                    }
+                                    .card_subheading{
+                                        display: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &:nth-child(3) {
+                        >div {
+                            display: block;
+                            &:nth-child(1) {
+                                width: 100%;
+                                margin: 1rem 0px;
+                                >div {
+                                    width: 100%;
+                                    margin: auto;
+                                    display: block;
+                                    span {
+                                        align-items: center;
+                                        box-sizing: border-box;
+                                        cursor: pointer;
+                                        display: flex;
+                                        height: 3.5rem;
+                                        justify-content: space-between;
+                                        margin: 0;
+                                        font-weight: 900;
+                                        letter-spacing: 0.5px;
+                                        text-transform: uppercase;
+                                        padding: 6px 11px;
+                                        width: 100%;
+                                        &::after {
+                                            background-color: initial;
+                                            background-image: url(https://www.eddiebauer.com/view/static/images/svg/ydv/arrowDown.svg);
+                                            background-position: 50% center;
+                                            background-repeat: no-repeat;
+                                            background-size: contain;
+                                            content: "";
+                                            font-family: "Helvetica Neue", Helvetica, sans-serif;
+                                            width: 0.8rem;
+                                            height: 0.8rem;
+                                            line-height: 5.1rem;
+                                            margin: 0;
+                                            padding: 0;
+                                            transition: all 0.3s ease-in-out;
+                                        }
+                                        &:hover::after {
+                                            transform: scale(1, -1);
+                                            transition: all 0.3s ease-in-out;
+                                        }
+    
+                                        + ul {
+                                            display: none !important;
+                                        }
+                                    }
+                                    div.i-handler {
+                                        width: 100%;
+                                        margin: 0px !important;
+                                        padding: 0px !important;
+                                        &:hover {
+                                            & > ul {
+                                                display: flex !important;
+                                                flex-direction: column;
+                                                letter-spacing: 0.2px;
+                                                text-transform: capitalize;
+                                                font-weight: 300;
+                                                padding: 0 11px;
+                                            }
+                                        }
+                                        border-bottom: 0.1rem solid #000000;
+                                    }
+                                }
+                                
+                            }
+                            &:nth-child(2) {
+                                text-align: center;
+                                max-width: 100%;
+                                width: 100%;
+                                >ul {
+                                    justify-content: center
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media (min-width: 565px) and (max-width: 780px) {
+        .exported-element {
+            >div {
+                margin: auto;
+                padding: 1.2rem 4vw;
+                >div {
+                    &:nth-child(1) {
+                        display: block;
+                        >a, div {
+                            max-width: 100%;
+                            text-decoration: none;
+                            margin: 1rem 0;
+                            >div {
+                                &:nth-child(2) {
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                    &:nth-child(3) {
+                        >div {
+                            display: block;
+                            &:nth-child(1) {
+                                width: 100%;
+                                margin: 1rem 0px 2rem 0px;
+                                >div {
+                                    width: 45%;
+                                    display: block;
+                                    div {
+                                        width: 100%;
+                                        margin: 0px !important;
+                                        padding: 0px !important;
+                                    }
+                                }
+                            }
+                            &:nth-child(2) {
+                                text-align: center;
+                                max-width: 100%;
+                                width: 100%;
+                                > div {
+                                    width: 50%;
+                                }
+                                >ul {
+                                    justify-content: center
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media  (min-width: 780px) and (max-width: 1135px) {
+        .exported-element {
+            >div {
+                margin: auto;
+                padding: 1.2rem 7vm;
+                >div {
+                    &:nth-child(1) {
+                        >a, div {
+                            text-decoration: none;
+                            margin: 1rem 0px;
+                            >div {
+                                &:nth-child(2) {
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                    &:nth-child(3) {
+                        >div {
+                            display: block;
+                            &:nth-child(1) {
+                                width: 100%;
+                                margin: 1rem 0px 2rem 0px;
+                                >div {
+                                    div {
+                                        width: 100%;
+                                        margin: 0px !important;
+                                        padding: 0px !important;
+                                    }
+                                }
+                            }
+                            &:nth-child(2) {
+                                text-align: center;
+                                max-width: 100%;
+                                width: 100%;
+                                > div {
+                                    width: 50%;
+                                }
+                                >ul {
+                                    justify-content: center
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media  (min-width: 1500px) {
+        .exported-element {
+            font-size: 1.4vw;
+            >div {
+                margin: auto;
+                margin: 0px 0.48vw;
+                padding: .36vw 10vw;
+                
+                .foot_seperator {
+                    opacity: 0.25;
+                    background-color: #424242;
+                    height: 1px;
+                    margin: 1.6rem 0px;
+                }
+                .footer-content {
+                    display: flex;
+                    -webkit-box-pack: justify;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                }
+                >div {
+        
+                    // .footer-cards
+                    &.footer-cards {
+                        display: flex;
+                        -webkit-box-pack: justify;
+                        justify-content: space-between;
+                        flex-wrap: wrap;
+                        margin: 1vw 0vw;
+    
+                        >a, div {
+                            display: flex;
+                            max-width: 25vw;
+                            text-decoration: none;
+                            margin: 0;
+                            >div {
+                                &:nth-child(1){
+                                    margin: 0*0.1vw 2vw 0*0.1vw 0*0.1vw;
+                                    >svg, img {
+                                        width: 48*0.1vw;
+                                        height: 48*0.1vw;
+                                    }
+                                }
+                                &:nth-child(2) {
+                                    display: block;
+                                    flex-direction: column;
+                                    flex: 0 1 auto;
+                                    >div {
+                                        &:nth-child(1) {
+                                            font-size: 0.928vw;
+                                            letter-spacing: 0.2*0.1vw;
+                                            opacity: 1;
+                                            color: rgb(51, 51, 51);
+                                            font-weight: bold;
+                                            text-transform: uppercase;
+                                            line-height: normal;
+                                            margin-top: 3*0.1vw;
+                                        }
+                                        &:nth-child(2) {
+                                            font-size: 0.928vw;
+                                            letter-spacing: 0.2*0.1vw;
+                                            opacity: 1;
+                                            font-weight: 100;
+                                            color: rgb(86, 90, 92);
+                                            line-height: 2.08;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    // .footer-customerservice
+                    &.footer-customerservice {
+                        display: flex;
+                        -webkit-box-pack: justify;
+                        justify-content: space-between;
+                        flex-wrap: wrap;
+                        >div {
+                            &:nth-child(1){
+                                >div {
+                                    display: flex;
+                                    -webkit-box-pack: center;
+                                    justify-content: center;
+                                    width: 25%;
+                                    >div {
+                                        width: 16vw;
+                                        &:nth-child(3) {
+                                            display: flex;
+                                            flex-direction: column;
+                                            justify-content: flex-start;
+                                            >div {
+                                                &:nth-child(1){
+                                                    width: 13vw;
+                                                }
+                                                &:nth-child(2){
+                                                    margin-top: 2.8vw;
+                                                    width: 16vw;
+                                                }
+                                               
+                                            }
+                                        }
+                                        &:nth-child(1), &:nth-child(2), &:nth-child(4){
+                                            >span {
+                                                font-size: 0.928vw;
+                                                line-height: 2vw;
+                                                letter-spacing: 0.2*0.1vw;
+                                                opacity: 1;
+                                                color: #333333;
+                                                font-weight: bold;
+                                                text-transform: uppercase;
+                                            }
+                                            >ul {
+                                                list-style-type: none;
+                                                padding: 0;
+                                                margin: 0;
+                                                display: flex;
+                                                flex-direction: column;
+                                                flex: 0 1 auto;
+                                                font-size: 0.928vw;
+                                                line-height: 2vw;
+                                                letter-spacing: 0.2*0.1vw;
+                                                opacity: 1;
+                                                font-weight: 100;
+                                                color: #333333;
+                                                
+                                                >li {
+                                                    display: list-item;
+                                                    text-align: -webkit-match-parent;
+                                                    >div {
+                                                        display: block;
+                                                        >a {
+                                                            color: inherit;
+                                                            text-decoration: none;
+                                                            cursor: pointer;
+                                                            font-size: 0.8vw;
+                                                            line-height: 2vw;
+                                                            // >a {
+                                                                .card_subheading {
+                                                                    background-color: red;
+                                                                    font-size: 0.928vw;
+                                                                    line-height: 2vw;
+                                                                    letter-spacing: 0.2*0.1vw;
+                                                                    opacity: 1;
+                                                                    font-weight: 100;
+                                                                    color: rgb(86, 90, 92);
+                                                                    
+                                                                }
+                                                                .nav_list_subtitle {
+                                                                    padding: 0*0.1vw;
+                                                                    text-transform: capitalize;
+                                                                    line-height: 2.15;
+                                                                    margin: 0*0.1vw;
+                                                                    text-decoration: none;
+                                                                    letter-spacing: 1*0.1vw;
+                                                                    cursor: pointer;
+                                                                }
+                                                            // }
+                                                            
+                                                            &:hover {
+                                                                font-weight: bold;
+                                                                letter-spacing: 0.55*0.1vw;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        
+                                    }
+                                }
+                            }
+                            &:nth-child(2){
+                                >span {
+                                    display: block;
+                                    &:nth-child(1) {
+                                        font-size: 0.928vw;
+                                        line-height: 2vw;
+                                        letter-spacing: 0.2*0.1vw;
+                                        opacity: 1;
+                                        color: rgb(51, 51, 51);
+                                        font-weight: bold;
+                                        text-transform: uppercase;
+                                    }
+                                    &:nth-child(2) {
+                                        font-weight: 300;
+                                        font-size: 12*0.1vw;
+                                        line-height: 18*0.1vw;
+                                        letter-spacing: 0.17*0.1vw;
+                                        margin-top: 6*0.1vw;
+                                    }
+                                }
+                                >button {
+                                    justify-content: center;
+                                    width: 185*0.1vw;
+                                    height: 39*0.1vw;
+                                    margin-top: 12*0.1vw;
+                                    background: #333333;
+                                    border-radius: 0*0.1vw;
+                                    text-transform: uppercase;
+                                    font-size: 0.928vw;
+                                    line-height: 2vw;
+                                    letter-spacing: 0.2*0.1vw;
+                                    opacity: 1;
+                                    font-weight: bold;
+                                    color: #ffffff;
+                                }
+                                >ul {
+                                    display: flex;
+                                    list-style: none;
+                                    margin: 1.5vw auto;
+                                    padding: 0vw;
+                                    >li {
+                                        margin:0vw 0.8vw;
+                                        margin-top: auto;
+                                        align-content: center;
+                                        >a {
+                                            text-decoration: none;
+                                            svg, img {
+                                                width: 1.6vw;
+                                                height: 1.6vw;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .foot_card_left {
+                            display: flex;
+                            width: 60%;
+                            flex-wrap: wrap;
+                            list-style: none;
+                            -webkit-box-pack: justify;
+                            justify-content: space-between;
+                        }
+                        .foot_card_right {
+                            flex-direction: column;
+                            max-width: 300*0.1vw;
+                            width: 100%;
+                        }
+                    }
+                    // .footer-bottom 
+                    &.footer-bottom  {
+                        display: flex;
+                        -webkit-box-pack: justify;
+                        justify-content: space-between;
+                        flex-wrap: wrap;
+                        >div {
+                            &:nth-child(1) {
+                                display: flex;
+                                list-style: none;
+                                -webkit-box-align: center;
+                                align-items: center;
+                                .shop_sites {
+                                    margin-right: 7*0.1vw;
+                                    padding: 0.2vw 0.2vw 0*0.1vw;
+                                    cursor: pointer;
+                                    &.active {
+                                        border: 1px solid;
+                                    }
+                                }
+            
+                                .card_subheading {
+                                    font-size: 1.4vw;
+                                    line-height: 2vw;
+                                    letter-spacing: 0.2*0.1vw;
+                                    opacity: 1;
+                                    font-weight: 100;
+                                    color: #565a5c;
+                                }
+                                >ul{
+                                    display: flex;
+                                    list-style-type: none;
+                                    padding: 0;
+                                    margin: 0;
+                                    svg, img {
+                                        height: 1.6vw;
+                                        width: max-content;
+                                    }
+                                }
+                            }
+                            &:nth-child(2) {
+                                text-align: center;
+                                font-weight: 100;
+                                margin: 10*0.1vw 0*0.1vw;
+                                >a {
+                                    text-decoration: none;
+                                }
+                            }
+                            &:nth-child(3) {
+                                display: flex;
+                                list-style: none;
+                                -webkit-box-align: center;
+                                align-items: center;
+                                .links {
+                                    display: flex;
+                                }                    
+                                ul {
+                                    
+                                    list-style-type: none;
+                                    padding: 0;
+                                    margin: 0;
+                                    >li {
+                                        display: list-item;
+                                        text-align: -webkit-match-parent;
+                                        >a {
+                                            font-size: 1.4vw;
+                                            line-height: 2vw;
+                                            letter-spacing: 0.2*0.1vw;
+                                            opacity: 1;
+                                            font-weight: 100;
+                                            color: #565a5c;
+                                            text-decoration: none;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    
+                    // .copyrights 
+                    &.copyrights  {
+                        text-align: center;
+                        margin-top: 1vw;
+                        font-size: 1.2vw;
+                        line-height: 4rem;
+                        letter-spacing: 0.02vw;
+                        opacity: 1;
+                        font-weight: 100;
+                        color: #565a5c;
+                    }
                 }
             }
         }

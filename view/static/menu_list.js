@@ -18,6 +18,7 @@ const doModalDialog = () => {
     let header_modal = getElementByQuery("#my-modal")
     if(HEADER_STATE.statusTOPHAT){
         onSearch()
+        hideElement("#search_dropdown")
         showElement("#top-hat-box")
         showElement(".modal-close")
     }
@@ -68,14 +69,15 @@ const findNode = (data) => {
  * @returns 
  */
 const buildDroping = (title, data_list, isfear = false) => {
+    console.log(title)
     let featured = isfear?"featured":''
     let ret_Data = '<div class="group'+' featured'+'">'
-        ret_Data += '<h2 class="title">' + title.toUpperCase() + '</h2><ul>'
+        ret_Data += '<h2 class="title">' + title + '</h2><ul>'
     data_list.map(data => {
         ret_Data += '<li><a href="'
         ret_Data += data._links.site.href
         ret_Data += '"><div class="item"><div class="item-label">'
-        ret_Data += data.name.toUpperCase()
+        ret_Data += data.name
         ret_Data += '</div></div></a></li>'
     })
     return ret_Data+'</ul></div>'
