@@ -56,7 +56,7 @@ body {
 .exported-element > div > div:nth-child(1) > a > div:nth-child(1), .exported-element > div > div:nth-child(1) div > div:nth-child(1) {
   margin: 0px 2rem 0px 0px;
 }
-.exported-element > div > div:nth-child(1) > a > div:nth-child(1) > svg, .exported-element > div > div:nth-child(1) div > div:nth-child(1) > svg {
+.exported-element > div > div:nth-child(1) > a > div:nth-child(1) > svg, .exported-element > div > div:nth-child(1) div > div:nth-child(1) > svg, .exported-element > div > div:nth-child(1) > a > div:nth-child(1) img, .exported-element > div > div:nth-child(1) div > div:nth-child(1) img {
   width: 48px;
   height: 48px;
 }
@@ -330,7 +330,7 @@ body {
     height: 38px;
     margin: auto;
  }
-  .exported-element > div > div:nth-child(1) > a > div:nth-child(1) > svg, .exported-element > div > div:nth-child(1) > div > div:nth-child(1) > svg {
+  .exported-element > div > div:nth-child(1) > a > div:nth-child(1) > svg, .exported-element > div > div:nth-child(1) > div > div:nth-child(1) > svg, .exported-element > div > div:nth-child(1) > a > div:nth-child(1) img, .exported-element > div > div:nth-child(1) > div > div:nth-child(1) img {
     width: 48px;
     height: 32px;
  }
@@ -528,7 +528,7 @@ body {
   .exported-element > div > div.footer-cards > a > div:nth-child(1), .exported-element > div > div.footer-cards div > div:nth-child(1) {
     margin: 0vw 2vw 0vw 0vw;
  }
-  .exported-element > div > div.footer-cards > a > div:nth-child(1) > svg, .exported-element > div > div.footer-cards div > div:nth-child(1) > svg {
+  .exported-element > div > div.footer-cards > a > div:nth-child(1) > svg, .exported-element > div > div.footer-cards div > div:nth-child(1) > svg, .exported-element > div > div.footer-cards > a > div:nth-child(1) img, .exported-element > div > div.footer-cards div > div:nth-child(1) img {
     width: 4.8vw;
     height: 4.8vw;
  }
@@ -689,7 +689,7 @@ body {
   .exported-element > div > div.footer-customerservice > div:nth-child(2) > ul > li > a {
     text-decoration: none;
  }
-  .exported-element > div > div.footer-customerservice > div:nth-child(2) > ul > li > a svg {
+  .exported-element > div > div.footer-customerservice > div:nth-child(2) > ul > li > a svg, .exported-element > div > div.footer-customerservice > div:nth-child(2) > ul > li > a img {
     width: 1.6vw;
     height: 1.6vw;
  }
@@ -740,7 +740,7 @@ body {
     padding: 0;
     margin: 0;
  }
-  .exported-element > div > div.footer-bottom > div:nth-child(1) > ul svg {
+  .exported-element > div > div.footer-bottom > div:nth-child(1) > ul svg, .exported-element > div > div.footer-bottom > div:nth-child(1) > ul img {
     height: 1.6vw;
     width: max-content;
  }

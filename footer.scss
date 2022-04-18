@@ -61,7 +61,7 @@ body {
                     >div {
                         &:nth-child(1){
                             margin: 0px 2rem 0px 0px;
-                            >svg{
+                            >svg, img {
                                 width: 48px;
                                 height: 48px;
                             }
@@ -368,7 +368,7 @@ body {
                                 width: 38px;
                                 height: 38px;
                                 margin: auto;
-                                >svg {
+                                >svg, img {
                                     width: 48px;
                                     height: 32px;
                                 }
@@ -602,7 +602,7 @@ body {
                         >div {
                             &:nth-child(1){
                                 margin: 0*0.1vw 2vw 0*0.1vw 0*0.1vw;
-                                >svg{
+                                >svg, img {
                                     width: 48*0.1vw;
                                     height: 48*0.1vw;
                                 }
@@ -781,7 +781,7 @@ body {
                                     align-content: center;
                                     >a {
                                         text-decoration: none;
-                                        svg {
+                                        svg, img {
                                             width: 1.6vw;
                                             height: 1.6vw;
                                         }
@@ -838,7 +838,7 @@ body {
                                 list-style-type: none;
                                 padding: 0;
                                 margin: 0;
-                                svg {
+                                svg, img {
                                     height: 1.6vw;
                                     width: max-content;
                                 }
