@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" focusable="false" width="13" height="8" viewBox="0 0 13 8">
+              <g fill="none" fill-rule="evenodd">
+                <path d="M0 0h13v8H0z"></path>
+                <g transform="matrix(0 -1 -1 0 13 8)">
+                  <mask id="b" fill="#fff">
+                    <path id="a" d="M.59 11.34l4.58-4.59L.59 2.16 2 .75l6 6-6 6z"></path>
+                  </mask>
+                  <g id="c" fill="#FFF" mask="url(#b)">
+                    <path d="M-8-6h24v24H-8z"></path>
+                  </g>
+                </g>
+              </g>
+            </svg>

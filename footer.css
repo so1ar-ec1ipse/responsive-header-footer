@@ -20,7 +20,7 @@ body {
   line-height: 2rem;
   letter-spacing: 0.2px;
   opacity: 1;
-  font-weight: lighter;
+  font-weight: 100;
   color: #565a5c;
 }
 .exported-element > div {
@@ -79,7 +79,7 @@ body {
   font-size: 0.928rem;
   letter-spacing: 0.2px;
   opacity: 1;
-  font-weight: lighter;
+  font-weight: 100;
   color: #565a5c;
   line-height: 2.08;
 }
@@ -130,7 +130,7 @@ body {
   line-height: 2rem;
   letter-spacing: 0.2px;
   opacity: 1;
-  font-weight: lighter;
+  font-weight: 100;
   color: #333;
 }
 .exported-element > div > div:nth-child(3) > div:nth-child(1) > div > div:nth-child(1) > ul > li, .exported-element > div > div:nth-child(3) > div:nth-child(1) > div > div:nth-child(2) > ul > li, .exported-element > div > div:nth-child(3) > div:nth-child(1) > div > div:nth-child(4) > ul > li {
@@ -151,7 +151,7 @@ body {
   line-height: 2rem;
   letter-spacing: 0.2px;
   opacity: 1;
-  font-weight: lighter;
+  font-weight: 100;
   color: #565a5c;
 }
 .exported-element > div > div:nth-child(3) > div:nth-child(1) > div > div:nth-child(1) > ul > li > div > a .nav_list_subtitle, .exported-element > div > div:nth-child(3) > div:nth-child(1) > div > div:nth-child(2) > ul > li > div > a .nav_list_subtitle, .exported-element > div > div:nth-child(3) > div:nth-child(1) > div > div:nth-child(4) > ul > li > div > a .nav_list_subtitle {
@@ -254,7 +254,7 @@ body {
   line-height: 2rem;
   letter-spacing: 0.2px;
   opacity: 1;
-  font-weight: lighter;
+  font-weight: 100;
   color: #565a5c;
 }
 .exported-element > div > div:nth-child(5) > div:nth-child(1) > ul {
@@ -265,7 +265,7 @@ body {
 }
 .exported-element > div > div:nth-child(5) > div:nth-child(2) {
   text-align: center;
-  font-weight: lighter;
+  font-weight: 100;
   margin: 10px 0px;
 }
 .exported-element > div > div:nth-child(5) > div:nth-child(2) > a {
@@ -294,7 +294,7 @@ body {
   line-height: 2rem;
   letter-spacing: 0.2px;
   opacity: 1;
-  font-weight: lighter;
+  font-weight: 100;
   color: #565a5c;
   text-decoration: none;
 }
@@ -304,7 +304,7 @@ body {
   line-height: 2rem;
   letter-spacing: 0.2px;
   opacity: 1;
-  font-weight: lighter;
+  font-weight: 100;
   color: #565a5c;
 }
 @media (max-width: 565px) {
@@ -551,7 +551,7 @@ body {
     font-size: 0.928vw;
     letter-spacing: 0.02vw;
     opacity: 1;
-    font-weight: lighter;
+    font-weight: 100;
     color: #565a5c;
     line-height: 2.08;
  }
@@ -602,7 +602,7 @@ body {
     line-height: 2vw;
     letter-spacing: 0.02vw;
     opacity: 1;
-    font-weight: lighter;
+    font-weight: 100;
     color: #333;
  }
   .exported-element > div > div.footer-customerservice > div:nth-child(1) > div > div:nth-child(1) > ul > li, .exported-element > div > div.footer-customerservice > div:nth-child(1) > div > div:nth-child(2) > ul > li, .exported-element > div > div.footer-customerservice > div:nth-child(1) > div > div:nth-child(4) > ul > li {
@@ -625,7 +625,7 @@ body {
     line-height: 2vw;
     letter-spacing: 0.02vw;
     opacity: 1;
-    font-weight: lighter;
+    font-weight: 100;
     color: #565a5c;
  }
   .exported-element > div > div.footer-customerservice > div:nth-child(1) > div > div:nth-child(1) > ul > li > div > a .nav_list_subtitle, .exported-element > div > div.footer-customerservice > div:nth-child(1) > div > div:nth-child(2) > ul > li > div > a .nav_list_subtitle, .exported-element > div > div.footer-customerservice > div:nth-child(1) > div > div:nth-child(4) > ul > li > div > a .nav_list_subtitle {
@@ -731,7 +731,7 @@ body {
     line-height: 2vw;
     letter-spacing: 0.02vw;
     opacity: 1;
-    font-weight: lighter;
+    font-weight: 100;
     color: #565a5c;
  }
   .exported-element > div > div.footer-bottom > div:nth-child(1) > ul {
@@ -746,7 +746,7 @@ body {
  }
   .exported-element > div > div.footer-bottom > div:nth-child(2) {
     text-align: center;
-    font-weight: lighter;
+    font-weight: 100;
     margin: 1vw 0vw;
  }
   .exported-element > div > div.footer-bottom > div:nth-child(2) > a {
@@ -775,7 +775,7 @@ body {
     line-height: 2vw;
     letter-spacing: 0.02vw;
     opacity: 1;
-    font-weight: lighter;
+    font-weight: 100;
     color: #565a5c;
     text-decoration: none;
  }
@@ -786,7 +786,7 @@ body {
     line-height: 4rem;
     letter-spacing: 0.02vw;
     opacity: 1;
-    font-weight: lighter;
+    font-weight: 100;
     color: #565a5c;
  }
 }

@@ -32,14 +32,14 @@
   font-family: Interstate;
   src: url('./view/static//fonts/Interstate-Light.otf') format('opentype');
   src: url('./view/static//fonts/Interstate-Light.woff') format('woff');
-  font-weight: lighter;
+  font-weight: 100;
   font-style: normal;
 }
 @font-face {
   font-family: Interstate;
   src: url('./view/static//fonts/Interstate-LightItalic.otf') format('opentype');
   src: url('./view/static//fonts/Interstate-LightItalic.woff') format('woff');
-  font-weight: lighter;
+  font-weight: 100;
   font-style: italic;
 }
 @font-face {

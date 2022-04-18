@@ -16,12 +16,10 @@ header * {
 }
 .app-header .fade_out {
   opacity: 0;
-  pointer-events: none;
   transition: opacity 100ms ease-out 0s, transform 100ms ease-out 0s;
 }
 .app-header .fade_in {
   opacity: 1;
-  pointer-events: none;
   transition: opacity 100ms ease-out 0s, transform 100ms ease-out 0s;
 }
 .app-header .close_btn {
@@ -54,7 +52,7 @@ header * {
   line-height: 2rem;
   letter-spacing: 0.2px;
   opacity: 1;
-  font-weight: 400;
+  font-weight: 100;
   color: #333;
   display: flex;
 }
@@ -124,7 +122,7 @@ header * {
   background: #333;
   color: #fff;
   font-size: 12px;
-  font-weight: 400;
+  font-weight: 100;
 }
 .app-header > .header-top > div {
   padding-right: 0px;
@@ -348,7 +346,7 @@ header * {
   line-height: 1.428rem;
   letter-spacing: 0.2px;
   opacity: 1;
-  font-weight: 400;
+  font-weight: 100;
   color: #333;
   background: transparent;
   border: none;
@@ -402,7 +400,7 @@ header * {
   z-index: 9;
   margin-left: 74px;
 }
-.app-header .header-mid > div.content > .left > a .logo > svg {
+.app-header .header-mid > div.content > .left > a .logo svg {
   max-width: 180px;
   min-width: 130px;
 }
@@ -452,7 +450,7 @@ header * {
   font-weight: 700;
   padding-right: 1rem;
 }
-.app-header div#sub-menu_title svg {
+.app-header div#sub-menu_title svg, .app-header div#sub-menu_title img {
   width: 18px;
   transform: rotate(90deg);
 }
@@ -496,8 +494,6 @@ header * {
   position: absolute;
   top: 33px;
   right: 20px;
-}
-.app-header .side-menu .close-icon svg {
   width: 20px;
 }
 .app-header .side-menu .side-menu-list {
@@ -514,7 +510,7 @@ header * {
   align-items: center;
   margin-bottom: 20px;
 }
-.app-header .side-menu .side-menu-list > div > .icons_row svg {
+.app-header .side-menu .side-menu-list > div > .icons_row svg, .app-header .side-menu .side-menu-list > div > .icons_row img {
   width: 130px;
   height: 45px;
 }
@@ -534,7 +530,7 @@ header * {
   text-decoration: none;
   color: #333;
 }
-.app-header .side-menu .side-menu-list > div .list-setting svg, .app-header .side-menu .side-menu-list > div div > a svg {
+.app-header .side-menu .side-menu-list > div .list-setting svg, .app-header .side-menu .side-menu-list > div div > a svg, .app-header .side-menu .side-menu-list > div .list-setting img, .app-header .side-menu .side-menu-list > div div > a img {
   width: 15px;
   transform: rotate(270deg);
 }
@@ -544,7 +540,7 @@ header * {
   line-height: 1.428rem;
   letter-spacing: 0.2px;
   opacity: 1;
-  font-weight: 400;
+  font-weight: 100;
   color: #333;
   height: 45px;
   -webkit-box-align: center;
@@ -552,7 +548,7 @@ header * {
   text-decoration: none;
   cursor: pointer;
 }
-.app-header .side-menu .side-menu-list > div .info_row svg {
+.app-header .side-menu .side-menu-list > div .info_row svg, .app-header .side-menu .side-menu-list > div .info_row img {
   width: 20px;
 }
 .app-header .side-menu .side-menu-list > div .info_row span {
@@ -791,7 +787,7 @@ header * {
   opacity: 1;
   font-weight: bold;
   font-size: 14px;
-  color: #333 !important;
+  color: #333;
   padding-bottom: 4px;
   cursor: pointer;
 }
@@ -902,7 +898,7 @@ header * {
   line-height: 1.428rem;
   letter-spacing: 0.2px;
   opacity: 1;
-  font-weight: 400;
+  font-weight: 100;
   color: #333;
   background: transparent;
   border: none;
@@ -917,7 +913,7 @@ header * {
   text-decoration: underline;
   margin-right: 15px;
   cursor: pointer;
-  font-weight: 400;
+  font-weight: 100;
 }
 .app-header .log-in-box > .content form > .log-in-form .forgot_password {
   font-size: 1rem;
@@ -1018,7 +1014,7 @@ header * {
 }
 .app-header .search_dropdown #text_suggestions_wrapper {
   font-size: 13px;
-  font-weight: 400;
+  font-weight: 100;
   color: #333;
   background: #fff;
   margin-top: 24px;
@@ -1115,7 +1111,7 @@ header * {
   .app-header .header-mid > div.content {
     width: 98%;
  }
-  .app-header .header-mid > div.content > .left > a > svg {
+  .app-header .header-mid > div.content > .left > a svg {
     width: 130px;
     height: 45px;
  }
@@ -1155,9 +1151,7 @@ header * {
     z-index: 1;
     display: flex;
     -webkit-box-align: center;
-    align-items: center;
     justify-content: space-between;
-    cursor: pointer;
  }
   .app-header > .header-top > div.content > .left.offers > .cta {
     max-width: 140px;
@@ -1167,13 +1161,6 @@ header * {
     font-weight: bold;
     min-width: 30vw;
     max-width: 50px;
- }
-  .app-header > .header-top > div.content > .left.offers > .cta > .icon-button {
-    transform: rotate(90deg);
-    transition: transform 0.2s ease 0s;
- }
-  .app-header > .header-top > div.content > .left.offers > .cta > .icon-button svg {
-    margin: 0px 10px;
  }
   .app-header > .header-top > div.content > .left.offers span {
     max-width: 50%;
@@ -1244,7 +1231,7 @@ header * {
     height: 3.4vw;
     background: #333;
     color: #fff;
-    font-weight: 400;
+    font-weight: 100;
  }
   .app-header > .header-top > div {
     padding-right: 0vw;
@@ -1426,7 +1413,7 @@ header * {
     line-height: 2.2vw;
     letter-spacing: 0.1vw;
     opacity: 1;
-    font-weight: 400;
+    font-weight: 100;
     color: #333;
     background: transparent;
     border: none;
@@ -1666,7 +1653,7 @@ header * {
     line-height: 3.2vw;
     letter-spacing: 0.2vw;
     opacity: 1;
-    font-weight: 400;
+    font-weight: 100;
     color: #333;
     display: flex;
  }
@@ -1745,7 +1732,7 @@ header * {
  }
   .app-header .search_dropdown #text_suggestions_wrapper {
     font-size: 1.3vw;
-    font-weight: 400;
+    font-weight: 100;
     color: #333;
     background: #fff;
     margin-top: 2.4vw;

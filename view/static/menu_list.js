@@ -100,13 +100,12 @@ const addMenuList = (source) => {
         if(source[i].childMenuItems.length) {
             retTagList += '<div class="list-setting">'
             retTagList += '<span id="sub-menu-title">'+source[i].name+'</span>'
-            retTagList += '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" focusable="false">'
-            retTagList += '<path fill="#050608" fill-rule="nonzero" d="M20.453 6l-8.372 8.126-8.335-8.09L2 7.73l10.08 9.784L22.2 7.694z"></path>'
-            retTagList += '</svg></div>'
+            retTagList += '<img src="./view/static/images/svgs/arrow-down.svg" alt=""/>'
+            retTagList += '</div>'
         }
         else {
             retTagList += '<a href="'+source[i]._links.site.href+'"target="_blank">'
-            retTagList += '<div class="styles__StyledLinkItem-sc-d3eg2d-2 gSCwQT"><span class="">'
+            retTagList += '<div class="sub-menu-title"><span class="">'
             retTagList += source[i].name+'</span></div></a>'
         }
     }
