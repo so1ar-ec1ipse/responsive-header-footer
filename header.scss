@@ -202,6 +202,9 @@ body {
               >.icon-button {
                 transform: rotate(90deg);
                 transition: transform 0.2s ease 0s;
+                &.svg-down {
+                  transform: rotate(180deg);
+                }
                 svg {
                   margin: 0px 10px;
                 }
@@ -1367,7 +1370,7 @@ body {
                 >.icon-button {
                   transform: rotate(90deg);
                   transition: transform 0.2s ease 0s;
-                  svg {
+                  svg, img {
                     margin: 0vw 1vw;
                   }
                 }

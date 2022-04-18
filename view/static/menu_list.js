@@ -18,11 +18,13 @@ const doModalDialog = () => {
     let header_modal = getElementByQuery("#my-modal")
     if(HEADER_STATE.statusTOPHAT){
         onSearch()
+        changeClassList(".icon-button", ["svg-down"], [])
         hideElement("#search_dropdown")
         showElement("#top-hat-box")
         showElement(".modal-close")
     }
     else if(HEADER_STATE.statusSEARCH){
+        changeClassList(".icon-button", [], ["svg-down"])
         hideElement("#top-hat-box")
         showElement("#search_dropdown")
         hideElement(".modal-close")
@@ -30,10 +32,16 @@ const doModalDialog = () => {
     header_modal.style.display = "block"
 }
 const hideModalDialog = () => {
+    console.log("hideDialog")
+    changeClassList(".icon-button", [], ["svg-down"])
     HEADER_STATE.statusSEARCH = false
     HEADER_STATE.statusTOPHAT = false
     getElementByQuery("#my-modal").style.display = "none"
 }
+/**
+ * These functions manage the state of element hidden|show|visible|invisible
+ * @param {*} query 
+ */
 const showElement = (query) => {
     getElementByQuery(query).style.display = "block"
 }
@@ -46,6 +54,31 @@ const invisibleElement = (query) => {
 const visibleElement = (query) => {
     getElementByQuery(query).style.visibility = "visible"
 }
+/**
+ * This function stands for add or remove css classes in an element
+ * @param {*} query 
+ * @param {*} add_list 
+ * @param {*} remove_list 
+ */
+const changeClassList = (query, add_list, remove_list) => {
+    console.log(add_list, remove_list, getElementByQuery(query))
+    let i
+    for(i = 0; i < add_list.length; i++)
+        getElementByQuery(query).classList.add(add_list[i])
+    for(i = 0; i < remove_list.length; i++)
+        getElementByQuery(query).classList.remove(remove_list[i])
+}
+/**
+ * This function stands for toggle css classes
+ * @param {*} query 
+ * @param {*} toggle_list 
+ */
+const toggleClassList = (query, toggle_list) => {
+    let i
+    for(i = 0; i < toggleClassList.length; i++)
+        classList.remove(getElementByQuery(query).classList.toggle(add_list[i]))
+}
+
 const findNextChild = (title, source) => {
     for(let i = 0; i < source.length; i++){
         if(title === source[i].name)

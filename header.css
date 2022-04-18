@@ -204,6 +204,9 @@ body {
   transform: rotate(90deg);
   transition: transform 0.2s ease 0s;
 }
+.app-header > .header-top > div.content > .left.offers > .cta > .icon-button.svg-down {
+  transform: rotate(180deg);
+}
 .app-header > .header-top > div.content > .left.offers > .cta > .icon-button svg {
   margin: 0px 10px;
 }
@@ -1311,7 +1314,7 @@ body {
     transform: rotate(90deg);
     transition: transform 0.2s ease 0s;
  }
-  .app-header > .header-top > div.content > .left.offers > .cta > .icon-button svg {
+  .app-header > .header-top > div.content > .left.offers > .cta > .icon-button svg, .app-header > .header-top > div.content > .left.offers > .cta > .icon-button img {
     margin: 0vw 1vw;
  }
   .app-header > .header-top > div.content > .rewards-rewares {
