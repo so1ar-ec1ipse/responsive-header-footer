@@ -246,7 +246,6 @@ const init = () => {
         }
     }
     getElementByQuery(".modal-close-1").onclick = () => {
-        console.log("AA Close")
         hideElement('.side-menu_back-1')
         hideElement('.do-modal-1')
     }
@@ -255,7 +254,6 @@ const init = () => {
         hideElement('.do-modal-1')
     }
     const details_list = document.querySelectorAll(".details")
-    console.log(details_list)
     for(let i = 0; i < details_list.length; i++){
         details_list[i].onclick = () => {
             showElement('.side-menu_back-1')
@@ -276,12 +274,22 @@ const init = () => {
     getElementByQuery(".slide_left_btn").onclick = () => { moveScroll(-1) }
     getElementByQuery(".slide_right_btn").onclick = () => { moveScroll(1) }
 
-    // DEKTOP:: Top Dropdwon Menu
-    getElementByQuery("#drop-down-view").onmouseenter = () => { 
+    // DEKTOP:: Top search Dropdwon Menu
+    getElementByQuery("#drop-down-search").onmouseenter = () => { 
         visibleDDMenu() 
     }
+    const top_nav_list = document.querySelectorAll(".cetegory-type a")
+    for(let i = 0; i < top_nav_list.length; i++){
+        top_nav_list[i].onmouseenter = (event) => {
+            visibleDDMenu(event)
+        }
+    }
     getElementByQuery("#nav_dropdown").onmouseleave = () => {visibleDDMenu()}
-    
+    // console.log(document.querySelectorAll(".close-icon_m"))
+    const close_ic_list = document.querySelectorAll(".close-icon_m")
+    for(let i = 0; i < close_ic_list.length; i++){
+        close_ic_list[i].onclick = () => { closeMenu() }
+    }
     // MOBILE:: side-menu EventListeners
     getElementByQuery(".menu_icon").onmouseover = () => { showSubMenu(0) }
     getElementByQuery("#bck-btn").onclick = () => { closeMenu(true) }

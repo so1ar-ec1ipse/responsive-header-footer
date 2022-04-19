@@ -1,10 +1,15 @@
 
-<link rel="stylesheet" href="./fonts.css">
-<link rel="stylesheet" href="./header.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Font Set -->
+<link rel="stylesheet" href="./fonts.css">
+<!-- Header CSS Set -->
+<link rel="stylesheet" href="./header.css">
+<!-- Header view interactions -->
 <script src="./view/static/menu_list.js"></script>
+
 <header class="app-header">
   <div class="bg-back"></div>
+  <!-- START - short Logo / view all offers / store location|log-in -->
   <div class="header-top">
     <div class="content">
       <div class="left notification">
@@ -27,8 +32,10 @@
         </a></div>
     </div>
   </div>
-  <!-- Dropdown Menu -->
-  <div id="drop-down-view" class="header-mid">
+  <!-- END - short Logo / view all offers / store location|log-in -->
+
+  <!-- START - Search input[Mobile hamburger icon]/Logo/Bag  -->
+  <div class="header-mid" id="drop-down-search">
     <div class="content">
       <div class="header-search animate_in">
         <div class="header-search-dev">
@@ -66,7 +73,9 @@
       </span>
     </div>
   </div>
-  <!-- Menu List -->
+  <!-- END - Search input[Mobile hamburger icon]/Logo/Bag  -->
+  
+  <!-- START - Site nav  -->
   <div class="header-bot ">
     <div class="content">
       <div class="cms-container">
@@ -75,51 +84,51 @@
           <ul class="cetegory-list">
             <!-- hover="chageShowData(event)" -->
             <li id="NEW!-menu" class="cetegory-type">
-              <a onmouseover="visibleDDMenu(event)"
+              <a 
                 href="/content/new-arrivals?cm_sp=topnav_new">NEW!</a>
             </li>
             <li id="WOMEN-menu" class="cetegory-type">
-              <a onmouseover="visibleDDMenu(event)"
+              <a 
                 href="/content/women?cm_sp=topnav_w">WOMEN</a>
             </li>
             <li id="MEN-menu" class="cetegory-type">
-              <a onmouseover="visibleDDMenu(event)"
+              <a 
                 href="/content/men?cm_sp=topnav_m">MEN</a>
             </li>
             <li id="KIDS-menu" class="cetegory-type">
-              <a onmouseover="visibleDDMenu(event)"
+              <a 
                 href="/content/kids?cm_sp=topnav_k">KIDS</a>
             </li>
             <li id="OUTERWEAR-menu" class="cetegory-type">
-              <a onmouseover="visibleDDMenu(event)"
+              <a 
                 ref="/content/outerwear?cm_sp=topnav_o">OUTERWEAR</a>
             </li>
             <li id="GEAR-menu" class="cetegory-type">
-              <a onmouseover="visibleDDMenu(event)"
+              <a 
                 href="/content/gear?cm_sp=topnav_g">GEAR</a>
             </li>
             <li id="FOOTWEAR-menu" class="cetegory-type">
-              <a onmouseover="visibleDDMenu(event)"
+              <a 
                 ref="/content/footwear?cm_sp=topnav_f">FOOTWEAR</a>
             </li>
             <li id="HOME-menu" class="cetegory-type">
-              <a onmouseover="visibleDDMenu(event)"
+              <a 
                 href="/content/home?cm_sp=topnav_h">HOME</a>
             </li>
             <li id="SALE-menu" class="cetegory-type">
-              <a onmouseover="visibleDDMenu(event)"
+              <a 
               href="/s/-?keyword=*&amp;cm_sp=topnav_sale&amp;facets=sale_attr%3A%22Yes%22"  >SALE</a> 
             </li>
             <li id="CLEARANCE-menu" class="cetegory-type">
-              <a onmouseover="visibleDDMenu(event)"
+              <a 
                 href="/content/clearance?cm_sp=topnav_c"
                 style="color: rgb(203, 31, 29);">CLEARANCE</a>
             </li>
             <li id="GUIDEPOST-menu" class="cetegory-type">
-              <a onmouseover="visibleDDMenu(event)"
+              <a 
                 href="/campaign/guidepost?cm_sp=topnav_guide">GUIDEPOST</a>
             </li>
-            <li id="RENTAL-menu" class="cetegory-type"><a onmouseover="visibleDDMenu(event)"
+            <li id="RENTAL-menu" class="cetegory-type"><a 
                 href="https://rentals.eddiebauer.com?utm_source=EB&amp;utm_campaign=&amp;utm_medium=Topnav&amp;utm_term=Site"
                 target="_blank"   aria-controls="RENTAL-submenu" >RENTAL</a>
               
@@ -129,17 +138,21 @@
       </div>
     </div>
   </div>
-<!-- DropDown Menu list-->
-  <div id="nav_dropdown" class="drop-down-menu">
-    <div class="">
-      <div id="nav-drop_featured" class="column featured"></div>
-      <div id="nav-drop_extra" class="column"></div>
+    <!-- START site nav drop down list -->
+    <div id="nav_dropdown" class="drop-down-menu">
+      <div class="">
+        <div id="nav-drop_featured" class="column featured"></div>
+        <div id="nav-drop_extra" class="column"></div>
+      </div>
     </div>
-  </div>
-<!-- Mobile side-menu list-->
+    <!-- END site nav drop down list -->
+  <!-- END - Site nav  -->
+
+  <!-- START - Mobile side-menu list-->
+    <!-- Basic Menu list and Links -->
   <button id="bck-btn" class="side-menu_back"></button>
   <div id="side-menu" class="side-menu-container side-menu">
-    <div class="close-icon" onclick="closeMenu()" id="sideNavCloseIcon">
+    <div class="close-icon close-icon_m" id="sideNavCloseIcon">
       <img src="./view/static/images/svgs/closex.svg"/>  
     </div>
     <div class="side-menu-list">
@@ -199,13 +212,14 @@
         </div>
     </div>
   </div>
+    <!-- Sub menu list -->
   <div id="side-menu_sub" class="side-menu-container side-menu">
-    <div class="close-icon sub-close" onclick="closeMenu()"  id="sideNavCloseIcon">
+    <div class="close-icon sub-close close-icon_m"  id="sideNavCloseIcon">
       <img src="./view/static/images/svgs/closex.svg" alt="Close">
     </div>
     <div class="side-menu-list">
       <div>
-        <div id="sub-menu_title" class="icons_row" onclick="closeMenu()">
+        <div id="sub-menu_title" class="icons_row close-icon_m">
           <div class="back_icon">
             <img src="./view/static/images/svgs/arrow-down.svg" alt=""/>
           </div>
@@ -225,7 +239,9 @@
       </div>
     </div>
   </div>
-  <!-- Log In Box -->
+  <!-- END - Mobile side-menu list -->
+
+  <!-- START - Log In Box -->
   <div id="log-in-box" class="hidden-div log-in-box">
     <div class="content">
       <div id="log-in-close" class="close-icon" aria-label="Close" role="button">
@@ -268,7 +284,9 @@
       </form>
     </div>
   </div>
-  <!-- The Modal -->
+  <!-- END - Log In Box -->
+  
+  <!-- START - Modal for TOPHAT AND SEARCH RESULT -->
   <div id="my-modal" class="do-modal">
     <!-- Modal content -->
     <div id="my-content" class="modal-content">
@@ -457,6 +475,7 @@
           <!-- </div> -->
         </div>
       </div>
+      <!-- Search result show -->
       <div id="search_dropdown" class="search_dropdown fade_out" role="listbox">
         <div id="text_suggestions_wrapper" class="text_suggestions_wrapper transform_out">
           <div id="search_terms"></div>
@@ -466,8 +485,10 @@
         <div class="vertical-row empty"></div>
       </div>
     </div>
-  
   </div>
+  <!-- END - Modal for TOPHAT AND SEARCH RESULT -->
+
+  <!-- START - DIALOG TopHat Details Dialog -->
   <button class="side-menu_back-1" style="background: rgba(0, 0, 0, 0.1);"></button>
   <div id="my-modal-1" class="do-modal-1"><div class="my-content">
     <div class="modal-close-1 inner" aria-label="Close" role="button">
@@ -478,13 +499,9 @@
       <span style="color:#333333de; font-family:Interstate; font-size:14px; font-stretch:normal; font-style:normal; font-weight:normal; letter-spacing:0.3px; line-height:normal; text-align:center">Buy 1 save 20%, buy 2 save 30%, buy 3+ save 40%. Use code <strong>BOTTOMSDEAL</strong>. Mix and match men's and women's pants in any eligible styles for ultimate savings. Exclusions apply. Offer valid at eddiebauer.com and eddiebauer.ca. Offers at Eddie Bauer Outlet and Retail stores may vary. See stores for details. Offer excludes select First Ascent products, select new products, co-branded products, non-Eddie Bauer brand products, footwear, accessories, sleeping bags, and tents. Offer does not include and cannot be applied to previous or pending purchases, credit card balances, taxes, gift cards, shipping, or other fees. Offer cannot be combined with any other offer, and subject to change without notice.</span></p></p>
     </div>
   </div>
+  <!-- END - DIALOG TopHat Details Dialog -->
+
 </header>
-<!-- Trigger/Open The Modal -->
-<body style="overflow: auto;">
-  <div style="height: 500px; background-color: #c1d82f;"></div>
-  <div style="height: 500px; background-color: aquamarine;"></div>
-  <div style="height: 500px; background-color: brown;"></div>
-</body>
 <script>
   const HEADER_STATE = {
     statusTOPHAT:false, 
