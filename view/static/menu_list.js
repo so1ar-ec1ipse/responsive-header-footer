@@ -32,7 +32,6 @@ const doModalDialog = () => {
     header_modal.style.display = "block"
 }
 const hideModalDialog = () => {
-    console.log("hideDialog")
     changeClassList(".icon-button", [], ["svg-down"])
     HEADER_STATE.statusSEARCH = false
     HEADER_STATE.statusTOPHAT = false
@@ -61,7 +60,6 @@ const visibleElement = (query) => {
  * @param {*} remove_list 
  */
 const changeClassList = (query, add_list, remove_list) => {
-    console.log(add_list, remove_list, getElementByQuery(query))
     let i
     for(i = 0; i < add_list.length; i++)
         getElementByQuery(query).classList.add(add_list[i])
@@ -218,7 +216,6 @@ const onSearch = (iflag) => {
         hideModalDialog()
     }
 }
-
 const moveScroll = (step) => {
     let icounter = 0;
     const seqMoveScroll = (step) => {
@@ -231,7 +228,7 @@ const moveScroll = (step) => {
 }
 
 /**
- * 
+ * intialize
  */
 
 const init = () => {
@@ -246,6 +243,23 @@ const init = () => {
             HEADER_STATE.statusTOPHAT = false
             HEADER_STATE.statusSEARCH = false
             hideModalDialog()
+        }
+    }
+    getElementByQuery(".modal-close-1").onclick = () => {
+        console.log("AA Close")
+        hideElement('.side-menu_back-1')
+        hideElement('.do-modal-1')
+    }
+    getElementByQuery(".do-modal-1").onclick = () => {
+        hideElement('.side-menu_back-1')
+        hideElement('.do-modal-1')
+    }
+    const details_list = document.querySelectorAll(".details")
+    console.log(details_list)
+    for(let i = 0; i < details_list.length; i++){
+        details_list[i].onclick = () => {
+            showElement('.side-menu_back-1')
+            showElement('.do-modal-1')
         }
     }
     /**
@@ -289,7 +303,6 @@ const init = () => {
         else {
             getElementByQuery(".login_button").disabled = true
         }
-        console.log(getElementByQuery(".login_button").disabled)
     }
     getElementByQuery('#email-signin').oninput = (event) => {
         getElementByQuery("#email-signin").value = event.target.value

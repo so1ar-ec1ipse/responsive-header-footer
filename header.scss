@@ -492,7 +492,7 @@ body {
       transform: rotate(90deg);
     }
   }
-  .side-menu_back {
+  .side-menu_back, side-menu_back-1 {
     display: none;
     background: rgba(0, 0, 0, 0.35);
     outline: none;
@@ -1095,7 +1095,7 @@ body {
       }
     }
   }
-  .do-modal {
+  .do-modal, .do-modal-1 {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -1107,6 +1107,7 @@ body {
     background-color: rgba(0,0,0,0.3); /* Black w/ opacity */
 
    /* The Close Button */
+    .modal-close-1,
     .modal-close {
       position: absolute;
       cursor: pointer;
@@ -1119,14 +1120,29 @@ body {
       height: 20px;
       background-image: url(./view/static/images/svgs/closex.svg);
       z-index: 1300;
+      &:hover, &:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      &.inner {
+        position: relative;
+        left: 97%;
+        top: -8px;
+      }
     }
-
-    .modal-close:hover,
-    .modal-close:focus {
-      color: black;
-      text-decoration: none;
-      cursor: pointer;
-    }
+  }
+  .do-modal-1 > .my-content {
+    background: white;
+    width: 80%;
+    max-width: 480px;
+    height: auto;
+    max-height: 80%;
+    overflow: auto;
+    padding: 16px;
+    margin: 10vw auto;
+    display: flex;
+    flex-direction: column;
   }
   #side-menu, 
   #side-menu_sub, 
