@@ -718,6 +718,12 @@ body {
   line-height: 1;
   text-align: left;
 }
+.app-header .top-hat-slider .top-hat-content > .scroll_wrapper .tophat-card > div:last-child .details {
+  cursor: pointer;
+}
+.app-header .top-hat-slider .top-hat-content > .scroll_wrapper .tophat-card > div:last-child .details:hover {
+  text-decoration: underline;
+}
 .app-header .top-hat-slider .top-hat-content > .scroll_wrapper:first-child {
   margin-left: 80px;
 }

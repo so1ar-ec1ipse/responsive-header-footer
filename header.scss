@@ -739,7 +739,12 @@ body {
                     line-height: 1;
                     text-align: left;
                   }
-                  
+                }
+                .details {
+                  cursor: pointer;
+                  &:hover {
+                    text-decoration: underline;
+                  }
                 }
               }
             }
